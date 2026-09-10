@@ -1,4 +1,154 @@
-# Proposed navigation will be developed collaboratively.
-title: AI @ CSU
+title: AI @ CSU Fort Collins
+domain: https://ai.colostate.edu
 status: tentative
-pages: []
+scope: Fort Collins campus
+
+principles:
+  - Campus-specific tools, teaching, research, training, and support live here.
+  - System policy, legal guidance, and risk methodology are linked, not duplicated.
+  - Tools are the first navigation task.
+  - Getting Started is a homepage call to action rather than a primary navigation item.
+  - Governance appears under About and in the footer.
+
+primary_navigation:
+  - /tools/
+  - /teaching/
+  - /research/
+  - /training/
+  - /it-support/
+  - /news/
+  - /resources/
+  - /about/
+
+utility_navigation:
+  - /getting-started/
+  - /resources/contact/
+  - /about/governance/
+
+external_governance:
+  system_ai: https://ai.csusystem.edu/
+  data_governance: https://datagov.csusystem.edu/
+
+pages:
+  - path: /
+    file: content/planned/home.md
+    priority: P0
+  - path: /about/
+    file: content/planned/about/index.md
+    priority: P2
+    children:
+      - path: /about/governance/
+        file: content/planned/about/governance.md
+        priority: P2
+  - path: /tools/
+    file: content/planned/tools/index.md
+    priority: P0
+    children:
+      - path: /tools/comparison/
+        file: content/planned/tools/comparison.md
+        priority: P0
+      - path: /tools/help-me-choose/
+        file: content/planned/tools/help-me-choose.md
+        priority: P2
+      - path: /tools/approval-process/
+        file: content/planned/tools/approval-process.md
+        priority: P0
+  - path: /getting-started/
+    file: content/planned/getting-started.md
+    priority: P2
+  - path: /teaching/
+    file: content/planned/teaching/index.md
+    priority: P0
+    children:
+      - path: /teaching/syllabus-language/
+        file: content/planned/teaching/syllabus-language.md
+        priority: P1
+      - path: /teaching/assignment-design/
+        file: content/planned/teaching/assignment-design.md
+        priority: P1
+      - path: /teaching/faculty-showcase/
+        file: content/planned/teaching/faculty-showcase.md
+        priority: P2
+      - path: /teaching/discipline-guides/
+        file: content/planned/teaching/discipline-guides.md
+        priority: P3
+  - path: /research/
+    file: content/planned/research/index.md
+    priority: P0
+    children:
+      - path: /research/grants/
+        file: content/planned/research/grants.md
+        priority: P1
+      - path: /research/irb/
+        file: content/planned/research/irb.md
+        priority: P1
+      - path: /research/data-security/
+        file: content/planned/research/data-security.md
+        priority: P1
+      - path: /research/showcase/
+        file: content/planned/research/showcase.md
+        priority: P2
+      - path: /research/computing/
+        file: content/planned/research/computing.md
+        priority: P2
+  - path: /training/
+    file: content/planned/training/index.md
+    priority: P2
+    children:
+      - path: /training/ai-essentials/
+        file: content/planned/training/ai-essentials.md
+        priority: P1
+      - path: /training/workshops/
+        file: content/planned/training/workshops.md
+        priority: P2
+      - path: /training/pathways/
+        file: content/planned/training/pathways.md
+        priority: P3
+      - path: /training/esi/
+        file: content/planned/training/esi.md
+        priority: P2
+  - path: /it-support/
+    file: content/planned/it-support/index.md
+    priority: P1
+    children:
+      - path: /it-support/ramgpt/
+        file: content/planned/it-support/ramgpt.md
+        priority: P1
+      - path: /it-support/csu-gpt/
+        file: content/planned/it-support/csu-gpt.md
+        priority: P1
+      - path: /it-support/copilot/
+        file: content/planned/it-support/copilot.md
+        priority: P1
+      - path: /it-support/faq/
+        file: content/planned/it-support/faq.md
+        priority: P1
+  - path: /news/
+    file: content/planned/news/index.md
+    priority: P2
+    children:
+      - path: /news/blog/
+        file: content/planned/news/blog.md
+        priority: P2
+      - path: /news/archive/
+        file: content/planned/news/archive.md
+        priority: P3
+  - path: /resources/
+    file: content/planned/resources/index.md
+    priority: P3
+    children:
+      - path: /resources/faq/
+        file: content/planned/resources/faq.md
+        priority: P2
+      - path: /resources/glossary/
+        file: content/planned/resources/glossary.md
+        priority: P3
+      - path: /resources/contact/
+        file: content/planned/resources/contact.md
+        priority: P1
+
+# These are planning briefs, not public placeholder URLs.
+future_sections:
+  - file: content/planned/future/ai-in-administration.md
+  - file: content/planned/future/ai-in-student-services.md
+  - file: content/planned/future/ai-accessibility.md

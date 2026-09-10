@@ -1,1 +1,14 @@
 source_url,destination_url,status,notes
+/ai-tools/,/tools/,proposed,Approved tools landing page
+/ai-resources-support/,/resources/,needs-review,Old page is split across teaching research training and resources
+/ai-news/,/news/,proposed,New current-news landing page
+/csu-ai-hub/,/it-support/,proposed,Replace obsolete product hub
+/csu-ai-hub/csu-gpt/,/it-support/csu-gpt/,proposed,Move product access and support content
+/artificial-intelligence-and-csus-mission-and-vision-shaping-the-future-of-education/,/about/,proposed,Consolidate campus vision content
+/enterprise-ai-design-team/,/about/governance/,proposed,Consolidate campus governance content
+/artificial-intelligence-joint-task-force/,/about/governance/,proposed,Consolidate task force outcomes
+/ai-centers/,/research/showcase/,needs-review,Retain only if the directory can be maintained
+/csu-ignites-ai-shaping-tomorrow-together/,/news/archive/,needs-review,Passed event; retain useful recordings and materials
+/csu-ignites-ai-shaping-tomorrow-together/csu-fort-collins-agenda-at-a-glance/,/news/archive/,needs-review,Passed event agenda
+/contact-form/,/resources/contact/,proposed,Central topic-based contact page
+/newsletter/,/news/,needs-review,Determine whether subscription remains a separate destination
