@@ -1,0 +1,13 @@
+const assert = require('node:assert/strict');
+const { matches, dataAllowed, score } = require('./chooser.js');
+const tool = { name:'Example Assistant', summary:'Draft and analyze', names:{aicsu_task:'Writing'}, approved:true, terms:{aicsu_task:['writing','analysis'],aicsu_data:['public-information','ferpa-student-records'],aicsu_role:['staff']} };
+assert(matches(tool, {}, 'example'));
+assert(matches(tool, {aicsu_task:['images','writing']}, ''));
+assert(!matches(tool, {aicsu_task:['writing'],aicsu_role:['student']}, ''));
+assert(!matches(tool, {}, 'not present'));
+assert(matches(tool, {aicsu_data:['ferpa-student-records']}, ''));
+assert(!dataAllowed(tool, {aicsu_data:['ferpa-student-records','hipaa-health']}));
+assert(!dataAllowed({...tool,approved:false}, {aicsu_data:['public-information','ferpa-student-records']}));
+assert(!dataAllowed({...tool,approved:true,terms:{}}, {aicsu_data:['ferpa-student-records']}));
+assert.equal(score(tool, {aicsu_task:['writing','analysis'],aicsu_role:['staff']}),3);
+console.log('PASS: search, OR within groups, AND across groups, sensitive-data checks, match scoring');

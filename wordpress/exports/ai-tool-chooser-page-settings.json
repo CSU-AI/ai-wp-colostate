@@ -1,0 +1,12 @@
+{
+  "title": "AI Tool Chooser | Proof of Concept",
+  "slug": "ai-tool-chooser-poc",
+  "status": "draft",
+  "template": "default",
+  "local_post_id": 52,
+  "settings": {
+    "template": "default",
+    "hide_title": "yes",
+    "custom_css": "body.page-id-52 .page-header { display: none; }"
+  }
+}

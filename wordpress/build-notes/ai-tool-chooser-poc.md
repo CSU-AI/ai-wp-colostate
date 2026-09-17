@@ -1,8 +1,8 @@
 # AI Tool Chooser proof of concept
 
-Built locally on 2026-09-11 and rechecked on 2026-09-17. The chooser page is published only on Local for review; all 12 tool records remain drafts.
+Built locally on 2026-09-11 and rechecked on 2026-09-17. The chooser page and all 12 tool records remain drafts; rendering is verified for both draft previews and published pages.
 
-- Local page: https://multisite.local/ai/?page_id=52
+- Preview: https://multisite.local/ai/?page_id=52&preview=true (requires WordPress login).
 - Elementor editor: https://multisite.local/ai/wp-admin/post.php?post=52&action=elementor
 - Sample tools: post IDs 40 through 51, all drafts, marked with `aicsu_demo=1`.
 - Page copy: `content/planned/ai-tool-chooser-poc.md`.

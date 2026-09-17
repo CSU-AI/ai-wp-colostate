@@ -1,0 +1,687 @@
+[
+  {
+    "post_id": 40,
+    "title": "Microsoft Copilot Chat",
+    "meta": {
+      "status": "approved",
+      "approved_for_sensitive": 1,
+      "cost": "Included with CSU NetID",
+      "tool_url": "https://copilot.microsoft.com/",
+      "aicsu_demo": 1
+    },
+    "highlights": [
+      "Enterprise Chat",
+      "Web Search",
+      "PDF Chat"
+    ],
+    "terms": {
+      "aicsu_task": [
+        38,
+        39,
+        40,
+        41
+      ],
+      "aicsu_data": [
+        12,
+        13,
+        14,
+        22,
+        17,
+        18,
+        20,
+        21,
+        23
+      ],
+      "aicsu_role": [
+        28,
+        29,
+        30,
+        31
+      ],
+      "aicsu_output": [
+        "Text",
+        "Reports"
+      ],
+      "aicsu_source": [
+        32,
+        33,
+        36
+      ],
+      "aicsu_collab": [
+        4,
+        5
+      ],
+      "aicsu_frequency": [
+        24,
+        25,
+        26
+      ],
+      "aicsu_complexity": [
+        8,
+        9
+      ]
+    }
+  },
+  {
+    "post_id": 41,
+    "title": "Microsoft 365 Copilot (Premium)",
+    "meta": {
+      "status": "approved",
+      "approved_for_sensitive": 1,
+      "cost": "~$30/user/mo License",
+      "tool_url": "",
+      "aicsu_demo": 1
+    },
+    "highlights": [
+      "Graph Integration",
+      "Outlook & Teams",
+      "PPT Creation"
+    ],
+    "terms": {
+      "aicsu_task": [
+        38,
+        39,
+        40,
+        42,
+        47
+      ],
+      "aicsu_data": [
+        15,
+        16,
+        14,
+        22,
+        17,
+        23,
+        21,
+        13
+      ],
+      "aicsu_role": [
+        28,
+        29
+      ],
+      "aicsu_output": [
+        "Text",
+        "Reports",
+        "Slides",
+        "Data Analysis",
+        "Meeting Recaps"
+      ],
+      "aicsu_source": [
+        34,
+        35,
+        37
+      ],
+      "aicsu_collab": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "aicsu_frequency": [
+        26,
+        27
+      ],
+      "aicsu_complexity": [
+        9
+      ]
+    }
+  },
+  {
+    "post_id": 42,
+    "title": "Copilot Agents",
+    "meta": {
+      "status": "approved",
+      "approved_for_sensitive": 1,
+      "cost": "Copilot Studio / M365",
+      "tool_url": "https://copilotstudio.microsoft.com/",
+      "aicsu_demo": 1
+    },
+    "highlights": [
+      "Copilot Studio",
+      "Workflow Automation",
+      "Custom Agents"
+    ],
+    "terms": {
+      "aicsu_task": [
+        44,
+        45,
+        47
+      ],
+      "aicsu_data": [
+        15,
+        16,
+        23,
+        13
+      ],
+      "aicsu_role": [
+        28,
+        29
+      ],
+      "aicsu_output": [
+        "Workflow",
+        "Text"
+      ],
+      "aicsu_source": [
+        34,
+        35
+      ],
+      "aicsu_collab": [
+        5,
+        6,
+        7
+      ],
+      "aicsu_frequency": [
+        26,
+        27
+      ],
+      "aicsu_complexity": [
+        9,
+        10,
+        11
+      ]
+    }
+  },
+  {
+    "post_id": 43,
+    "title": "Copilot Cowork",
+    "meta": {
+      "status": "pilot",
+      "approved_for_sensitive": 0,
+      "cost": "Pilot / Strategy Team",
+      "tool_url": "",
+      "aicsu_demo": 1
+    },
+    "highlights": [
+      "Autonomous Agent",
+      "Multi-Step Task",
+      "Pilot Phase"
+    ],
+    "terms": {
+      "aicsu_task": [
+        44,
+        47,
+        45
+      ],
+      "aicsu_data": [
+        15,
+        14,
+        16
+      ],
+      "aicsu_role": [
+        28,
+        29
+      ],
+      "aicsu_output": [
+        "Text",
+        "Reports",
+        "Workflow"
+      ],
+      "aicsu_source": [
+        34,
+        37
+      ],
+      "aicsu_collab": [
+        5,
+        6
+      ],
+      "aicsu_frequency": [
+        26
+      ],
+      "aicsu_complexity": [
+        9,
+        10
+      ]
+    }
+  },
+  {
+    "post_id": 44,
+    "title": "Microsoft Foundry / Azure AI Foundry",
+    "meta": {
+      "status": "approved",
+      "approved_for_sensitive": 1,
+      "cost": "Pay-As-You-Go Azure",
+      "tool_url": "https://ai.azure.com/",
+      "aicsu_demo": 1
+    },
+    "highlights": [
+      "Azure SDK/API",
+      "Enterprise RAG",
+      "Developer Platform"
+    ],
+    "terms": {
+      "aicsu_task": [
+        45,
+        46,
+        44
+      ],
+      "aicsu_data": [
+        20,
+        23,
+        19,
+        13
+      ],
+      "aicsu_role": [
+        28,
+        29,
+        31
+      ],
+      "aicsu_output": [
+        "Code",
+        "Data Analysis",
+        "Workflow"
+      ],
+      "aicsu_source": [
+        37
+      ],
+      "aicsu_collab": [
+        6,
+        7
+      ],
+      "aicsu_frequency": [
+        26,
+        27
+      ],
+      "aicsu_complexity": [
+        11
+      ]
+    }
+  },
+  {
+    "post_id": 45,
+    "title": "Microsoft Teams Premium AI",
+    "meta": {
+      "status": "approved",
+      "approved_for_sensitive": 1,
+      "cost": "~$29/user/yr License",
+      "tool_url": "",
+      "aicsu_demo": 1
+    },
+    "highlights": [
+      "AI Recaps",
+      "Meeting Notes",
+      "Teams Native"
+    ],
+    "terms": {
+      "aicsu_task": [
+        39
+      ],
+      "aicsu_data": [
+        15,
+        22,
+        17,
+        18,
+        21,
+        23,
+        13
+      ],
+      "aicsu_role": [
+        28,
+        29
+      ],
+      "aicsu_output": [
+        "Meeting Recaps"
+      ],
+      "aicsu_source": [],
+      "aicsu_collab": [
+        5,
+        6,
+        7
+      ],
+      "aicsu_frequency": [
+        26
+      ],
+      "aicsu_complexity": [
+        8,
+        9
+      ]
+    }
+  },
+  {
+    "post_id": 46,
+    "title": "CSU-GPT",
+    "meta": {
+      "status": "approved",
+      "approved_for_sensitive": 1,
+      "cost": "Free for All CSU NetIDs",
+      "tool_url": "https://chat.colostate.edu/",
+      "aicsu_demo": 1
+    },
+    "highlights": [
+      "Azure OpenAI",
+      "chat.colostate.edu",
+      "Agent Builder"
+    ],
+    "terms": {
+      "aicsu_task": [
+        38,
+        39,
+        40,
+        41,
+        45
+      ],
+      "aicsu_data": [
+        12,
+        13,
+        14,
+        15,
+        22,
+        17,
+        18,
+        20,
+        21,
+        23
+      ],
+      "aicsu_role": [
+        28,
+        29,
+        30,
+        31
+      ],
+      "aicsu_output": [
+        "Text",
+        "Reports",
+        "Data Analysis"
+      ],
+      "aicsu_source": [
+        32,
+        33,
+        36,
+        37
+      ],
+      "aicsu_collab": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "aicsu_frequency": [
+        24,
+        25,
+        26
+      ],
+      "aicsu_complexity": [
+        8,
+        9,
+        10
+      ]
+    }
+  },
+  {
+    "post_id": 47,
+    "title": "RamGPT",
+    "meta": {
+      "status": "approved",
+      "approved_for_sensitive": 1,
+      "cost": "Free (Faculty & TILT)",
+      "tool_url": "",
+      "aicsu_demo": 1
+    },
+    "highlights": [
+      "TILT Supported",
+      "Course Design",
+      "Teaching AI"
+    ],
+    "terms": {
+      "aicsu_task": [
+        38,
+        39,
+        41,
+        45
+      ],
+      "aicsu_data": [
+        13,
+        14
+      ],
+      "aicsu_role": [
+        28,
+        29
+      ],
+      "aicsu_output": [
+        "Text",
+        "Reports"
+      ],
+      "aicsu_source": [
+        32,
+        33
+      ],
+      "aicsu_collab": [
+        4,
+        5,
+        6
+      ],
+      "aicsu_frequency": [
+        24,
+        25
+      ],
+      "aicsu_complexity": [
+        8,
+        9
+      ]
+    }
+  },
+  {
+    "post_id": 48,
+    "title": "Anthropic Claude (Claude.ai)",
+    "meta": {
+      "status": "pilot",
+      "approved_for_sensitive": 0,
+      "cost": "Free / Enterprise Pilot",
+      "tool_url": "https://claude.ai/",
+      "aicsu_demo": 1
+    },
+    "highlights": [
+      "Long Context",
+      "Reasoning",
+      "Enterprise Pilot"
+    ],
+    "terms": {
+      "aicsu_task": [
+        38,
+        39,
+        40,
+        41,
+        46
+      ],
+      "aicsu_data": [
+        12,
+        13,
+        14
+      ],
+      "aicsu_role": [
+        28,
+        29,
+        30,
+        31
+      ],
+      "aicsu_output": [
+        "Text",
+        "Reports",
+        "Code"
+      ],
+      "aicsu_source": [
+        32,
+        33,
+        36,
+        37
+      ],
+      "aicsu_collab": [
+        4,
+        5,
+        6
+      ],
+      "aicsu_frequency": [
+        26
+      ],
+      "aicsu_complexity": [
+        9,
+        10
+      ]
+    }
+  },
+  {
+    "post_id": 49,
+    "title": "Google Gemini",
+    "meta": {
+      "status": "public_only",
+      "approved_for_sensitive": 0,
+      "cost": "Free / Commercial SaaS",
+      "tool_url": "https://gemini.google.com/",
+      "aicsu_demo": 1
+    },
+    "highlights": [
+      "Google Grounding",
+      "Multimodal",
+      "Public Only"
+    ],
+    "terms": {
+      "aicsu_task": [
+        38,
+        39,
+        41,
+        43,
+        42
+      ],
+      "aicsu_data": [
+        12,
+        13
+      ],
+      "aicsu_role": [
+        28,
+        29,
+        30
+      ],
+      "aicsu_output": [
+        "Text",
+        "Slides",
+        "Images"
+      ],
+      "aicsu_source": [
+        32,
+        36
+      ],
+      "aicsu_collab": [
+        4
+      ],
+      "aicsu_frequency": [
+        24
+      ],
+      "aicsu_complexity": [
+        8,
+        9
+      ]
+    }
+  },
+  {
+    "post_id": 50,
+    "title": "ChatGPT (OpenAI)",
+    "meta": {
+      "status": "public_only",
+      "approved_for_sensitive": 0,
+      "cost": "Free / $20/mo Plus",
+      "tool_url": "https://chatgpt.com/",
+      "aicsu_demo": 1
+    },
+    "highlights": [
+      "General AI",
+      "DALL-E Images",
+      "Public Only"
+    ],
+    "terms": {
+      "aicsu_task": [
+        38,
+        39,
+        41,
+        43,
+        46
+      ],
+      "aicsu_data": [
+        12,
+        13
+      ],
+      "aicsu_role": [
+        28,
+        29,
+        30
+      ],
+      "aicsu_output": [
+        "Text",
+        "Images",
+        "Code",
+        "Data Analysis"
+      ],
+      "aicsu_source": [
+        32,
+        33,
+        36
+      ],
+      "aicsu_collab": [
+        4
+      ],
+      "aicsu_frequency": [
+        24,
+        26
+      ],
+      "aicsu_complexity": [
+        8,
+        9
+      ]
+    }
+  },
+  {
+    "post_id": 51,
+    "title": "Ollama (Local Offline Models)",
+    "meta": {
+      "status": "approved",
+      "approved_for_sensitive": 1,
+      "cost": "Free / Open Source",
+      "tool_url": "https://ollama.com/",
+      "aicsu_demo": 1
+    },
+    "highlights": [
+      "Offline Privacy",
+      "Local GPU",
+      "Open Source"
+    ],
+    "terms": {
+      "aicsu_task": [
+        38,
+        39,
+        40,
+        46,
+        45
+      ],
+      "aicsu_data": [
+        12,
+        13,
+        14,
+        20
+      ],
+      "aicsu_role": [
+        28,
+        29,
+        31
+      ],
+      "aicsu_output": [
+        "Text",
+        "Code",
+        "Data Analysis"
+      ],
+      "aicsu_source": [
+        32,
+        33
+      ],
+      "aicsu_collab": [
+        4,
+        5
+      ],
+      "aicsu_frequency": [
+        26,
+        27
+      ],
+      "aicsu_complexity": [
+        10,
+        11
+      ]
+    }
+  }
+]
