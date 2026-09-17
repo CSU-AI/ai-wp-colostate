@@ -93,7 +93,7 @@
       ['Feature', ...picked.map(tool => tool.name)].forEach(name => { const th = make('th', name); th.scope = 'col'; tr.appendChild(th); });
       head.appendChild(tr); table.appendChild(head);
       const body = make('tbody', '');
-      const rows = [['Status', tool => tool.status], ['Cost', tool => tool.cost || 'Not provided'], ['Description', tool => tool.summary], ['Best For', tool => tool.names.aicsu_task], ['Data Classifications', tool => tool.names.aicsu_data], ['Output', tool => tool.names.aicsu_output], ['Technical Comfort', tool => tool.names.aicsu_complexity], ['Roles', tool => tool.names.aicsu_role]];
+      const rows = [['Status', tool => tool.status], ['Cost', tool => tool.cost || 'Not provided'], ['Description', tool => tool.summary], ['Best For', tool => tool.names.aicsu_task], ['Data Classifications', tool => tool.names.aicsu_data], ['Technical Comfort', tool => tool.names.aicsu_complexity], ['Roles', tool => tool.names.aicsu_role]];
       rows.forEach(([label, value]) => {
         const row = make('tr', ''); const th = make('th', label); th.scope = 'row'; row.appendChild(th);
         picked.forEach(tool => row.appendChild(make('td', value(tool) || 'Not specified'))); body.appendChild(row);

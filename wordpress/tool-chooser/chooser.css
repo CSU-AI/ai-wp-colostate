@@ -21,8 +21,6 @@
 .ac-form legend { font-size:16px; font-weight:700; padding:0; margin-bottom:10px; }
 .ac-form label { display:flex; gap:10px; align-items:flex-start; font-size:15px; padding:6px 0; cursor:pointer; }
 .ac-form input[type=checkbox] { accent-color:var(--ac-green); width:18px; height:18px; flex:0 0 18px; margin:3px 0 0; }
-.ac-refine { margin:20px 0; }
-.ac-refine summary { font-size:16px; }
 .ac-toolbar { display:flex; gap:20px; margin:0 0 26px; align-items:end; }
 .ac-toolbar label { display:block; font-size:14px; font-weight:700; }
 .ac-search { flex:1; min-width:0; }

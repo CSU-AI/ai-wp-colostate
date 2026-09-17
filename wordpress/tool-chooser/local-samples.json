@@ -15,11 +15,11 @@
       "PDF Chat"
     ],
     "terms": {
-      "aicsu_task": [
-        38,
-        39,
-        40,
-        41
+      "aicsu_role": [
+        28,
+        29,
+        30,
+        31
       ],
       "aicsu_data": [
         12,
@@ -32,29 +32,11 @@
         21,
         23
       ],
-      "aicsu_role": [
-        28,
-        29,
-        30,
-        31
-      ],
-      "aicsu_output": [
-        "Text",
-        "Reports"
-      ],
-      "aicsu_source": [
-        32,
-        33,
-        36
-      ],
-      "aicsu_collab": [
-        4,
-        5
-      ],
-      "aicsu_frequency": [
-        24,
-        25,
-        26
+      "aicsu_task": [
+        38,
+        39,
+        40,
+        41
       ],
       "aicsu_complexity": [
         8,
@@ -78,12 +60,9 @@
       "PPT Creation"
     ],
     "terms": {
-      "aicsu_task": [
-        38,
-        39,
-        40,
-        42,
-        47
+      "aicsu_role": [
+        28,
+        29
       ],
       "aicsu_data": [
         15,
@@ -95,31 +74,12 @@
         21,
         13
       ],
-      "aicsu_role": [
-        28,
-        29
-      ],
-      "aicsu_output": [
-        "Text",
-        "Reports",
-        "Slides",
-        "Data Analysis",
-        "Meeting Recaps"
-      ],
-      "aicsu_source": [
-        34,
-        35,
-        37
-      ],
-      "aicsu_collab": [
-        4,
-        5,
-        6,
-        7
-      ],
-      "aicsu_frequency": [
-        26,
-        27
+      "aicsu_task": [
+        38,
+        39,
+        40,
+        42,
+        47
       ],
       "aicsu_complexity": [
         9
@@ -142,10 +102,9 @@
       "Custom Agents"
     ],
     "terms": {
-      "aicsu_task": [
-        44,
-        45,
-        47
+      "aicsu_role": [
+        28,
+        29
       ],
       "aicsu_data": [
         15,
@@ -153,26 +112,10 @@
         23,
         13
       ],
-      "aicsu_role": [
-        28,
-        29
-      ],
-      "aicsu_output": [
-        "Workflow",
-        "Text"
-      ],
-      "aicsu_source": [
-        34,
-        35
-      ],
-      "aicsu_collab": [
-        5,
-        6,
-        7
-      ],
-      "aicsu_frequency": [
-        26,
-        27
+      "aicsu_task": [
+        44,
+        45,
+        47
       ],
       "aicsu_complexity": [
         9,
@@ -197,35 +140,19 @@
       "Pilot Phase"
     ],
     "terms": {
-      "aicsu_task": [
-        44,
-        47,
-        45
+      "aicsu_role": [
+        28,
+        29
       ],
       "aicsu_data": [
         15,
         14,
         16
       ],
-      "aicsu_role": [
-        28,
-        29
-      ],
-      "aicsu_output": [
-        "Text",
-        "Reports",
-        "Workflow"
-      ],
-      "aicsu_source": [
-        34,
-        37
-      ],
-      "aicsu_collab": [
-        5,
-        6
-      ],
-      "aicsu_frequency": [
-        26
+      "aicsu_task": [
+        44,
+        47,
+        45
       ],
       "aicsu_complexity": [
         9,
@@ -249,10 +176,10 @@
       "Developer Platform"
     ],
     "terms": {
-      "aicsu_task": [
-        45,
-        46,
-        44
+      "aicsu_role": [
+        28,
+        29,
+        31
       ],
       "aicsu_data": [
         20,
@@ -260,26 +187,10 @@
         19,
         13
       ],
-      "aicsu_role": [
-        28,
-        29,
-        31
-      ],
-      "aicsu_output": [
-        "Code",
-        "Data Analysis",
-        "Workflow"
-      ],
-      "aicsu_source": [
-        37
-      ],
-      "aicsu_collab": [
-        6,
-        7
-      ],
-      "aicsu_frequency": [
-        26,
-        27
+      "aicsu_task": [
+        45,
+        46,
+        44
       ],
       "aicsu_complexity": [
         11
@@ -302,8 +213,9 @@
       "Teams Native"
     ],
     "terms": {
-      "aicsu_task": [
-        39
+      "aicsu_role": [
+        28,
+        29
       ],
       "aicsu_data": [
         15,
@@ -314,21 +226,8 @@
         23,
         13
       ],
-      "aicsu_role": [
-        28,
-        29
-      ],
-      "aicsu_output": [
-        "Meeting Recaps"
-      ],
-      "aicsu_source": [],
-      "aicsu_collab": [
-        5,
-        6,
-        7
-      ],
-      "aicsu_frequency": [
-        26
+      "aicsu_task": [
+        39
       ],
       "aicsu_complexity": [
         8,
@@ -352,12 +251,11 @@
       "Agent Builder"
     ],
     "terms": {
-      "aicsu_task": [
-        38,
-        39,
-        40,
-        41,
-        45
+      "aicsu_role": [
+        28,
+        29,
+        30,
+        31
       ],
       "aicsu_data": [
         12,
@@ -371,33 +269,12 @@
         21,
         23
       ],
-      "aicsu_role": [
-        28,
-        29,
-        30,
-        31
-      ],
-      "aicsu_output": [
-        "Text",
-        "Reports",
-        "Data Analysis"
-      ],
-      "aicsu_source": [
-        32,
-        33,
-        36,
-        37
-      ],
-      "aicsu_collab": [
-        4,
-        5,
-        6,
-        7
-      ],
-      "aicsu_frequency": [
-        24,
-        25,
-        26
+      "aicsu_task": [
+        38,
+        39,
+        40,
+        41,
+        45
       ],
       "aicsu_complexity": [
         8,
@@ -422,36 +299,19 @@
       "Teaching AI"
     ],
     "terms": {
-      "aicsu_task": [
-        38,
-        39,
-        41,
-        45
+      "aicsu_role": [
+        28,
+        29
       ],
       "aicsu_data": [
         13,
         14
       ],
-      "aicsu_role": [
-        28,
-        29
-      ],
-      "aicsu_output": [
-        "Text",
-        "Reports"
-      ],
-      "aicsu_source": [
-        32,
-        33
-      ],
-      "aicsu_collab": [
-        4,
-        5,
-        6
-      ],
-      "aicsu_frequency": [
-        24,
-        25
+      "aicsu_task": [
+        38,
+        39,
+        41,
+        45
       ],
       "aicsu_complexity": [
         8,
@@ -475,42 +335,23 @@
       "Enterprise Pilot"
     ],
     "terms": {
-      "aicsu_task": [
-        38,
-        39,
-        40,
-        41,
-        46
-      ],
-      "aicsu_data": [
-        12,
-        13,
-        14
-      ],
       "aicsu_role": [
         28,
         29,
         30,
         31
       ],
-      "aicsu_output": [
-        "Text",
-        "Reports",
-        "Code"
+      "aicsu_data": [
+        12,
+        13,
+        14
       ],
-      "aicsu_source": [
-        32,
-        33,
-        36,
-        37
-      ],
-      "aicsu_collab": [
-        4,
-        5,
-        6
-      ],
-      "aicsu_frequency": [
-        26
+      "aicsu_task": [
+        38,
+        39,
+        40,
+        41,
+        46
       ],
       "aicsu_complexity": [
         9,
@@ -534,36 +375,21 @@
       "Public Only"
     ],
     "terms": {
+      "aicsu_role": [
+        28,
+        29,
+        30
+      ],
+      "aicsu_data": [
+        12,
+        13
+      ],
       "aicsu_task": [
         38,
         39,
         41,
         43,
         42
-      ],
-      "aicsu_data": [
-        12,
-        13
-      ],
-      "aicsu_role": [
-        28,
-        29,
-        30
-      ],
-      "aicsu_output": [
-        "Text",
-        "Slides",
-        "Images"
-      ],
-      "aicsu_source": [
-        32,
-        36
-      ],
-      "aicsu_collab": [
-        4
-      ],
-      "aicsu_frequency": [
-        24
       ],
       "aicsu_complexity": [
         8,
@@ -587,39 +413,21 @@
       "Public Only"
     ],
     "terms": {
+      "aicsu_role": [
+        28,
+        29,
+        30
+      ],
+      "aicsu_data": [
+        12,
+        13
+      ],
       "aicsu_task": [
         38,
         39,
         41,
         43,
         46
-      ],
-      "aicsu_data": [
-        12,
-        13
-      ],
-      "aicsu_role": [
-        28,
-        29,
-        30
-      ],
-      "aicsu_output": [
-        "Text",
-        "Images",
-        "Code",
-        "Data Analysis"
-      ],
-      "aicsu_source": [
-        32,
-        33,
-        36
-      ],
-      "aicsu_collab": [
-        4
-      ],
-      "aicsu_frequency": [
-        24,
-        26
       ],
       "aicsu_complexity": [
         8,
@@ -643,12 +451,10 @@
       "Open Source"
     ],
     "terms": {
-      "aicsu_task": [
-        38,
-        39,
-        40,
-        46,
-        45
+      "aicsu_role": [
+        28,
+        29,
+        31
       ],
       "aicsu_data": [
         12,
@@ -656,27 +462,12 @@
         14,
         20
       ],
-      "aicsu_role": [
-        28,
-        29,
-        31
-      ],
-      "aicsu_output": [
-        "Text",
-        "Code",
-        "Data Analysis"
-      ],
-      "aicsu_source": [
-        32,
-        33
-      ],
-      "aicsu_collab": [
-        4,
-        5
-      ],
-      "aicsu_frequency": [
-        26,
-        27
+      "aicsu_task": [
+        38,
+        39,
+        40,
+        46,
+        45
       ],
       "aicsu_complexity": [
         10,

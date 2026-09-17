@@ -16,12 +16,10 @@
     "Open Source"
   ],
   "taxonomies": {
-    "aicsu_task": [
-      "analyze-documents",
-      "build-agent",
-      "code",
-      "draft-writing",
-      "summarize"
+    "aicsu_role": [
+      "faculty",
+      "researcher",
+      "staff"
     ],
     "aicsu_data": [
       "confidential-research",
@@ -29,27 +27,12 @@
       "no-csu-data",
       "public-information"
     ],
-    "aicsu_role": [
-      "faculty",
-      "researcher",
-      "staff"
-    ],
-    "aicsu_output": [
+    "aicsu_task": [
+      "analyze-documents",
+      "build-agent",
       "code",
-      "data-analysis",
-      "text"
-    ],
-    "aicsu_source": [
-      "direct-prompt",
-      "uploaded-files"
-    ],
-    "aicsu_collab": [
-      "individual",
-      "work-group"
-    ],
-    "aicsu_frequency": [
-      "automated",
-      "daily"
+      "draft-writing",
+      "summarize"
     ],
     "aicsu_complexity": [
       "advanced",

@@ -16,10 +16,10 @@
     "Developer Platform"
   ],
   "taxonomies": {
-    "aicsu_task": [
-      "automation",
-      "build-agent",
-      "code"
+    "aicsu_role": [
+      "faculty",
+      "researcher",
+      "staff"
     ],
     "aicsu_data": [
       "confidential-research",
@@ -27,26 +27,10 @@
       "public-information",
       "sensitive-business"
     ],
-    "aicsu_role": [
-      "faculty",
-      "researcher",
-      "staff"
-    ],
-    "aicsu_output": [
-      "code",
-      "data-analysis",
-      "workflow"
-    ],
-    "aicsu_source": [
-      "multiple-sources"
-    ],
-    "aicsu_collab": [
-      "department",
-      "university"
-    ],
-    "aicsu_frequency": [
-      "automated",
-      "daily"
+    "aicsu_task": [
+      "automation",
+      "build-agent",
+      "code"
     ],
     "aicsu_complexity": [
       "developer"

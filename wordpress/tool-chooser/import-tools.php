@@ -6,7 +6,7 @@ if (!defined('WP_CLI') || !WP_CLI || home_url() !== 'https://multisite.local/ai'
 
 try {
 $directory = dirname(__DIR__, 2) . '/content/planned/tools/directory';
-$taxonomies = ['aicsu_task', 'aicsu_data', 'aicsu_role', 'aicsu_output', 'aicsu_source', 'aicsu_collab', 'aicsu_frequency', 'aicsu_complexity'];
+$taxonomies = ['aicsu_role', 'aicsu_data', 'aicsu_task', 'aicsu_complexity'];
 $sensitive = ['ferpa-student-records', 'hipaa-health', 'export-controlled', 'confidential-research', 'personnel-hr', 'financial', 'sensitive-business'];
 $field_keys = ['status' => 'field_6a861cf9bd6c4', 'approved_for_sensitive' => 'field_6a861d6dadeaf', 'cost' => 'field_6a861d9cadeb0', 'tool_url' => 'field_6a861dbbadeb1'];
 $dry_run = getenv('AICSU_TOOL_IMPORT_DRY_RUN') === '1';

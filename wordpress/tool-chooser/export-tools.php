@@ -4,7 +4,7 @@ if (!defined('WP_CLI') || !WP_CLI || home_url() !== 'https://multisite.local/ai'
     throw new RuntimeException('This exporter is restricted to the local AI subsite.');
 }
 
-$taxonomies = ['aicsu_task', 'aicsu_data', 'aicsu_role', 'aicsu_output', 'aicsu_source', 'aicsu_collab', 'aicsu_frequency', 'aicsu_complexity'];
+$taxonomies = ['aicsu_role', 'aicsu_data', 'aicsu_task', 'aicsu_complexity'];
 $tools = [];
 foreach (get_posts(['post_type' => 'aicsu_tool', 'post_status' => 'any', 'posts_per_page' => -1, 'orderby' => ['menu_order' => 'ASC', 'title' => 'ASC']]) as $post) {
     $terms = [];

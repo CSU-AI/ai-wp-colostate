@@ -16,12 +16,9 @@
     "PPT Creation"
   ],
   "taxonomies": {
-    "aicsu_task": [
-      "analyze-documents",
-      "business-process",
-      "draft-writing",
-      "presentations",
-      "summarize"
+    "aicsu_role": [
+      "faculty",
+      "staff"
     ],
     "aicsu_data": [
       "ferpa-student-records",
@@ -33,31 +30,12 @@
       "sensitive-business",
       "sharepoint-teams"
     ],
-    "aicsu_role": [
-      "faculty",
-      "staff"
-    ],
-    "aicsu_output": [
-      "data-analysis",
-      "meeting-recaps",
-      "reports",
-      "slides",
-      "text"
-    ],
-    "aicsu_source": [
-      "m365-tenant",
-      "multiple-sources",
-      "sharepoint-sites"
-    ],
-    "aicsu_collab": [
-      "department",
-      "individual",
-      "university",
-      "work-group"
-    ],
-    "aicsu_frequency": [
-      "automated",
-      "daily"
+    "aicsu_task": [
+      "analyze-documents",
+      "business-process",
+      "draft-writing",
+      "presentations",
+      "summarize"
     ],
     "aicsu_complexity": [
       "intermediate"

@@ -11,13 +11,9 @@ add_shortcode('aicsu_tool_chooser', function () {
         return '<p>The tool directory is unavailable. Please check the ACF configuration.</p>';
     }
     $groups = [
-        'aicsu_task' => 'What Do You Want to Do?',
-        'aicsu_data' => 'What Data Is Involved?',
         'aicsu_role' => 'Who Are You?',
-        'aicsu_output' => 'Desired Output',
-        'aicsu_source' => 'Information Sources',
-        'aicsu_collab' => 'Collaboration',
-        'aicsu_frequency' => 'Frequency',
+        'aicsu_data' => 'What Data Is Involved?',
+        'aicsu_task' => 'What Do You Want to Do?',
         'aicsu_complexity' => 'Technical Comfort',
     ];
     $posts = get_posts([
@@ -65,15 +61,14 @@ add_shortcode('aicsu_tool_chooser', function () {
                 <summary>Filter Tools</summary>
                 <form class="ac-form">
                     <p class="ac-hint">Choose any options within a group. Tools must match every selected group.</p>
-                    <?php $index = 0; foreach ($groups as $taxonomy => $label) : ?>
-                        <?php if ($index++ === 3) : ?><details class="ac-refine"><summary>More Filters</summary><?php endif; ?>
+                    <?php foreach ($groups as $taxonomy => $label) : ?>
                         <fieldset><legend><?php echo esc_html($label); ?></legend>
                             <?php $items = get_terms(['taxonomy' => $taxonomy, 'hide_empty' => false]); ?>
                             <?php foreach (is_array($items) ? $items : [] as $term) : ?>
                                 <label><input type="checkbox" name="<?php echo esc_attr($taxonomy); ?>" value="<?php echo esc_attr($term->slug); ?>"> <span><?php echo esc_html($term->name); ?></span></label>
                             <?php endforeach; ?>
                         </fieldset>
-                    <?php endforeach; ?></details>
+                    <?php endforeach; ?>
                     <button type="reset" class="ac-secondary">Reset Filters</button>
                 </form>
             </details>

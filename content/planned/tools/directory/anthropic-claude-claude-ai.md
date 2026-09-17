@@ -16,42 +16,23 @@
     "Enterprise Pilot"
   ],
   "taxonomies": {
-    "aicsu_task": [
-      "analyze-documents",
-      "code",
-      "draft-writing",
-      "research",
-      "summarize"
-    ],
-    "aicsu_data": [
-      "my-own-files",
-      "no-csu-data",
-      "public-information"
-    ],
     "aicsu_role": [
       "faculty",
       "researcher",
       "staff",
       "student"
     ],
-    "aicsu_output": [
+    "aicsu_data": [
+      "my-own-files",
+      "no-csu-data",
+      "public-information"
+    ],
+    "aicsu_task": [
+      "analyze-documents",
       "code",
-      "reports",
-      "text"
-    ],
-    "aicsu_source": [
-      "direct-prompt",
-      "multiple-sources",
-      "uploaded-files",
-      "web-search"
-    ],
-    "aicsu_collab": [
-      "department",
-      "individual",
-      "work-group"
-    ],
-    "aicsu_frequency": [
-      "daily"
+      "draft-writing",
+      "research",
+      "summarize"
     ],
     "aicsu_complexity": [
       "advanced",

@@ -35,20 +35,15 @@ copy of the safety information; the coloured badge is only an upgrade.
 
 ## 2. Taxonomies — ACF › Taxonomies › Add New
 
-Nine would be a wall of ~60 checkboxes, ANDed, over 20 tools — an empty result
-set most of the time. Three primary, five in a collapsed "Refine" group.
-Layers 2 and 3 of the wireframe are merged: "what data are you working with"
-and "how is it classified" are the same question asked twice.
+The active chooser uses four questions. Layers 2 and 3 of the wireframe are
+merged: "what data are you working with" and "how is it classified" are the
+same question asked twice.
 
 All taxonomies: **Public: Yes**, **Hierarchical: No**, **Show in REST: Yes**,
 assigned to `aicsu_tool`.
 
-### Primary
-
-**`aicsu_task`** — What are you trying to do?
-`draft-writing` · `summarize` · `analyze-documents` · `research` ·
-`presentations` · `images` · `automation` · `build-agent` · `code` ·
-`business-process`
+**`aicsu_role`** — Who are you?
+`faculty` · `staff` · `student` · `researcher`
 
 **`aicsu_data`** — What data is involved?
 `no-csu-data` · `public-information` · `my-own-files` · `m365-content` ·
@@ -56,20 +51,10 @@ assigned to `aicsu_tool`.
 `export-controlled` · `confidential-research` · `personnel-hr` · `financial` ·
 `sensitive-business`
 
-**`aicsu_role`** — Who are you?
-`faculty` · `staff` · `student` · `researcher`
-
-### Refine
-
-**`aicsu_output`** — `text` · `reports` · `slides` · `images` · `code` ·
-`data-analysis` · `workflow` · `meeting-recaps`
-
-**`aicsu_source`** — `direct-prompt` · `uploaded-files` · `m365-tenant` ·
-`sharepoint-sites` · `web-search` · `multiple-sources`
-
-**`aicsu_collab`** — `individual` · `work-group` · `department` · `university`
-
-**`aicsu_frequency`** — `one-time` · `weekly` · `daily` · `automated`
+**`aicsu_task`** — What are you trying to do?
+`draft-writing` · `summarize` · `analyze-documents` · `research` ·
+`presentations` · `images` · `automation` · `build-agent` · `code` ·
+`business-process`
 
 **`aicsu_complexity`** — `beginner` · `intermediate` · `advanced` · `developer`
 
@@ -115,8 +100,7 @@ Location rule: Post Type is equal to Tool.
 New form, **Post Type: Tool**.
 
 Fields, all **Checkboxes**, all **Operator / Match: Any (OR)**:
-`aicsu_task`, `aicsu_data`, `aicsu_role`, `aicsu_output`, `aicsu_source`,
-`aicsu_collab`, `aicsu_frequency`, `aicsu_complexity`.
+`aicsu_role`, `aicsu_data`, `aicsu_task`, `aicsu_complexity`.
 
 Then set the **relationship between taxonomy fields to AND**.
 
@@ -129,9 +113,9 @@ no code. Do not carry the wireframe's logic across.
 Other settings: Display Results **via AJAX**, Auto-update results **on**,
 Posts per page **-1** (20 tools, no pagination), Order by `menu_order`.
 
-Because every layer ANDs, an over-checked form empties fast. Keep the three
-primary layers visible and put the other five in a `<details>` block styled by
-`.aicsu-finder-refine`.
+Because every layer ANDs, an over-checked form empties fast. Keep all four
+questions visible and do not add secondary filters without a demonstrated
+selection need.
 
 ## 5. Rendering — Elementor loop
 

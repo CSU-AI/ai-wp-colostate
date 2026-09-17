@@ -16,35 +16,19 @@
     "Pilot Phase"
   ],
   "taxonomies": {
-    "aicsu_task": [
-      "automation",
-      "build-agent",
-      "business-process"
+    "aicsu_role": [
+      "faculty",
+      "staff"
     ],
     "aicsu_data": [
       "m365-content",
       "my-own-files",
       "sharepoint-teams"
     ],
-    "aicsu_role": [
-      "faculty",
-      "staff"
-    ],
-    "aicsu_output": [
-      "reports",
-      "text",
-      "workflow"
-    ],
-    "aicsu_source": [
-      "m365-tenant",
-      "multiple-sources"
-    ],
-    "aicsu_collab": [
-      "department",
-      "work-group"
-    ],
-    "aicsu_frequency": [
-      "daily"
+    "aicsu_task": [
+      "automation",
+      "build-agent",
+      "business-process"
     ],
     "aicsu_complexity": [
       "advanced",

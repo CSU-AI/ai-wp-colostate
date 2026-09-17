@@ -16,36 +16,21 @@
     "Public Only"
   ],
   "taxonomies": {
+    "aicsu_role": [
+      "faculty",
+      "staff",
+      "student"
+    ],
+    "aicsu_data": [
+      "no-csu-data",
+      "public-information"
+    ],
     "aicsu_task": [
       "draft-writing",
       "images",
       "presentations",
       "research",
       "summarize"
-    ],
-    "aicsu_data": [
-      "no-csu-data",
-      "public-information"
-    ],
-    "aicsu_role": [
-      "faculty",
-      "staff",
-      "student"
-    ],
-    "aicsu_output": [
-      "images",
-      "slides",
-      "text"
-    ],
-    "aicsu_source": [
-      "direct-prompt",
-      "web-search"
-    ],
-    "aicsu_collab": [
-      "individual"
-    ],
-    "aicsu_frequency": [
-      "one-time"
     ],
     "aicsu_complexity": [
       "beginner",

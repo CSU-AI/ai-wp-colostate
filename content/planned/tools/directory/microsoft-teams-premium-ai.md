@@ -16,8 +16,9 @@
     "Teams Native"
   ],
   "taxonomies": {
-    "aicsu_task": [
-      "summarize"
+    "aicsu_role": [
+      "faculty",
+      "staff"
     ],
     "aicsu_data": [
       "ferpa-student-records",
@@ -28,21 +29,8 @@
       "public-information",
       "sensitive-business"
     ],
-    "aicsu_role": [
-      "faculty",
-      "staff"
-    ],
-    "aicsu_output": [
-      "meeting-recaps"
-    ],
-    "aicsu_source": [],
-    "aicsu_collab": [
-      "department",
-      "university",
-      "work-group"
-    ],
-    "aicsu_frequency": [
-      "daily"
+    "aicsu_task": [
+      "summarize"
     ],
     "aicsu_complexity": [
       "beginner",

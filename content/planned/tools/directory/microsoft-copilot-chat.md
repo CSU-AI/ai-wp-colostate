@@ -16,11 +16,11 @@
     "PDF Chat"
   ],
   "taxonomies": {
-    "aicsu_task": [
-      "analyze-documents",
-      "draft-writing",
-      "research",
-      "summarize"
+    "aicsu_role": [
+      "faculty",
+      "researcher",
+      "staff",
+      "student"
     ],
     "aicsu_data": [
       "confidential-research",
@@ -33,29 +33,11 @@
       "public-information",
       "sensitive-business"
     ],
-    "aicsu_role": [
-      "faculty",
-      "researcher",
-      "staff",
-      "student"
-    ],
-    "aicsu_output": [
-      "reports",
-      "text"
-    ],
-    "aicsu_source": [
-      "direct-prompt",
-      "uploaded-files",
-      "web-search"
-    ],
-    "aicsu_collab": [
-      "individual",
-      "work-group"
-    ],
-    "aicsu_frequency": [
-      "daily",
-      "one-time",
-      "weekly"
+    "aicsu_task": [
+      "analyze-documents",
+      "draft-writing",
+      "research",
+      "summarize"
     ],
     "aicsu_complexity": [
       "beginner",

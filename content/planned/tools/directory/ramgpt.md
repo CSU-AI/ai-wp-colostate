@@ -16,36 +16,19 @@
     "Teaching AI"
   ],
   "taxonomies": {
-    "aicsu_task": [
-      "build-agent",
-      "draft-writing",
-      "research",
-      "summarize"
+    "aicsu_role": [
+      "faculty",
+      "staff"
     ],
     "aicsu_data": [
       "my-own-files",
       "public-information"
     ],
-    "aicsu_role": [
-      "faculty",
-      "staff"
-    ],
-    "aicsu_output": [
-      "reports",
-      "text"
-    ],
-    "aicsu_source": [
-      "direct-prompt",
-      "uploaded-files"
-    ],
-    "aicsu_collab": [
-      "department",
-      "individual",
-      "work-group"
-    ],
-    "aicsu_frequency": [
-      "one-time",
-      "weekly"
+    "aicsu_task": [
+      "build-agent",
+      "draft-writing",
+      "research",
+      "summarize"
     ],
     "aicsu_complexity": [
       "beginner",

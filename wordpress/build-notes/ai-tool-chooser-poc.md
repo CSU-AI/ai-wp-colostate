@@ -14,6 +14,8 @@ The existing `aicsu_tool` post type was correctly registered with REST support, 
 
 Corrected the Tool Details field group (22, `group_6a861cf88c190`) location from ordinary posts to `aicsu_tool` and enabled its REST output. Attached Outputs (17, `taxonomy_6a861b4f4fd26`) to `aicsu_tool`. Created the missing output terms while creating samples. Existing fields, taxonomies, and unrelated content were preserved.
 
+On 2026-09-17, Outputs, Sources, Collaborators, and Frequencies were removed after review showed they duplicated stronger questions or did not meaningfully narrow the 12-tool directory. Roles, Data, Tasks, and Complexities remain.
+
 Sample posts and scalar metadata were created through emcp-multisite-local. The MCP post tools write raw post meta rather than ACF field references, so a guarded local WP-CLI helper completed ACF references and the Highlights repeater via `update_field`. ACF readback confirmed the resulting values.
 
 ## Implementation
@@ -25,7 +27,7 @@ The plugin renders cards on the server and adds client-side search, filtering, s
 - OR within each taxonomy group; AND across groups.
 - For sensitive data, all selected sensitive classifications must match, and both the approval status and boolean must agree. A public-data choice cannot bypass this gate.
 - Directory order, name ascending/descending, or match score. DOM order follows sort order.
-- Three primary filter groups and five under More Filters. Mobile filters start collapsed.
+- Four visible filter groups in decision order: role, data, task, and technical comfort. Mobile filters start collapsed.
 - Up to three selections, retained while filtering, with a modal comparison table. Two selections enable comparison. Escape closes the dialog and restores focus.
 - No-JavaScript fallback shows all server-rendered cards with a notice; interactive controls remain hidden.
 - Tool records render whether the chooser page is published or shown as a draft preview.
