@@ -1,19 +1,20 @@
 ---
 {
-  "title": "Google Gemini",
+  "title": "Google Gemini and NotebookLM",
   "slug": "",
   "local_post_id": 49,
   "production_post_id": null,
-  "wordpress_status": "draft",
-  "menu_order": 15,
+  "wordpress_status": "publish",
+  "menu_order": 16,
   "status": "public_only",
   "approved_for_sensitive": false,
-  "cost": "Free / Commercial SaaS",
+  "data_level_ceiling": "level-1-public",
+  "cost": "Free",
   "tool_url": "https://gemini.google.com/",
   "highlights": [
-    "Google Grounding",
-    "Multimodal",
-    "Public Only"
+    "Students get a rams.colostate.edu account",
+    "NotebookLM for study guides",
+    "Public information only"
   ],
   "taxonomies": {
     "aicsu_role": [
@@ -22,8 +23,7 @@
       "student"
     ],
     "aicsu_data": [
-      "no-csu-data",
-      "public-information"
+      "level-1-public"
     ],
     "aicsu_task": [
       "draft-writing",
@@ -37,8 +37,12 @@
       "intermediate"
     ]
   },
-  "demo": true
+  "data_examples": [
+    "no-csu-data",
+    "public-information"
+  ],
+  "demo": false
 }
 ---
 
-Sample data for chooser testing. Google's consumer multimodal model with Google Search grounding. Useful for brainstorming public topics; forbidden for sensitive CSU data.
+CSU students can get a rams.colostate.edu Google account, which includes limited access to Gemini and NotebookLM. NotebookLM in particular is popular for turning readings into study guides and summaries. CSU does not have an enterprise agreement with Google covering AI use, so treat this the same as any consumer tool: public information only, no student records, no personnel data, no unpublished work. If you need to work with CSU data, use Copilot Chat or Nebula One instead.

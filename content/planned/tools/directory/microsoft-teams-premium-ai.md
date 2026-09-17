@@ -1,19 +1,20 @@
 ---
 {
-  "title": "Microsoft Teams Premium AI",
+  "title": "Microsoft Teams Premium",
   "slug": "",
   "local_post_id": 45,
   "production_post_id": null,
-  "wordpress_status": "draft",
+  "wordpress_status": "publish",
   "menu_order": 6,
   "status": "approved",
-  "approved_for_sensitive": true,
-  "cost": "~$29/user/yr License",
+  "approved_for_sensitive": false,
+  "data_level_ceiling": "level-2-internal",
+  "cost": "About $29 per user per year, requested through Freshservice",
   "tool_url": "",
   "highlights": [
-    "AI Recaps",
-    "Meeting Notes",
-    "Teams Native"
+    "Meeting recaps and action items",
+    "Request through Freshservice",
+    "Not needed if you have Copilot Premium"
   ],
   "taxonomies": {
     "aicsu_role": [
@@ -21,13 +22,8 @@
       "staff"
     ],
     "aicsu_data": [
-      "ferpa-student-records",
-      "financial",
-      "hipaa-health",
-      "m365-content",
-      "personnel-hr",
-      "public-information",
-      "sensitive-business"
+      "level-1-public",
+      "level-2-internal"
     ],
     "aicsu_task": [
       "summarize"
@@ -37,8 +33,12 @@
       "intermediate"
     ]
   },
-  "demo": true
+  "data_examples": [
+    "m365-content",
+    "sensitive-business"
+  ],
+  "demo": false
 }
 ---
 
-Sample data for chooser testing. Official CSU-approved meeting intelligence. Generates automated meeting recaps, chapter breakdowns, transcripts, and action items in Teams.
+Adds AI meeting recaps, chapter breakdowns, searchable transcripts, and suggested action items to Teams meetings. Request a license through Freshservice. Before you do, check whether you are getting Copilot Premium: Copilot Premium already covers the AI meeting features, and Teams Premium then only adds large-audience town hall controls such as watermarking. Holding both licenses is usually wasted money.

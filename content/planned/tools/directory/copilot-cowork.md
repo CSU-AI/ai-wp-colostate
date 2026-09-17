@@ -4,16 +4,17 @@
   "slug": "",
   "local_post_id": 43,
   "production_post_id": null,
-  "wordpress_status": "draft",
+  "wordpress_status": "publish",
   "menu_order": 4,
   "status": "pilot",
   "approved_for_sensitive": false,
-  "cost": "Pilot / Strategy Team",
+  "data_level_ceiling": "level-2-internal",
+  "cost": "Usage based, and requires a Copilot Premium license first",
   "tool_url": "",
   "highlights": [
-    "Autonomous Agent",
-    "Multi-Step Task",
-    "Pilot Phase"
+    "Runs multi-step work on its own",
+    "Very limited pilot",
+    "Costs add up fast"
   ],
   "taxonomies": {
     "aicsu_role": [
@@ -21,9 +22,8 @@
       "staff"
     ],
     "aicsu_data": [
-      "m365-content",
-      "my-own-files",
-      "sharepoint-teams"
+      "level-1-public",
+      "level-2-internal"
     ],
     "aicsu_task": [
       "automation",
@@ -35,8 +35,13 @@
       "intermediate"
     ]
   },
-  "demo": true
+  "data_examples": [
+    "m365-content",
+    "my-own-files",
+    "sharepoint-teams"
+  ],
+  "demo": false
 }
 ---
 
-Sample data for chooser testing. Autonomous multi-step digital coworker under evaluation by CSU AI Strategy team for executing complex collaborative projects.
+Microsoft's semi-autonomous agent that takes a multi-step assignment and produces finished files rather than just answering in chat. CSU is testing it with a very small group. Billing is usage based on top of a required Copilot Premium seat, and early testing showed a single inbox cleanup task consuming roughly $50 against a $100 monthly cap without clearly finishing the work. Worth watching, not yet worth planning around. Contact the AI strategy team if you have a specific use case.

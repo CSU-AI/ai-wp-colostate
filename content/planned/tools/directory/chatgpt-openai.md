@@ -4,16 +4,17 @@
   "slug": "",
   "local_post_id": 50,
   "production_post_id": null,
-  "wordpress_status": "draft",
-  "menu_order": 16,
+  "wordpress_status": "publish",
+  "menu_order": 17,
   "status": "public_only",
   "approved_for_sensitive": false,
-  "cost": "Free / $20/mo Plus",
+  "data_level_ceiling": "level-1-public",
+  "cost": "Free, or about $20 per month for a personal Plus plan",
   "tool_url": "https://chatgpt.com/",
   "highlights": [
-    "General AI",
-    "DALL-E Images",
-    "Public Only"
+    "No CSU agreement",
+    "Public information only",
+    "Paid personally, not reimbursed"
   ],
   "taxonomies": {
     "aicsu_role": [
@@ -22,8 +23,7 @@
       "student"
     ],
     "aicsu_data": [
-      "no-csu-data",
-      "public-information"
+      "level-1-public"
     ],
     "aicsu_task": [
       "code",
@@ -37,8 +37,12 @@
       "intermediate"
     ]
   },
-  "demo": true
+  "data_examples": [
+    "no-csu-data",
+    "public-information"
+  ],
+  "demo": false
 }
 ---
 
-Sample data for chooser testing. Popular consumer AI tool for general writing, DALL-E image generation, and public coding queries. Strictly restricted to non-sensitive Level 1 data.
+Capable and widely used, but CSU has no enterprise agreement with OpenAI, so it sits outside CSU's data protections. Public information only. Internal memos, draft reports, student records, and personnel data do not belong here, even though the tool will happily accept them. If you are paying for a Plus plan yourself to get around a gap in CSU's tools, tell the AI strategy team which gap, because that is useful information.

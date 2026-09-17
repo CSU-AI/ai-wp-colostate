@@ -7,7 +7,8 @@ if (!defined('WP_CLI') || !WP_CLI || home_url() !== 'https://multisite.local/ai'
 try {
 $directory = dirname(__DIR__, 2) . '/content/planned/tools/directory';
 $taxonomies = ['aicsu_role', 'aicsu_data', 'aicsu_task', 'aicsu_complexity'];
-$sensitive = ['ferpa-student-records', 'hipaa-health', 'export-controlled', 'confidential-research', 'personnel-hr', 'financial', 'sensitive-business'];
+$sensitive = ['level-3-confidential', 'level-4-restricted'];
+$levels = ['level-1-public', 'level-2-internal', 'level-3-confidential', 'level-4-restricted'];
 $field_keys = ['status' => 'field_6a861cf9bd6c4', 'approved_for_sensitive' => 'field_6a861d6dadeaf', 'cost' => 'field_6a861d9cadeb0', 'tool_url' => 'field_6a861dbbadeb1'];
 $dry_run = getenv('AICSU_TOOL_IMPORT_DRY_RUN') === '1';
 
@@ -22,16 +23,22 @@ foreach (glob($directory . '/*.md') as $file) {
     if (!$id || get_post_type($id) !== 'aicsu_tool') {
         throw new RuntimeException(basename($file) . ': local_post_id is not an existing Tool.');
     }
-    if (!in_array($tool['status'] ?? '', ['approved', 'pilot', 'public_only'], true)) {
+    if (!in_array($tool['status'] ?? '', ['approved', 'coming_soon', 'pilot', 'public_only', 'unsupported', 'informational'], true)) {
         throw new RuntimeException(basename($file) . ': invalid approval status.');
     }
     $terms = $tool['taxonomies'] ?? [];
     if (array_diff(array_keys($terms), $taxonomies)) {
         throw new RuntimeException(basename($file) . ': unknown taxonomy.');
     }
+    if (array_diff($terms['aicsu_data'] ?? [], $levels)) {
+        throw new RuntimeException(basename($file) . ': aicsu_data accepts only CSU data-classification level terms.');
+    }
     $sensitive_terms = array_intersect($terms['aicsu_data'] ?? [], $sensitive);
     if ($sensitive_terms && (($tool['status'] ?? '') !== 'approved' || empty($tool['approved_for_sensitive']))) {
-        throw new RuntimeException(basename($file) . ': sensitive data terms require approved status and approved_for_sensitive=true.');
+        throw new RuntimeException(basename($file) . ': Level 3 or 4 data requires approved status and approved_for_sensitive=true.');
+    }
+    if (in_array('level-4-restricted', $terms['aicsu_data'] ?? [], true)) {
+        throw new RuntimeException(basename($file) . ': no tool is approved for Level 4 restricted data.');
     }
     foreach ($taxonomies as $taxonomy) {
         $slugs = array_values($terms[$taxonomy] ?? []);
