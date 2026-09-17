@@ -1,19 +1,20 @@
 ---
 {
-  "title": "Ollama (Local Offline Models)",
+  "title": "Ollama (Local Models)",
   "slug": "",
   "local_post_id": 51,
   "production_post_id": null,
-  "wordpress_status": "draft",
+  "wordpress_status": "publish",
   "menu_order": 19,
-  "status": "approved",
-  "approved_for_sensitive": true,
-  "cost": "Free / Open Source",
+  "status": "unsupported",
+  "approved_for_sensitive": false,
+  "data_level_ceiling": "level-1-public",
+  "cost": "Free and open source",
   "tool_url": "https://ollama.com/",
   "highlights": [
-    "Offline Privacy",
-    "Local GPU",
-    "Open Source"
+    "Runs on your own hardware",
+    "No data leaves your machine",
+    "No CSU review or support"
   ],
   "taxonomies": {
     "aicsu_role": [
@@ -22,10 +23,7 @@
       "staff"
     ],
     "aicsu_data": [
-      "confidential-research",
-      "my-own-files",
-      "no-csu-data",
-      "public-information"
+      "level-1-public"
     ],
     "aicsu_task": [
       "analyze-documents",
@@ -39,8 +37,12 @@
       "developer"
     ]
   },
-  "demo": true
+  "data_examples": [
+    "my-own-files",
+    "no-csu-data"
+  ],
+  "demo": false
 }
 ---
 
-Sample data for chooser testing. Local open-source execution framework running models (Llama 3, Mistral, CodeLlama) directly on user hardware. Ensures complete data privacy without cloud transmission.
+Open source software that runs models such as Llama and Mistral directly on your own computer, so nothing is sent to a cloud service. Listed here because researchers ask about it, not because CSU provides it. Ollama has not been through CSU's AI or security review, it is not supported by the Division of IT, and installing it is your own decision. The privacy benefit is real but depends entirely on how your machine is secured and managed, so it does not by itself clear the tool for confidential or regulated data.

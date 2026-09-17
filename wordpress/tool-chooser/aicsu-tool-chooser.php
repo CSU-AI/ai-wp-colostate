@@ -18,13 +18,13 @@ add_shortcode('aicsu_tool_chooser', function () {
     ];
     $posts = get_posts([
         'post_type' => 'aicsu_tool',
-        'post_status' => ['publish', 'draft'],
+        'post_status' => ['publish'],
         // ponytail: a small directory is rendered once; add pagination for hundreds of tools.
         'posts_per_page' => -1,
         'orderby' => ['menu_order' => 'ASC', 'title' => 'ASC'],
         'suppress_filters' => false,
     ]);
-    $statuses = ['approved' => 'Approved for sensitive CSU data', 'pilot' => 'CSU evaluation pilot', 'public_only' => 'Public, non-sensitive data only'];
+    $statuses = ['approved' => 'Approved for CSU use', 'coming_soon' => 'Coming soon', 'pilot' => 'CSU evaluation pilot', 'public_only' => 'Public, non-sensitive data only', 'unsupported' => 'Not reviewed or supported by CSU', 'informational' => 'Not provided by CSU'];
     $records = [];
     foreach ($posts as $post) {
         $terms = [];

@@ -1,19 +1,20 @@
 ---
 {
-  "title": "Microsoft Foundry / Azure AI Foundry",
+  "title": "Microsoft Foundry (Azure AI Foundry)",
   "slug": "",
   "local_post_id": 44,
   "production_post_id": null,
-  "wordpress_status": "draft",
+  "wordpress_status": "publish",
   "menu_order": 5,
   "status": "approved",
-  "approved_for_sensitive": true,
-  "cost": "Pay-As-You-Go Azure",
+  "approved_for_sensitive": false,
+  "data_level_ceiling": "level-2-internal",
+  "cost": "Pay as you go through Azure",
   "tool_url": "https://ai.azure.com/",
   "highlights": [
-    "Azure SDK/API",
-    "Enterprise RAG",
-    "Developer Platform"
+    "Runs in CSU's Azure tenant",
+    "Model APIs and RAG pipelines",
+    "For developers"
   ],
   "taxonomies": {
     "aicsu_role": [
@@ -22,10 +23,8 @@
       "staff"
     ],
     "aicsu_data": [
-      "confidential-research",
-      "export-controlled",
-      "public-information",
-      "sensitive-business"
+      "level-1-public",
+      "level-2-internal"
     ],
     "aicsu_task": [
       "automation",
@@ -36,8 +35,12 @@
       "developer"
     ]
   },
-  "demo": true
+  "data_examples": [
+    "confidential-research",
+    "sensitive-business"
+  ],
+  "demo": false
 }
 ---
 
-Sample data for chooser testing. Developer platform for hosting, fine-tuning, and scaling custom enterprise RAG pipelines, LLM APIs, and agentic solutions within Azure.
+The developer platform for building your own AI applications on models hosted inside CSU's Azure tenant, including retrieval pipelines, fine-tuning, and direct API access. Because it runs in CSU's tenant it inherits CSU's Azure protections, which is why it is approved where consumer APIs are not. Work involving Level 3 confidential data needs approval from the Data Governance Steering Committee and written confirmation of zero data retention for your subscription. Level 4 restricted data, including controlled unclassified information, is not covered.
