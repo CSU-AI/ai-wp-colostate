@@ -9,12 +9,11 @@
   "status": "coming_soon",
   "approved_for_sensitive": false,
   "data_level_ceiling": "level-2-internal",
-  "cost": "$18 per user per month, charged back to your unit",
+  "cost": "Pricing to be confirmed",
   "tool_url": "",
   "highlights": [
     "Works inside Word, Excel, Outlook, Teams",
-    "Searches your CSU files",
-    "Available mid to late October"
+    "Searches your CSU files"
   ],
   "taxonomies": {
     "aicsu_role": [
@@ -45,4 +44,4 @@
 }
 ---
 
-The paid upgrade that puts Copilot directly inside Word, Excel, Outlook, PowerPoint, and Teams, and lets it search across the CSU files you already have access to. The Division of IT plans to offer it from mid to late October at $18 per user per month, billed back to your department. That rate reflects CSU's education pricing; Microsoft's published list price is $30 per user per month. Strongest in Excel and Outlook. The PowerPoint integration is weaker than people expect.
+The planned paid upgrade will put Copilot inside Word, Excel, Outlook, PowerPoint, and Teams, and let it search CSU files you can access. Availability and CSU pricing are still being finalized.

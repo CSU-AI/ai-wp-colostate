@@ -1,20 +1,20 @@
 ---
 {
-  "title": "Google Gemini and NotebookLM",
-  "slug": "",
+  "title": "Google Gemini",
+  "slug": "google-gemini",
   "local_post_id": 49,
   "production_post_id": null,
   "wordpress_status": "publish",
   "menu_order": 16,
-  "status": "public_only",
+  "status": "approved",
   "approved_for_sensitive": false,
-  "data_level_ceiling": "level-1-public",
+  "data_level_ceiling": "level-2-internal",
   "cost": "Free",
   "tool_url": "https://gemini.google.com/",
   "highlights": [
-    "Students get a rams.colostate.edu account",
-    "NotebookLM for study guides",
-    "Public information only"
+    "Use your rams.colostate.edu account",
+    "Approved for Levels 1 and 2 with that account",
+    "Personal Google accounts: public data only"
   ],
   "taxonomies": {
     "aicsu_role": [
@@ -23,7 +23,8 @@
       "student"
     ],
     "aicsu_data": [
-      "level-1-public"
+      "level-1-public",
+      "level-2-internal"
     ],
     "aicsu_task": [
       "draft-writing",
@@ -38,11 +39,14 @@
     ]
   },
   "data_examples": [
-    "no-csu-data",
+    "my-own-files",
     "public-information"
   ],
-  "demo": false
+  "demo": false,
+  "sources": [
+    "https://edu.google.com/our-values/privacy-security/frequently-asked-questions/"
+  ]
 }
 ---
 
-CSU students can get a rams.colostate.edu Google account, which includes limited access to Gemini and NotebookLM. NotebookLM in particular is popular for turning readings into study guides and summaries. CSU does not have an enterprise agreement with Google covering AI use, so treat this the same as any consumer tool: public information only, no student records, no personnel data, no unpublished work. If you need to work with CSU data, use Copilot Chat or Nebula One instead.
+Google Gemini helps with writing, research, images, and everyday questions. CSU students, faculty, and staff can use it with a rams.colostate.edu Google Workspace for Education account for Level 1 public and Level 2 internal data. Sign in with that account before entering CSU information. A personal Google account does not have the same CSU-approved access; use it only with Level 1 public information. Do not enter Level 3 confidential or Level 4 restricted data.
