@@ -20,8 +20,9 @@ foreach (glob($directory . '/*.md') as $file) {
     }
     $tool = json_decode($parts[1], true, 512, JSON_THROW_ON_ERROR);
     $id = filter_var($tool['local_post_id'] ?? null, FILTER_VALIDATE_INT);
-    if (!$id || get_post_type($id) !== 'aicsu_tool') {
-        throw new RuntimeException(basename($file) . ': local_post_id is not an existing Tool.');
+    $new = !$id;
+    if (($id && get_post_type($id) !== 'aicsu_tool') || ($new && ($tool['wordpress_status'] ?? '') !== 'draft')) {
+        throw new RuntimeException(basename($file) . ': local_post_id must identify a Tool; new tools must start as drafts.');
     }
     if (!in_array($tool['status'] ?? '', ['approved', 'coming_soon', 'pilot', 'public_only', 'unsupported', 'informational'], true)) {
         throw new RuntimeException(basename($file) . ': invalid approval status.');
@@ -32,6 +33,9 @@ foreach (glob($directory . '/*.md') as $file) {
     }
     if (array_diff($terms['aicsu_data'] ?? [], $levels)) {
         throw new RuntimeException(basename($file) . ': aicsu_data accepts only CSU data-classification level terms.');
+    }
+    if (!($terms['aicsu_data'] ?? []) || ($tool['data_level_ceiling'] ?? '') !== $levels[max(array_map(fn($slug) => array_search($slug, $levels, true), $terms['aicsu_data']))]) {
+        throw new RuntimeException(basename($file) . ': data_level_ceiling must match the highest aicsu_data level.');
     }
     $sensitive_terms = array_intersect($terms['aicsu_data'] ?? [], $sensitive);
     if ($sensitive_terms && (($tool['status'] ?? '') !== 'approved' || empty($tool['approved_for_sensitive']))) {
@@ -45,6 +49,14 @@ foreach (glob($directory . '/*.md') as $file) {
         foreach ($slugs as $slug) {
             if (!term_exists($slug, $taxonomy)) throw new RuntimeException(basename($file) . ": missing {$taxonomy} term {$slug}.");
         }
+    }
+    if ($new && !$dry_run) {
+        $existing = get_page_by_path((string) $tool['slug'], OBJECT, 'aicsu_tool');
+        $id = $existing ? $existing->ID : wp_insert_post(['post_type' => 'aicsu_tool', 'post_status' => 'draft', 'post_title' => (string) $tool['title'], 'post_name' => (string) $tool['slug']], true);
+        if (is_wp_error($id)) throw new RuntimeException(basename($file) . ': ' . $id->get_error_message());
+    }
+    foreach ($taxonomies as $taxonomy) {
+        $slugs = array_values($terms[$taxonomy] ?? []);
         if ($dry_run) continue;
         $result = wp_set_object_terms($id, $slugs, $taxonomy, false);
         if (is_wp_error($result)) throw new RuntimeException(basename($file) . ': ' . $result->get_error_message());
@@ -59,15 +71,19 @@ foreach (glob($directory . '/*.md') as $file) {
         'post_name' => (string) $tool['slug'],
         'post_excerpt' => trim($parts[2]),
         'menu_order' => (int) ($tool['menu_order'] ?? 0),
+        'post_status' => ($tool['wordpress_status'] ?? '') === 'draft' ? 'draft' : get_post_status($id),
     ], true);
     if (is_wp_error($result)) throw new RuntimeException(basename($file) . ': ' . $result->get_error_message());
     foreach ($field_keys as $name => $key) update_field($key, $tool[$name] ?? '', $id);
     update_field('field_6a861dc8adeb2', array_map(fn($label) => ['field_6a861ddeadeb3' => (string) $label], $tool['highlights'] ?? []), $id);
     empty($tool['demo']) ? delete_post_meta($id, 'aicsu_demo') : update_post_meta($id, 'aicsu_demo', '1');
+    if ($new && file_put_contents($file, str_replace('"local_post_id": null', '"local_post_id": ' . $id, $markdown)) === false) {
+        throw new RuntimeException(basename($file) . ': could not record new local_post_id.');
+    }
     WP_CLI::log('Updated ' . get_the_title($id) . " ({$id})");
 }
 
-WP_CLI::success($dry_run ? 'Validated tool Markdown without changes.' : 'Synced tool Markdown to local WordPress. Publication states were preserved.');
+WP_CLI::success($dry_run ? 'Validated tool Markdown without changes.' : 'Synced tool Markdown to local WordPress. Draft requests were applied; published posts stayed as they were.');
 } catch (Throwable $error) {
     WP_CLI::error($error->getMessage());
 }

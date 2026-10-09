@@ -24,7 +24,8 @@ add_shortcode('aicsu_tool_chooser', function () {
         'orderby' => ['menu_order' => 'ASC', 'title' => 'ASC'],
         'suppress_filters' => false,
     ]);
-    $statuses = ['approved' => 'Approved for CSU use', 'coming_soon' => 'Coming soon', 'pilot' => 'CSU evaluation pilot', 'public_only' => 'Public, non-sensitive data only', 'unsupported' => 'Not reviewed or supported by CSU', 'informational' => 'Not provided by CSU'];
+    $levels = ['level-1-public', 'level-2-internal', 'level-3-confidential', 'level-4-restricted'];
+    $statuses = ['coming_soon' => 'Coming soon', 'pilot' => 'CSU evaluation pilot', 'public_only' => 'Public information only', 'unsupported' => 'Not reviewed or supported by CSU', 'informational' => 'Not provided by CSU'];
     $records = [];
     foreach ($posts as $post) {
         $terms = [];
@@ -32,16 +33,19 @@ add_shortcode('aicsu_tool_chooser', function () {
         foreach ($groups as $taxonomy => $label) {
             $items = get_the_terms($post, $taxonomy);
             $items = is_array($items) ? $items : [];
+            if ($taxonomy === 'aicsu_data') $items = array_values(array_filter($items, fn($item) => in_array($item->slug, $levels, true)));
             $terms[$taxonomy] = wp_list_pluck($items, 'slug');
             $names[$taxonomy] = implode(', ', wp_list_pluck($items, 'name'));
         }
         $demo = (bool) get_post_meta($post->ID, 'aicsu_demo', true);
         $status = (string) get_field('status', $post->ID);
+        $ceiling = max([0, ...array_map(fn($slug) => array_search($slug, $levels, true), $terms['aicsu_data'])]) + 1;
+        $status_label = $status === 'approved' ? "Approved for CSU use • up to Level {$ceiling}" : ($statuses[$status] ?? 'Approval not reviewed');
         $records[] = [
             'id' => $post->ID, 'name' => get_the_title($post),
             'summary' => wp_strip_all_tags($post->post_excerpt),
             'cost' => (string) get_field('cost', $post->ID),
-            'status' => ($demo ? 'Example: ' : '') . ($statuses[$status] ?? 'Approval not reviewed'),
+            'status' => ($demo ? 'Example: ' : '') . $status_label,
             'approved' => $status === 'approved' && (bool) get_field('approved_for_sensitive', $post->ID),
             'terms' => $terms, 'names' => $names,
             'url' => esc_url_raw((string) get_field('tool_url', $post->ID), ['https', 'http']),
@@ -60,12 +64,16 @@ add_shortcode('aicsu_tool_chooser', function () {
             <details class="ac-filters ac-interactive" open hidden>
                 <summary>Filter Tools</summary>
                 <form class="ac-form">
-                    <p class="ac-hint">Choose any options within a group. Tools must match every selected group.</p>
+                    <p class="ac-hint">For data, the highest level selected applies. In other groups, tools match any selected option within the group.</p>
                     <?php foreach ($groups as $taxonomy => $label) : ?>
                         <fieldset><legend><?php echo esc_html($label); ?></legend>
                             <?php $items = get_terms(['taxonomy' => $taxonomy, 'hide_empty' => false]); ?>
+                            <?php if ($taxonomy === 'aicsu_data' && is_array($items)) {
+                                $items = array_values(array_filter($items, fn($item) => in_array($item->slug, $levels, true)));
+                                usort($items, fn($a, $b) => array_search($a->slug, $levels, true) <=> array_search($b->slug, $levels, true));
+                            } ?>
                             <?php foreach (is_array($items) ? $items : [] as $term) : ?>
-                                <label><input type="checkbox" name="<?php echo esc_attr($taxonomy); ?>" value="<?php echo esc_attr($term->slug); ?>"> <span><?php echo esc_html($term->name); ?></span></label>
+                                <label><input type="checkbox" name="<?php echo esc_attr($taxonomy); ?>" value="<?php echo esc_attr($term->slug); ?>"> <span><?php echo esc_html($taxonomy === 'aicsu_data' ? 'Level ' . (array_search($term->slug, $levels, true) + 1) . ': ' . $term->name : $term->name); ?></span></label>
                             <?php endforeach; ?>
                         </fieldset>
                     <?php endforeach; ?>
@@ -80,7 +88,8 @@ add_shortcode('aicsu_tool_chooser', function () {
                 </div>
                 <div class="ac-results-heading"><h2>Explore Your Options</h2><p class="ac-count" role="status" aria-live="polite"><?php echo count($records); ?> tools</p></div>
                 <p class="ac-interactive ac-hint" hidden>Select up to three tools to compare side by side.</p>
-                <p class="ac-sensitive" hidden>Data filters require a matching classification for every sensitive data type selected, plus an approved status. Example records do not establish CSU approval.</p>
+                <p class="ac-hint">Tool approval does not grant access to CSU data. For Level 3, follow applicable data-steward and access requirements.</p>
+                <p class="ac-sensitive" hidden>Level 3 and 4 results require matching tool approval.</p>
                 <div class="ac-grid">
                 <?php foreach ($records as $record) : ?>
                     <article class="ac-card" data-id="<?php echo (int) $record['id']; ?>">

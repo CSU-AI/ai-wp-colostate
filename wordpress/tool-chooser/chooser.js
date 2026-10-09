@@ -1,14 +1,14 @@
 /* Small, dependency-free enhancement of the server-rendered ACF directory. */
 (function () {
   'use strict';
-  const sensitive = ['ferpa-student-records', 'hipaa-health', 'export-controlled', 'confidential-research', 'personnel-hr', 'financial', 'sensitive-business'];
+  const levels = ['level-1-public', 'level-2-internal', 'level-3-confidential', 'level-4-restricted'];
   function dataAllowed(tool, groups) {
-    const selected = (groups.aicsu_data || []).filter(value => sensitive.includes(value));
-    return !selected.length || (tool.approved === true && selected.every(value => (tool.terms.aicsu_data || []).includes(value)));
+    const highest = Math.max(-1, ...(groups.aicsu_data || []).map(value => levels.indexOf(value)));
+    return highest < 0 || (highest < 2 || tool.approved === true) && (tool.terms.aicsu_data || []).includes(levels[highest]);
   }
   function matches(tool, groups, search) {
     return dataAllowed(tool, groups) &&
-      Object.entries(groups).every(([tax, values]) => !values.length || values.some(value => (tool.terms[tax] || []).includes(value))) &&
+      Object.entries(groups).every(([tax, values]) => tax === 'aicsu_data' || !values.length || values.some(value => (tool.terms[tax] || []).includes(value))) &&
       [tool.name, tool.summary, ...Object.values(tool.names)].join(' ').toLowerCase().includes(search.trim().toLowerCase());
   }
   function score(tool, groups) {
@@ -49,7 +49,7 @@
       });
       root.querySelector('.ac-count').textContent = `${visible.length} of ${tools.length} tools`;
       root.querySelector('.ac-empty').hidden = visible.length > 0;
-      const hasSensitive = (chosen.aicsu_data || []).some(value => sensitive.includes(value));
+      const hasSensitive = (chosen.aicsu_data || []).some(value => levels.indexOf(value) >= 2);
       root.querySelector('.ac-sensitive').hidden = !hasSensitive;
       const excluded = root.querySelector('.ac-excluded');
       const withheld = tools.filter(tool => !dataAllowed(tool, chosen));

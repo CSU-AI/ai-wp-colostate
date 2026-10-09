@@ -4,7 +4,7 @@
   "slug": "",
   "local_post_id": 43,
   "production_post_id": null,
-  "wordpress_status": "publish",
+  "wordpress_status": "draft",
   "menu_order": 4,
   "status": "pilot",
   "approved_for_sensitive": false,
