@@ -2,9 +2,19 @@
 /**
  * Plugin Name: AI @ CSU Tool Chooser
  * Description: ACF-backed tool chooser for an Elementor Shortcode widget: [aicsu_tool_chooser].
- * Version: 0.1.0
+ * Version: 0.2.0
  */
 defined('ABSPATH') || exit;
+
+// Tool post type, taxonomies, and fields ship as ACF Local JSON. Regenerate with export-acf-json.php.
+add_filter('acf/settings/load_json', function ($paths) {
+    $paths[] = __DIR__ . '/acf-json';
+    return $paths;
+});
+// ACF's default save path is the shared network theme. Never write this plugin's schema there.
+add_filter('acf/json/save_paths', function ($paths, $post) {
+    return is_file(__DIR__ . '/acf-json/' . ($post['key'] ?? '') . '.json') ? [__DIR__ . '/acf-json'] : $paths;
+}, 10, 2);
 
 add_shortcode('aicsu_tool_chooser', function () {
     if (!post_type_exists('aicsu_tool') || !function_exists('get_field')) {

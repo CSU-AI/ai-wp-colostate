@@ -13,7 +13,7 @@ source "/Users/david/Local Sites/multisite/local-wpcli-env.sh"
 wp --path="/Users/david/Local Sites/multisite/app/public" --url=https://multisite.local/ai eval-file wordpress/tool-chooser/import-tools.php
 ```
 
-The importer validates known taxonomies and prevents sensitive-data tags unless both approval fields agree. It does not publish tools. Production transfer remains a reviewed bulk export/import step.
+The importer validates known taxonomies and prevents sensitive-data tags unless both approval fields agree. It does not publish tools. It is restricted to Local; production records are pushed through the production MCP per `wordpress/build-notes/production-workflow.md`, and their IDs go in `production_post_id`.
 
 Set `AICSU_TOOL_IMPORT_DRY_RUN=1` before the `wp` command to validate every file without changing WordPress.
 
