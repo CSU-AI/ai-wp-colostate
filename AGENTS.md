@@ -14,17 +14,30 @@ This repository is the working source for the complete rebuild of `ai.colostate.
 
 ## WordPress workflow
 
-- All MCP calls target the Local by Flywheel site unless the user explicitly states otherwise.
+- The full process is in `wordpress/build-notes/production-workflow.md`.
+- All MCP calls target the Local by Flywheel site (`emcp-multisite-local-ai`) unless the user explicitly states otherwise.
 - Create new pages as local Elementor drafts.
 - Do not replace, publish, delete, or change the configured homepage without explicit approval.
-- Never point a write-enabled MCP connection at production without explicit instruction in that session.
-- Production migration happens in bulk after local content and design review.
-- Prefer export/import for the bulk transfer. Keep migration notes and exports under `wordpress/`.
-- Recheck internal URLs, media URLs, forms, dynamic content, and redirects after migration.
+- Never point a write-enabled MCP connection at production without explicit instruction in that session. The production connection is `emcp-prod-ai`; it is read-only unless the user enables writes for that session.
+- Production pages are created as drafts. Publishing happens in section releases, one top-level sitemap section at a time, with explicit approval.
+- Before updating an existing production page, compare its modified time with `production_modified` in the front matter. If they differ, stop and report the drift.
+- Record `production_post_id` and `production_modified` after every push. Record media mappings in `wordpress/media-map.csv`.
+- Recheck internal URLs, media URLs, forms, dynamic content, and redirects after each release.
+
+## Shared multisite network
+
+`ai.colostate.edu` is one subsite on a network shared by hundreds of sites.
+
+- Never edit, upload, update, or write files into `csu-theme`, including ACF JSON.
+- Never network-activate plugins or change network settings. Activate `aicsu-tool-chooser` on the ai subsite only.
+- Never change the ai subsite's active theme.
+- Never use super admin credentials for MCP or scripts.
+- Schema for the tool directory lives in `wordpress/tool-chooser/acf-json/`. Change it in Local ACF, then run `export-acf-json.php`. Do not sync it into the production database.
 
 ## Elementor
 
-- New site pages use native Elementor containers and widgets.
+- New site pages use native Elementor containers and widgets. Atomic (v4) elements are enabled on Local and production.
+- Avoid HTML widgets, embeds, and custom code in pushed pages. The production MCP account lacks `unfiltered_html` on multisite, so that markup is stripped; flag it for manual entry instead.
 - Prefer Elementor controls, global tokens, reusable templates, and Theme Builder over custom CSS or JavaScript.
 - Add custom code only when native Elementor and installed plugins cannot meet a confirmed requirement.
 - Keep content structure semantic: one H1, ordered heading levels, meaningful link text, and real lists for list content.
@@ -57,6 +70,6 @@ This repository is the working source for the complete rebuild of `ai.colostate.
 
 ## Repository safety
 
-- The repository may be public. Never commit credentials, private URLs, personal-vault paths, protected data, or WordPress authentication material.
+- The repository is private. Production post IDs, release logs, and media maps may be committed. Never commit credentials, private URLs, personal-vault paths, protected data, or WordPress authentication material.
 - Preserve unrelated local changes.
 - Do not edit CSU theme files.
