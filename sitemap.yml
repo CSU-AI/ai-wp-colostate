@@ -53,6 +53,9 @@ pages:
       - path: /tools/approval-process/
         file: content/planned/tools/approval-process.md
         priority: P0
+      - path: /tools/level-3-data/
+        file: content/planned/tools/level-3-data.md
+        priority: P0
   - path: /getting-started/
     file: content/planned/getting-started.md
     priority: P2

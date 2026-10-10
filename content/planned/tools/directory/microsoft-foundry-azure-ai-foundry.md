@@ -7,8 +7,8 @@
   "wordpress_status": "publish",
   "menu_order": 5,
   "status": "approved",
-  "approved_for_sensitive": false,
-  "data_level_ceiling": "level-2-internal",
+  "approved_for_sensitive": true,
+  "data_level_ceiling": "level-3-confidential",
   "cost": "Pay as you go through Azure",
   "tool_url": "https://ai.azure.com/",
   "highlights": [
@@ -24,7 +24,8 @@
     ],
     "aicsu_data": [
       "level-1-public",
-      "level-2-internal"
+      "level-2-internal",
+      "level-3-confidential"
     ],
     "aicsu_task": [
       "automation",
@@ -43,4 +44,4 @@
 }
 ---
 
-The developer platform for building your own AI applications on models hosted inside CSU's Azure tenant, including retrieval pipelines, fine-tuning, and direct API access. Because it runs in CSU's tenant it inherits CSU's Azure protections, which is why it is approved where consumer APIs are not. Work involving Level 3 confidential data needs approval from the Data Governance Steering Committee and written confirmation of zero data retention for your subscription. Level 4 restricted data, including controlled unclassified information, is not covered.
+The developer platform for building your own AI applications on models hosted inside CSU's Azure tenant, including retrieval pipelines, fine-tuning, and direct API access. Because it runs in CSU's tenant it inherits CSU's Azure protections, which is why it is approved where consumer APIs are not. Work involving Level 3 confidential data needs approval from the Data Governance Steering Committee and written confirmation that abuse-monitoring data retention is turned off for your subscription. Level 3 approval covers models hosted by Microsoft in CSU's tenant, not third-party models offered under their provider's own terms. Tool approval does not grant access to the data itself; follow applicable data-steward and access requirements. Level 4 restricted data, including controlled unclassified information, is not covered.

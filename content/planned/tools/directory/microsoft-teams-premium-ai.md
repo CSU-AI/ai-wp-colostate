@@ -7,14 +7,14 @@
   "wordpress_status": "publish",
   "menu_order": 6,
   "status": "approved",
-  "approved_for_sensitive": false,
-  "data_level_ceiling": "level-2-internal",
+  "approved_for_sensitive": true,
+  "data_level_ceiling": "level-3-confidential",
   "cost": "About $29 per user per year, requested through Freshservice",
   "tool_url": "",
   "highlights": [
     "Meeting recaps and action items",
-    "Request through Freshservice",
-    "Not needed if you have Copilot Premium"
+    "Advanced meeting protection and controls",
+    "Request through Freshservice"
   ],
   "taxonomies": {
     "aicsu_role": [
@@ -23,7 +23,8 @@
     ],
     "aicsu_data": [
       "level-1-public",
-      "level-2-internal"
+      "level-2-internal",
+      "level-3-confidential"
     ],
     "aicsu_task": [
       "summarize"
@@ -41,4 +42,4 @@
 }
 ---
 
-Adds AI meeting recaps, chapter breakdowns, searchable transcripts, and suggested action items to Teams meetings. Request a license through Freshservice. Before you do, check whether you are getting Copilot Premium: Copilot Premium already covers the AI meeting features, and Teams Premium then only adds large-audience town hall controls such as watermarking. Holding both licenses is usually wasted money.
+Microsoft Teams Premium adds AI meeting recaps, notes, and suggested tasks. It also offers advanced meeting protection, branded meeting experiences, communication features, and administrative controls. Some recap features overlap with Microsoft 365 Copilot, so check which features you need before requesting both licenses. Request a license through Freshservice.
