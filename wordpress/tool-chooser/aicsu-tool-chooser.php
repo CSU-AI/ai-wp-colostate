@@ -2,7 +2,7 @@
 /**
  * Plugin Name: AI @ CSU Tool Chooser
  * Description: ACF-backed tool chooser for an Elementor Shortcode widget: [aicsu_tool_chooser].
- * Version: 0.2.0
+ * Version: 0.2.2
  */
 defined('ABSPATH') || exit;
 
@@ -120,7 +120,7 @@ add_shortcode('aicsu_tool_chooser', function () {
                 <details class="ac-excluded" hidden><summary>Tools Excluded by Data Requirements</summary><p>These tools do not satisfy all selected data classifications and approval checks.</p><ul></ul></details>
             </section>
         </div>
-        <dialog class="ac-dialog" aria-label="Tool comparison"><div class="ac-dialog-head"><h2>Compare Tools</h2><button type="button" class="ac-close ac-secondary">Close</button></div><p>Sample descriptions, pricing, and approvals are for testing only.</p><p class="ac-hint">On a small screen, scroll the table sideways to see every tool.</p><div class="ac-table-scroll" tabindex="0" role="region" aria-label="Comparison table"></div></dialog>
+        <dialog class="ac-dialog" aria-label="Tool comparison"><div class="ac-dialog-head"><h2>Compare Tools</h2><button type="button" class="ac-close ac-secondary">Close</button></div><p class="ac-hint">On a small screen, scroll the table sideways to see every tool.</p><div class="ac-table-scroll" tabindex="0" role="region" aria-label="Comparison table"></div></dialog>
         <script type="application/json" class="ac-data"><?php echo wp_json_encode($records, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT); ?></script>
     </div>
     <?php

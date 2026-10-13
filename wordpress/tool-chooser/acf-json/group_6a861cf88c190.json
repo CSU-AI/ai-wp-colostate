@@ -19,7 +19,10 @@
             "choices": {
                 "approved": "Approved for sensitive CSU data",
                 "pilot": "CSU evaluation pilot",
-                "public_only": "Public, non-sensitive data only"
+                "public_only": "Public, non-sensitive data only",
+                "coming_soon": "Coming soon",
+                "unsupported": "Not reviewed or supported by CSU",
+                "informational": "Not provided by CSU"
             },
             "default_value": false,
             "return_format": "value",
@@ -160,5 +163,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1789146451
+    "modified": 1791917816
 }
