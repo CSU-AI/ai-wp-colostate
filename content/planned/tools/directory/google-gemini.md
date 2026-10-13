@@ -3,7 +3,7 @@
   "title": "Google Gemini",
   "slug": "google-gemini",
   "local_post_id": 49,
-  "production_post_id": null,
+  "production_post_id": 780,
   "wordpress_status": "publish",
   "menu_order": 16,
   "status": "approved",

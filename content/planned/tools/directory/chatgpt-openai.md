@@ -3,7 +3,7 @@
   "title": "ChatGPT (OpenAI)",
   "slug": "",
   "local_post_id": 50,
-  "production_post_id": null,
+  "production_post_id": 783,
   "wordpress_status": "publish",
   "menu_order": 18,
   "status": "public_only",

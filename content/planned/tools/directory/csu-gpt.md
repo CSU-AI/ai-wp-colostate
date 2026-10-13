@@ -3,7 +3,7 @@
   "title": "CSU-GPT",
   "slug": "",
   "local_post_id": 46,
-  "production_post_id": null,
+  "production_post_id": 787,
   "wordpress_status": "publish",
   "menu_order": 8,
   "status": "approved",

@@ -3,7 +3,7 @@
   "title": "Copilot Cowork",
   "slug": "",
   "local_post_id": 43,
-  "production_post_id": null,
+  "production_post_id": 784,
   "wordpress_status": "draft",
   "menu_order": 4,
   "status": "pilot",

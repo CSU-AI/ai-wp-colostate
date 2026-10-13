@@ -3,7 +3,7 @@
   "title": "Claude Enterprise (CSU Pilot)",
   "slug": "",
   "local_post_id": 48,
-  "production_post_id": null,
+  "production_post_id": 782,
   "wordpress_status": "draft",
   "menu_order": 14,
   "status": "pilot",

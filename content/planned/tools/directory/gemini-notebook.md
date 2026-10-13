@@ -3,7 +3,7 @@
   "title": "Gemini Notebook",
   "slug": "gemini-notebook",
   "local_post_id": 71,
-  "production_post_id": null,
+  "production_post_id": 788,
   "wordpress_status": "draft",
   "menu_order": 17,
   "status": "approved",

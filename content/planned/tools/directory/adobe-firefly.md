@@ -3,7 +3,7 @@
   "title": "Adobe Firefly",
   "slug": "adobe-firefly",
   "local_post_id": 70,
-  "production_post_id": null,
+  "production_post_id": 781,
   "wordpress_status": "publish",
   "menu_order": 21,
   "status": "public_only",

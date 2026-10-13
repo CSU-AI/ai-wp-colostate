@@ -3,7 +3,7 @@
   "title": "Microsoft Foundry (Azure AI Foundry)",
   "slug": "",
   "local_post_id": 44,
-  "production_post_id": null,
+  "production_post_id": 793,
   "wordpress_status": "publish",
   "menu_order": 5,
   "status": "approved",
