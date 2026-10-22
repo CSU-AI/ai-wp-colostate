@@ -49,7 +49,8 @@ Per-site storage is safe: pages, posts, media in `uploads/sites/<id>/`, Elemento
 
 ## Production MCP
 
-- Connection name: `emcp-prod-ai`. Never reuse the Local connection name.
+- Connection name: `emcp-ai-colostate-edu`, at `https://ai.colostate.edu/wp-json/mcp/emcp-tools-server`. Never reuse the Local connection name.
+- The server is off by default. Turn it on in EMCP Tools, then authenticate with OAuth through `/mcp` in an interactive Claude Code session. A session started before the server was on reports `ENDPOINT_NOT_FOUND`.
 - Account: a dedicated `ai-mcp` user, Administrator on the ai subsite only, no role on any other site, not a super admin. Without `unfiltered_html`, it cannot save script or iframe markup; add embeds yourself.
 - Ask that `read-file`, `search-files`, `list-directory`, and `add-custom-js` be disabled on production. File tools on a shared network can expose `wp-config.php` and other sites.
 - Keep it read-only by default. Enable writes only for a push session, and say so explicitly in that session.
