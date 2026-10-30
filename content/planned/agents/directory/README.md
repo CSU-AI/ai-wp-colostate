@@ -36,4 +36,4 @@ Terms are curated. Pick only from this list. If nothing fits, ask before adding 
 
 ## Schema
 
-Registered in Local through ACF Pro (database only, no plugin): post type `aicsu_agent`, taxonomies `aicsu_platform` and `aicsu_agent_tag`, field group "Agent Details", and `aicsu_role` extended to cover agents. Production gets the same schema through an ACF Tools export and import, not through the tool-chooser plugin's JSON.
+Ships as ACF JSON in the `aicsu-tool-chooser` plugin (`wordpress/tool-chooser/acf-json/`): post type `aicsu_agent`, taxonomies `aicsu_platform` and `aicsu_agent_tag`, field group "Agent Details", and `aicsu_role` shared with tools. See `wordpress/agent-directory/README.md` for the workflow.

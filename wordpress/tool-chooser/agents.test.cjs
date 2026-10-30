@@ -1,0 +1,13 @@
+const assert = require('node:assert/strict');
+const { matches } = require('./agents.js');
+const agent = { text: 'powerpoint alt text adds alt text to images', terms: { role: ['faculty', 'student'], platform: ['copilot'], tag: ['accessibility', 'powerpoint'] } };
+assert(matches(agent, {}, ''));
+assert(matches(agent, { role: ['student'] }, ''));
+assert(!matches(agent, { role: ['staff'] }, ''));
+assert(matches(agent, { role: ['staff', 'faculty'] }, ''), 'OR within a group');
+assert(!matches(agent, { role: ['faculty'], platform: ['nebulaone'] }, ''), 'AND across groups');
+assert(matches(agent, { role: ['faculty'], platform: ['copilot'], tag: ['powerpoint'] }, ''));
+assert(matches(agent, {}, 'ALT text'), 'search is case-insensitive');
+assert(!matches(agent, {}, 'not present'));
+assert(matches(agent, { tag: ['accessibility'] }, '  images '));
+console.log('PASS: agent group matching and search');

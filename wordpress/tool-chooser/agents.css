@@ -1,0 +1,7 @@
+/* Agent directory additions on top of chooser.css (same .aicsu-chooser scope). */
+/* Keep the layout full width when a filter leaves no cards (Elementor's shortcode widget otherwise shrink-wraps it). */
+.aicsu-agents, .elementor-widget:has(> .elementor-widget-container .aicsu-agents), .elementor-widget-shortcode:has(.aicsu-agents) { width:100%; }
+.aicsu-agents .ac-meta { color:#444; font-size:14px; margin:0 0 6px; }
+.aicsu-agents .ac-tags { margin-top:4px; }
+.aicsu-agents .ac-card-actions { padding-top:12px; }
+.aicsu-agents .ac-card h3 { margin-bottom:12px; }

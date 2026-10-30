@@ -50,6 +50,9 @@ pages:
       - path: /tools/help-me-choose/
         file: content/planned/tools/help-me-choose.md
         priority: P2
+      - path: /tools/agents/
+        file: content/planned/tools/agents.md
+        priority: P1
       - path: /tools/approval-process/
         file: content/planned/tools/approval-process.md
         priority: P0

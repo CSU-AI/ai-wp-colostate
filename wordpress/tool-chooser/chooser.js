@@ -105,7 +105,7 @@
     dialog.addEventListener('close', () => root.querySelector('.ac-open').focus());
     refresh(); updateSelection();
   }
-  const start = () => document.querySelectorAll('.aicsu-chooser').forEach(init);
+  const start = () => document.querySelectorAll('.aicsu-chooser:not(.aicsu-agents)').forEach(init);
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
   if (window.jQuery) window.jQuery(window).on('elementor/frontend/init', () => {
     window.elementorFrontend.hooks.addAction('frontend/element_ready/shortcode.default', start);

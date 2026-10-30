@@ -10,7 +10,7 @@ ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 SRC="$ROOT/wordpress/tool-chooser"
 SLUG="aicsu-tool-chooser"
 LOCAL_PLUGINS="${LOCAL_PLUGINS:-$HOME/Local Sites/multisite/app/public/wp-content/plugins}"
-FILES=(aicsu-tool-chooser.php chooser.css chooser.js acf-json)
+FILES=(aicsu-tool-chooser.php agent-directory.php chooser.css chooser.js agents.css agents.js acf-json)
 
 version="$(sed -n 's/^ \* Version: *//p' "$SRC/aicsu-tool-chooser.php")"
 stage="$(mktemp -d)"

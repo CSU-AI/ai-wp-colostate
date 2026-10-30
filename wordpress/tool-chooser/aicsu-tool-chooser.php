@@ -1,12 +1,14 @@
 <?php
 /**
  * Plugin Name: AI @ CSU Tool Chooser
- * Description: ACF-backed tool chooser for an Elementor Shortcode widget: [aicsu_tool_chooser].
- * Version: 0.2.2
+ * Description: ACF-backed tool chooser and agent directory for Elementor Shortcode widgets: [aicsu_tool_chooser] and [aicsu_agent_directory].
+ * Version: 0.3.0
  */
 defined('ABSPATH') || exit;
 
-// Tool post type, taxonomies, and fields ship as ACF Local JSON. Regenerate with export-acf-json.php.
+require_once __DIR__ . '/agent-directory.php';
+
+// Tool and agent post types, taxonomies, and fields ship as ACF Local JSON. Regenerate with export-acf-json.php.
 add_filter('acf/settings/load_json', function ($paths) {
     $paths[] = __DIR__ . '/acf-json';
     return $paths;

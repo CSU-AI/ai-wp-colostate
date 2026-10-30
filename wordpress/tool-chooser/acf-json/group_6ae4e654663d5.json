@@ -1,0 +1,104 @@
+{
+    "key": "group_6ae4e654663d5",
+    "title": "Agent Details",
+    "fields": [
+        {
+            "key": "field_6ae4e654663b7",
+            "label": "Agent URL",
+            "name": "agent_url",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "Where people open the agent.",
+            "required": 1,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_6ae4e654663c0",
+            "label": "Owner",
+            "name": "owner",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Team or person who maintains the agent.",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6ae4e654663c5",
+            "label": "Contact",
+            "name": "contact",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Email or URL for support and feedback.",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6ae4e654663ca",
+            "label": "Last reviewed",
+            "name": "last_reviewed",
+            "aria-label": "",
+            "type": "date_picker",
+            "instructions": "Date someone last confirmed the agent works and the description is accurate.",
+            "required": 1,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "Y-m-d",
+            "display_format": "F j, Y",
+            "first_day": 1,
+            "default_to_current_date": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "aicsu_agent"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [],
+    "active": true,
+    "description": "",
+    "show_in_rest": false,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1793386068
+}

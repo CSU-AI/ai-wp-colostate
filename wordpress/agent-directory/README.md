@@ -1,68 +1,56 @@
 # AI agent directory
 
-Searchable, filterable directory of CSU agents. No plugin: the schema is stored in ACF Pro, cards are a native Elementor Pro Loop Grid, and the filter is one Elementor HTML widget.
+Searchable, filterable directory of CSU agents, shown with the `[aicsu_agent_directory]` shortcode from the `aicsu-tool-chooser` plugin (version 0.3.0 and later). It reuses the tool chooser's markup and stylesheet, so the two pages look alike.
 
 ## Pieces
 
-| Piece | Where | Source in this repo |
-|---|---|---|
-| Records | `aicsu_agent` posts | `content/planned/agents/directory/*.md` |
-| Schema | ACF Pro, database only | Described in `content/planned/agents/directory/README.md` |
-| Card | Elementor Pro Loop Item "AI Agent Card" | `build-loop-item.php` (Local only) |
-| Filter, styling, and script | One HTML widget in the left column | `../tool-chooser/agent-filter.html` |
-| Test page | Local page 84, "AI Agents (test build)" | `build-directory-page.php` rebuilds the layout and places the filter |
+| Piece | Source in this repo |
+|---|---|
+| Shortcode (server-rendered list) | `wordpress/tool-chooser/agent-directory.php` |
+| Filtering, search, prefilter links | `wordpress/tool-chooser/agents.js` (tests: `agents.test.cjs`) |
+| Styling | `wordpress/tool-chooser/chooser.css` plus `agents.css` |
+| Schema: `aicsu_agent`, `aicsu_platform`, `aicsu_agent_tag`, Agent Details fields, `aicsu_role` | `wordpress/tool-chooser/acf-json/` (shared with tools) |
+| Records | `content/planned/agents/directory/*.md` |
 
-## How the filter works
+The first build used an Elementor Loop Grid and an HTML widget. It is in commit `59d619c` if you need it; the shortcode replaced it because it needed fewer overrides and no manual paste.
 
-The Loop Grid renders every agent on the server, so the list works without JavaScript. Each card wrapper carries WordPress term classes such as `aicsu_role-student`, `aicsu_platform-copilot`, and `aicsu_agent_tag-powerpoint`. `agent-filter.html` reads those classes, builds the checkbox groups from the terms that appear on cards, and hides cards that do not match. Choices combine with OR inside a group and AND across groups. Term display names come from the public REST API.
+## How it works
 
-Adding a term to an agent adds it to the filter automatically. Nothing in `agent-filter.html` changes.
+The shortcode renders every published agent on the server, so the list works without JavaScript. `agents.js` adds search and filters (OR within a group, AND across groups). Filter groups: Who Are You? (all four roles), Platform and Topic (only terms an agent uses). Cards show owner and the last-reviewed date (formatted in PHP from the raw `Ymd` value) and link to the agent. Agents are ordered by menu order, then title.
 
 ## Linking to a pre-filtered view
 
 Use slugs, comma separated:
 
 ```
-/ai-agents/?role=student
-/ai-agents/?role=student&platform=copilot
-/ai-agents/?tag=powerpoint,accessibility&q=alt
+/tools/agents/?role=student
+/tools/agents/?role=student&platform=copilot
+/tools/agents/?tag=powerpoint,accessibility&q=alt
 ```
 
-Parameters: `role`, `platform`, `tag`, `q` (search text). Visitors can untick anything. The URL updates as filters change, so a filtered view can be shared. Unknown slugs are ignored.
+Parameters: `role`, `platform`, `tag`, `q` (search text). Visitors can untick anything, and the URL updates as filters change. Slugs with no matching checkbox are ignored. Filtering happens in the browser, so the page stays cacheable.
 
-## Page requirements
+## The page
 
-The look matches the tool chooser (`chooser.css`): gray filter panel with a green top rule on the left, two-column card grid on the right.
+An Elementor page with the usual heading and intro, then a Shortcode widget containing `[aicsu_agent_directory]`, the same structure as the tool chooser page. The MCP can push this page; there is no HTML widget or super admin step.
 
-- A row container with class `aicsu-agent-layout` holds two children: `aicsu-agent-sidebar` (270px) with the HTML widget, and `aicsu-agent-main`.
-- `aicsu-agent-main` holds the "Explore Your Options" heading and a container with class `aicsu-agent-results` that wraps the Loop Grid.
-- The Loop Grid uses the "AI Agent Card" Loop Item and queries post type `aicsu_agent`.
-- `build-directory-page.php` builds exactly this structure on Local. Copy it when building the production page.
-- The HTML widget also carries the card and panel CSS (kept in one place, using the chooser's tokens), and the script injects the result count and the empty-state message into the results container.
+## Local workflow
 
-## Putting the filter on a page (production)
-
-The production MCP account lacks `unfiltered_html`, so it cannot save an HTML widget. A super admin does this step by hand:
-
-1. Log in to the ai subsite as a super admin. Super admins have `unfiltered_html` on multisite unless `DISALLOW_UNFILTERED_HTML` is set in `wp-config.php`.
-2. Edit the directory page in Elementor and add an HTML widget above the results container.
-3. Paste the full contents of `wordpress/tool-chooser/agent-filter.html`, update, and view the page.
-4. Re-paste whenever `agent-filter.html` changes. This repo is the source of truth, not the widget.
-
-## Local commands
+Change schema in Local ACF, then **export first, then sync**:
 
 ```sh
 source "/Users/david/Local Sites/multisite/local-wpcli-env.sh"
-# The env script names PHP 8.4.10; Local now has 8.4.18, so put it first on PATH.
+# The env script names PHP 8.4.10; Local has 8.4.18, so put it first on PATH.
 export PATH="$HOME/Library/Application Support/Local/lightning-services/php-8.4.18+1/bin/darwin-arm64/bin:$PATH"
 W=(--path="/Users/david/Local Sites/multisite/app/public" --url=https://multisite.local/ai --user=cdedward)
-wp "${W[@]}" eval-file wordpress/agent-directory/build-loop-item.php
-wp "${W[@]}" eval-file wordpress/agent-directory/build-directory-page.php
+wp "${W[@]}" eval-file wordpress/tool-chooser/export-acf-json.php   # Local ACF -> repo
+scripts/package-plugin.sh local                                      # repo -> Local plugin (rsync --delete)
 ```
 
-`--user` is required. Elementor will not save documents without a logged-in user.
+Syncing first would overwrite Local's newer schema with the repo copy. Run `node wordpress/tool-chooser/agents.test.cjs` and `chooser.test.cjs` after JS changes.
 
 ## Known gaps
 
-- The "Last reviewed" date shows as `YYYY-MM-DD`.
-- Production still needs the ACF schema (ACF Tools export and import), the Loop Item, and a directory page.
+- Slugs for unused terms are ignored in prefilter links (for example a tag no agent has).
+- `contact` is stored but not shown on cards.
+- Production still needs the plugin update: see `PRODUCTION-PLAN.md`.

@@ -5,7 +5,8 @@
     "active": true,
     "taxonomy": "aicsu_role",
     "object_type": [
-        "aicsu_tool"
+        "aicsu_tool",
+        "aicsu_agent"
     ],
     "advanced_configuration": 0,
     "import_source": "",
@@ -73,5 +74,5 @@
     "meta_box_sanitize_cb": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1787173695
+    "modified": 1793386088
 }

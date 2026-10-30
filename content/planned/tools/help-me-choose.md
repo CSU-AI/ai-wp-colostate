@@ -4,8 +4,10 @@ slug: "help-me-choose"
 status: drafting
 priority: P2
 parent: /tools/
-source_urls: []
-redirect_from: []
+source_urls:
+  - https://ai.colostate.edu/ai-tools/help-me-choose/
+redirect_from:
+  - /ai-tools/help-me-choose/
 template: tool-chooser
 owner:
 partners:

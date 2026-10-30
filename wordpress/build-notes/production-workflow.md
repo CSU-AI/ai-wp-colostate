@@ -16,7 +16,7 @@ How work moves from this repo and the Local by Flywheel site to `ai.colostate.ed
 | Never | Why |
 |---|---|
 | Edit, upload, or update `csu-theme` files | Shared by every site. Updates belong to the network's normal theme process. |
-| Network-activate `aicsu-tool-chooser` | It registers the `aicsu_tool` post type and taxonomies. Network activation would add them to every site. Activate it on the ai subsite only. |
+| Network-activate `aicsu-tool-chooser` | It registers the `aicsu_tool` and `aicsu_agent` post types and taxonomies. Network activation would add them to every site. Activate it on the ai subsite only. |
 | Change the ai subsite's active theme or network settings | Out of scope for content work. |
 | Use super admin credentials for MCP or scripts | A leaked super admin password reaches every site. |
 | Sync ACF JSON into the database through "Sync available" on production | Not harmful, but makes the database a second source of truth. Leave the JSON as the schema. |
@@ -28,7 +28,8 @@ Per-site storage is safe: pages, posts, media in `uploads/sites/<id>/`, Elemento
 | Layer | Source of truth | Path to production |
 |---|---|---|
 | Code: tool chooser plugin | `wordpress/tool-chooser/` | `scripts/package-plugin.sh zip`, then upload as super admin in the browser and activate on the ai subsite only |
-| Schema: `aicsu_tool`, taxonomies, Tool Details fields | `wordpress/tool-chooser/acf-json/` | Ships inside the plugin zip |
+| Schema: `aicsu_tool`, `aicsu_agent`, taxonomies, Tool and Agent Details fields | `wordpress/tool-chooser/acf-json/` | Ships inside the plugin zip |
+| Agent directory page and records | `content/planned/agents/` | Shortcode page and records through the production MCP, as drafts; see `wordpress/agent-directory/PRODUCTION-PLAN.md` |
 | Design system: Elementor kit, loop templates, reusable sections | Local Elementor | Production MCP (`update-global-colors`, `update-global-typography`, `import-template`) |
 | Pages and tool records | `content/planned/` Markdown, built in Local Elementor | Production MCP push, as drafts |
 | Redirects | `data/redirects.csv` | `scripts/release_redirects.py`, imported into Redirection |

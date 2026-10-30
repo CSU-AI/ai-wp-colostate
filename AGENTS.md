@@ -33,7 +33,7 @@ This repository is the working source for the complete rebuild of `ai.colostate.
 - Never change the ai subsite's active theme.
 - Never use super admin credentials for MCP or scripts.
 - Schema for the tool directory lives in `wordpress/tool-chooser/acf-json/`. Change it in Local ACF, then run `export-acf-json.php`. Do not sync it into the production database.
-- The agent directory uses no plugin. Its schema lives in ACF Pro's database on each site, and `wordpress/agent-directory/` holds the card builder, the filter source, and the README. Do not click ACF "Sync available" on `aicsu_role`: the tool-chooser JSON predates agents and would remove them.
+- The agent directory ships in the same plugin as the tool chooser (`[aicsu_agent_directory]`). Its schema is ACF JSON in `wordpress/tool-chooser/acf-json/`; run `export-acf-json.php` before `scripts/package-plugin.sh local`, never after, so Local's newer schema is not overwritten. Details are in `wordpress/agent-directory/README.md`.
 
 ## Elementor
 
