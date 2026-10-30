@@ -53,4 +53,5 @@ Syncing first would overwrite Local's newer schema with the repo copy. Run `node
 
 - Slugs for unused terms are ignored in prefilter links (for example a tag no agent has).
 - `contact` is stored but not shown on cards.
-- Production still needs the plugin update: see `PRODUCTION-PLAN.md`.
+- The "Open ..." card links are 22px tall, just under the 24px WCAG 2.2 target size (the tool chooser's links match). A padding change would need a new plugin release.
+- Production deployment and QA are recorded in `PRODUCTION-PLAN.md`.

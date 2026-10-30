@@ -1,7 +1,7 @@
 ---
 title: "AI Agents"
 slug: "agents"
-status: qa
+status: published
 priority: P1
 parent: /tools/
 source_urls: []
@@ -14,7 +14,7 @@ last_reviewed: 2026-10-30
 local_post_id: 109
 production_post_id: 814
 production_parent: 800
-production_modified: 2026-10-30 13:56:33
+production_modified: 2026-10-30 14:13:37
 ---
 
 AI @ CSU / Colorado State University

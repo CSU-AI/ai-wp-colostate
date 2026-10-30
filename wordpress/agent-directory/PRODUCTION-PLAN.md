@@ -13,8 +13,8 @@ Everything ships in one release of the existing `aicsu-tool-chooser` plugin (0.3
 | 2 Terms | Done: 2 platforms, 10 tags (Procurement, Governance, and Security added with the ICT agent). |
 | 3 Records | Done: posts 811, 812, 813, plus 818 (ICT Acquisition Process Assistant, added later). Published on 2026-10-30 so the directory could be QA'd (single agent pages are public; no page links to them yet). |
 | 4 Page | Done: draft page 814, slug `agents`, parent 800 (the live AI Tools page, now slug `tools`), so it publishes at `/tools/agents/`. |
-| 5 QA | Partly done: layout, equal heights, filter groups, prefilter links, tool chooser regression (16 of 16 tools, Compare works). Remaining: date after 0.3.1, mobile and tablet, keyboard, screen reader, contrast, JavaScript off. |
-| 6 Release | Not started. Publishes with the `/tools/` section release. |
+| 5 QA | Done on the live page (2026-10-30): layout at desktop, tablet, and mobile widths with no horizontal overflow (mobile collapses the filter panel), equal-height cards, filter groups, prefilter links, tool chooser regression, contrast (every pair 7.5:1 or better), review dates correct, all cards present without JavaScript. Not done: a screen reader pass. Known: the "Open ..." card links are 22px tall, under the 24px WCAG 2.2 target size (the tool chooser's links are the same). |
+| 6 Release | Done 2026-10-30: page 814 published at `/tools/agents/` (parent 800). Not yet checked: that a newly added agent appears on the live page without a cache purge. |
 
 ## Decisions before starting
 
