@@ -37,15 +37,16 @@ add_shortcode('aicsu_agent_directory', function () {
             foreach ($items as $item) $used[$param][$item->slug] = true;
         }
         // last_reviewed is stored as Ymd; read the raw value so display does not depend on the field's return format.
+        // Parse it in the site time zone and format it there, so a date never shifts by a day.
         $raw = (string) get_field('last_reviewed', $post->ID, false);
-        $time = $raw !== '' ? strtotime($raw) : false;
+        $reviewed = $raw !== '' ? date_create($raw, wp_timezone()) : false;
         $records[] = [
             'id' => $post->ID,
             'name' => get_the_title($post),
             'summary' => wp_strip_all_tags($post->post_excerpt),
             'url' => esc_url_raw((string) get_field('agent_url', $post->ID), ['https', 'http']),
             'owner' => trim((string) get_field('owner', $post->ID)),
-            'reviewed' => $time ? wp_date('F j, Y', $time) : '',
+            'reviewed' => $reviewed ? $reviewed->format('F j, Y') : '',
             'terms' => $terms,
             'names' => $names,
         ];

@@ -1,0 +1,4 @@
+source,target,regex,code
+/ai-tools/,/tools/,0,301
+/ai-tools/help-me-choose/,/tools/help-me-choose/,0,301
+^/ai-tools/(.*)$,/tools/$1,1,301

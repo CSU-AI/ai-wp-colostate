@@ -1,7 +1,7 @@
 ---
 title: "AI Agents"
 slug: "agents"
-status: built-local
+status: qa
 priority: P1
 parent: /tools/
 source_urls: []
@@ -12,7 +12,9 @@ partners:
   - Division of IT
 last_reviewed: 2026-10-30
 local_post_id: 109
-production_post_id:
+production_post_id: 814
+production_parent: 800
+production_modified: 2026-10-30 13:56:33
 ---
 
 AI @ CSU / Colorado State University

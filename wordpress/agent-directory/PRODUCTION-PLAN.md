@@ -4,6 +4,18 @@ Moves the agent directory to `ai.colostate.edu`. Follows `wordpress/build-notes/
 
 Everything ships in one release of the existing `aicsu-tool-chooser` plugin (0.3.0): schema, shortcode, and assets. Field keys match Local automatically because the schema is JSON in the plugin.
 
+## Progress (2026-10-30)
+
+| Phase | Status |
+|---|---|
+| 0 Parity | Done. Plugin 0.3.0 already uploaded; schema loaded from JSON. Elementor 4.3.4, Pro 4.3.1, ACF Pro 6.1.6 (Local runs 6.3.12). |
+| 1 Plugin release | 0.3.1 uploaded (fixes "Last reviewed" showing a day early). Verify the date on production. |
+| 2 Terms | Done: 2 platforms, 10 tags (Procurement, Governance, and Security added with the ICT agent). |
+| 3 Records | Done: posts 811, 812, 813, plus 818 (ICT Acquisition Process Assistant, added later). Published on 2026-10-30 so the directory could be QA'd (single agent pages are public; no page links to them yet). |
+| 4 Page | Done: draft page 814, slug `agents`, parent 800 (the live AI Tools page, now slug `tools`), so it publishes at `/tools/agents/`. |
+| 5 QA | Partly done: layout, equal heights, filter groups, prefilter links, tool chooser regression (16 of 16 tools, Compare works). Remaining: date after 0.3.1, mobile and tablet, keyboard, screen reader, contrast, JavaScript off. |
+| 6 Release | Not started. Publishes with the `/tools/` section release. |
+
 ## Decisions before starting
 
 | # | Decision | Recommendation |
@@ -98,3 +110,7 @@ One release, following "Section release" in the production workflow.
 | Terms missing when records are pushed | Phase 2 before phase 3 |
 | Agent goes live with no contact on file | Fill `contact`, or accept owner-only cards |
 | Elementor or Pro version drift | Phase 0 comparison |
+
+## Tools slug change (2026-10-30)
+
+Page 800 now has slug `tools`; see `wordpress/releases/2026-10-30-tools-slug.md` and `2026-10-30-tools-redirects.csv` (needs a manual Redirection import).

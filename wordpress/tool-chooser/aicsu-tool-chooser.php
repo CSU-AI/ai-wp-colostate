@@ -2,7 +2,7 @@
 /**
  * Plugin Name: AI @ CSU Tool Chooser
  * Description: ACF-backed tool chooser and agent directory for Elementor Shortcode widgets: [aicsu_tool_chooser] and [aicsu_agent_directory].
- * Version: 0.3.0
+ * Version: 0.3.1
  */
 defined('ABSPATH') || exit;
 

@@ -32,7 +32,7 @@ Terms are curated. Pick only from this list. If nothing fits, ask before adding 
 
 **`aicsu_platform`**: `copilot`, `nebulaone`
 
-**`aicsu_agent_tag`**: `accessibility`, `powerpoint`, `word`, `excel`, `curriculum`, `learning-outcomes`, `assessment`
+**`aicsu_agent_tag`**: `accessibility`, `powerpoint`, `word`, `excel`, `curriculum`, `learning-outcomes`, `assessment`, `procurement`, `governance`, `security`
 
 ## Schema
 
