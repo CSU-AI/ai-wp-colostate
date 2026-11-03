@@ -23,6 +23,8 @@ AI @ CSU / Colorado State University
 
 Browse agents built for CSU. Filter by who the agent is for, the platform it runs on, and what it helps with.
 
+[Button: Submit an agent](/tools/submit-an-agent/)
+
 ## Explore Your Options
 
 The directory is rendered from the ACF-managed AI Agents post type using `[aicsu_agent_directory]` in an Elementor Shortcode widget. Records are in `content/planned/agents/directory/`; the page works like the tool chooser. See `wordpress/agent-directory/README.md`.
