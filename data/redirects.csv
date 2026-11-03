@@ -1,7 +1,7 @@
 source_url,destination_url,status,notes
 /ai-tools/,/tools/,live,Approved tools landing page
 /ai-tools/help-me-choose/,/tools/help-me-choose/,live,Live tool chooser moves with the Tools section
-/ai-resources-support/,/resources/,needs-review,Old page is split across teaching research training and resources
+/ai-resources-support/,/training/,live,Old page is split across teaching research training and resources; training hub chosen as target
 /ai-news/,/news/,proposed,New current-news landing page
 /csu-ai-hub/,/it-support/,proposed,Replace obsolete product hub
 /csu-ai-hub/csu-gpt/,/it-support/csu-gpt/,proposed,Move product access and support content
