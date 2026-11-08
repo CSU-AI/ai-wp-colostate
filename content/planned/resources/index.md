@@ -1,7 +1,7 @@
 ---
 title: "AI Resource Library"
 slug: "resources"
-status: drafting
+status: published
 priority: P3
 parent:
 source_urls:
@@ -13,7 +13,8 @@ partners:
   - CSU Libraries
 last_reviewed:
 local_post_id: 153
-production_post_id:
+production_post_id: 862
+production_modified: "2026-11-08 12:27:50"
 ---
 
 # AI Resource Library

@@ -1,7 +1,7 @@
 ---
 title: "Using AI for Mental Health Support"
 slug: "mental-health"
-status: built-local
+status: published
 priority: P1
 parent: /resources/responsible-use/
 source_urls: []
@@ -13,7 +13,8 @@ partners:
   - Division of IT
 last_reviewed:
 local_post_id: 157
-production_post_id:
+production_post_id: 870
+production_modified: "2026-11-08 12:28:19"
 ---
 
 AI @ CSU / Resources / Using AI Responsibly

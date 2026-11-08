@@ -1,7 +1,7 @@
 ---
 title: "Using AI Responsibly"
 slug: "responsible-use"
-status: built-local
+status: published
 priority: P1
 parent: /resources/
 source_urls: []
@@ -12,7 +12,8 @@ partners:
   - CSU Health Network
 last_reviewed:
 local_post_id: 155
-production_post_id:
+production_post_id: 868
+production_modified: "2026-11-08 12:28:12"
 ---
 
 AI @ CSU / Resources

@@ -1,7 +1,7 @@
 ---
 title: "AI Glossary"
 slug: "glossary"
-status: built-local
+status: published
 priority: P3
 parent: /resources/
 source_urls:
@@ -13,7 +13,8 @@ partners:
   - CSU Libraries
 last_reviewed:
 local_post_id: 233
-production_post_id:
+production_post_id: 872
+production_modified: "2026-11-08 12:37:03"
 ---
 
 AI @ CSU / Resources

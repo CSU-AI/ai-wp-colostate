@@ -1,7 +1,7 @@
 ---
 title: "AI at CSU FAQ"
 slug: "faq"
-status: built-local
+status: published
 priority: P2
 parent: /resources/
 source_urls:
@@ -13,7 +13,8 @@ owner:
 partners: []
 last_reviewed:
 local_post_id: 235
-production_post_id:
+production_post_id: 874
+production_modified: "2026-11-08 12:32:46"
 ---
 
 AI @ CSU / Resources
@@ -47,7 +48,7 @@ These enterprise tools are provided through CSU's Microsoft 365 agreement or hos
 - Microsoft Teams Premium, for meeting notes and recaps
 - CSU-GPT, a secure CSU-hosted chat tool for students, faculty, and staff
 
-What each tool may handle depends on the data level and its settings. See [Approved AI Tools](/tools/) and [Use AI With Level 3 Confidential Data](/tools/level-3-data/). RamGPT, a chatbot, is not live yet.
+What each tool may handle depends on the data level and its settings. See [Approved AI Tools](/tools/). RamGPT, a chatbot, is not live yet.
 
 ### Can I Use ChatGPT, Claude, or Gemini for CSU Work?
 
@@ -55,7 +56,7 @@ Yes, for public information (Level 1). Internal (Level 2) information needs appr
 
 ### Which Tool Should I Choose?
 
-Use [Help Me Choose](/tools/help-me-choose/) to match a task and data level to a tool, or see the [tool comparison](/tools/comparison/).
+Use [Help Me Choose](/tools/help-me-choose/) to match a task and data level to a tool.
 
 ### Can I Use Other Tools to Transcribe Meetings?
 
@@ -69,7 +70,7 @@ Only to an enterprise tool approved for that kind of data, and only when FERPA a
 
 ### How Do I Know What Level My Data Is?
 
-CSU sorts data into four levels from Public to Restricted. Read the [data classification levels](https://datagov.csusystem.edu/data-classification-levels/). For Level 3 confidential data, see [Use AI With Level 3 Confidential Data](/tools/level-3-data/).
+CSU sorts data into four levels from Public to Restricted. Read the [data classification levels](https://datagov.csusystem.edu/data-classification-levels/).
 
 ### What Is the Green Shield in Copilot?
 
@@ -93,7 +94,7 @@ It depends on the data and the funder. Check data classification, IRB requiremen
 
 ### Who Do I Contact?
 
-Start with [AI Contact and Support](/resources/contact/) for tool access, teaching, research, and general questions. The Division of IT service desk can help with sign-in and access.
+Start with [Contact Us](/contact-form/) for tool access, teaching, research, and general questions. The Division of IT service desk can help with sign-in and access.
 
 ### How Do I Report a Problem or a Data Exposure?
 
@@ -101,7 +102,7 @@ Report a data incident through the [Data Governance contact page](https://datago
 
 ### Can I Contribute a Post or Share a Project?
 
-Yes. We welcome stories and projects about AI at CSU or in higher education from across the community. Send your idea through [AI Contact and Support](/resources/contact/).
+Yes. We welcome stories and projects about AI at CSU or in higher education from across the community. Send your idea through [Contact Us](/contact-form/).
 
 ## Related
 
