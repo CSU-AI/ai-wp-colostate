@@ -3,3 +3,7 @@ dist/
 __pycache__/
 .agents/
 .impeccable/config.local.json
+# Local agent tooling
+.claude/
+.codex/
+skills-lock.json
