@@ -44,8 +44,19 @@ Lessons from building the Resources pages on Local with the EMCP tools, verified
 ### Callout
 
 - Container, full width, flex column, 14px gap, 28px padding (18px mobile), 8px radius.
-- Background: Colorado State Gold tinted to 25% strength, `#F1F0DC`. Border: Colorado State Green, 2px with a 10px left edge.
+- Background: Colorado State Gold tinted to 25% strength, `#F1F0DC`. Border: Colorado State Green, uniform 2px (no thicker side edge).
 - Contents: H2 in green, dark paragraph, then Buttons. Used for the crisis box on the mental health page.
+
+### Long pages: jump links, bands, accordion
+
+Pattern used on the FAQ, Glossary, Mental Health, hub and index pages (November 2026).
+
+- Under the intro, a row of small Buttons linking to section anchors (`_element_id` on each section container). Row is flex, wrap, 12px gap.
+- Each section is a full-width flex column container with an anchor id. Alternate sections get the Gold Tint band (`#F1F0DC`, 8px radius, 28px padding). Outer container gap is 28px.
+- Section header: flex row, 14px gap, icon widget (26px, gold circle, green glyph) plus H2.
+- FAQ questions use the native Accordion widget: H3 titles, `faq_schema: yes`, green title color, 1px green border, white backgrounds. Elementor opens the first item by default and the widget has no control to collapse it.
+- Keep heading order: H1, H2 sections, H3 items. Do not jump from H1 to H3.
+- Rebuilding a page: `import-template` the new container tree, then `remove-element` the old top-level container. Imported element ids are regenerated, so look them up with `find-element` or `get-page-structure` before updating.
 
 ## Brand colors
 
