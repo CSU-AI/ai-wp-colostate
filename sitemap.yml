@@ -40,6 +40,10 @@ pages:
       - path: /about/governance/
         file: content/planned/about/governance.md
         priority: P2
+        children:
+          - path: /about/governance/ai-philosophy/
+            file: content/planned/about/governance/ai-philosophy.md
+            priority: P2
       - path: /about/ai-use-on-this-site/
         file: content/planned/about/ai-use-on-this-site.md
         priority: P2
