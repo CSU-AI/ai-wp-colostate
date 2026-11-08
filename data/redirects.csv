@@ -6,9 +6,9 @@ source_url,destination_url,status,notes
 /csu-ai-hub/,/it-support/,proposed,Replace obsolete product hub
 /csu-ai-hub/csu-gpt/,/it-support/csu-gpt/,proposed,Move product access and support content
 /artificial-intelligence-and-csus-mission-and-vision-shaping-the-future-of-education/,/about/,proposed,Consolidate campus vision content
-/enterprise-ai-design-team/,/about/governance/,proposed,Consolidate campus governance content
-/artificial-intelligence-joint-task-force/,/about/governance/,proposed,Consolidate task force outcomes
-/ai-centers/,/research/showcase/,needs-review,Retain only if the directory can be maintained
+/enterprise-ai-design-team/,/about/governance/previous-groups/,approved,Retired group; target anchor #enterprise-ai-design-team added in the import CSV
+/artificial-intelligence-joint-task-force/,/about/governance/previous-groups/,approved,Retired group; target anchor #ai-joint-task-force added in the import CSV
+/ai-centers/,/about/governance/,approved,Centers page retired 2026-11-08; links preserved in content/planned/research/showcase.md
 /csu-ignites-ai-shaping-tomorrow-together/,/news/archive/,needs-review,Passed event; retain useful recordings and materials
 /csu-ignites-ai-shaping-tomorrow-together/csu-fort-collins-agenda-at-a-glance/,/news/archive/,needs-review,Passed event agenda
 /contact-form/,/resources/contact/,proposed,Central topic-based contact page

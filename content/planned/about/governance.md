@@ -16,8 +16,9 @@ owner:
 partners:
   - Division of IT
 last_reviewed:
-local_post_id:
-production_post_id:
+local_post_id: 310
+production_post_id: 887
+production_modified: "2026-11-08 13:33:21"
 ---
 
 # AI Governance at CSU Fort Collins
@@ -34,6 +35,12 @@ Describe campus decision-making and initiatives while directing visitors to CSU 
 - Current initiative status
 - Participation and contact information
 - Links to CSU System AI and Data Governance
+
+## Campus AI groups
+
+- [Presidential AI Strategy Task Force](/about/governance/presidential-ai-strategy-task-force/): sets CSU's institutional AI philosophy, coordination, and governance model. Phase 1 runs October 2026 to January 2027.
+- [Provost's Artificial Intelligence Working Group](/about/governance/provosts-ai-working-group/): guides how AI is integrated into teaching, learning, advising, and academic operations. Chartered Fall 2026.
+- [Previous AI Groups](/about/governance/previous-groups/): the Enterprise AI Design Team (through December 2025) and the AI Joint Task Force (September to December 2024).
 
 ## CSU System AI Governance Guidelines
 
