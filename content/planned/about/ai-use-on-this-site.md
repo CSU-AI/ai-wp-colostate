@@ -1,7 +1,7 @@
 ---
 title: "How We Use AI on This Site"
 slug: "ai-use-on-this-site"
-status: built-local
+status: published
 priority: P2
 parent: /about/
 source_urls:
@@ -12,7 +12,8 @@ owner: Division of IT
 partners: []
 last_reviewed:
 local_post_id: 277
-production_post_id:
+production_post_id: 866
+production_modified: "2026-11-08 12:32:56"
 ---
 
 AI @ CSU / About
@@ -46,13 +47,12 @@ The footer on every page links here, so this page covers the whole site. Where A
 
 ## Check Our Work
 
-AI makes mistakes, and so do people. If you find something wrong, unclear, or missing on this site, tell us at [Contact Us](/resources/contact/). We will correct it and, when it affects what a page says, update the page's review date.
+AI makes mistakes, and so do people. If you find something wrong, unclear, or missing on this site, tell us at [Contact Us](/contact-form/). We will correct it and, when it affects what a page says, update the page's review date.
 
 ## Related
 
 - [AI Glossary](/resources/glossary/)
 - [Using AI Responsibly](/resources/responsible-use/)
-- [AI Governance at CSU Fort Collins](/about/governance/)
 - [CSU System AI Use Guidelines](https://ai.csusystem.edu/guidelines/)
 
 ## Build notes
@@ -66,4 +66,4 @@ AI makes mistakes, and so do people. If you find something wrong, unclear, or mi
 - Confirm every claim in "What We Use AI For" and "What We Don't Do" is true of current practice, especially the rule about no confidential or student information and the no-photo-realistic-images rule. Delete any we won't keep.
 - Confirm the review process: who approves a page before it is published.
 - Decide whether the Provost working group wants a standard format for page notes.
-- Confirm the contact route. `/resources/contact/` is assumed.
+- Confirm the contact route. `/contact-form/` is used.

@@ -23,6 +23,7 @@ Lessons from building the Resources pages on Local with the EMCP tools, verified
 - `reorder-elements` takes `container_id` and `element_ids`.
 - `menu-write` operations: `add-item`, `delete-item`, `reorder-items`. A menu write can fail once with `ECONNRESET`. Check the menu with `get-menu` before retrying, because it may have saved.
 - Protected meta (for example `_wc_*`) cannot be written through `update-post`.
+- `export-page` returns only the element tree. Page settings such as `custom_css` (the Glossary's table borders and alignment) are not included. When pushing, also read `_elementor_page_settings` from Local (`wp_14_postmeta`) and apply it with `update-page-settings`.
 
 ## Layout recipes
 

@@ -1,7 +1,7 @@
 ---
 title: "About AI @ CSU Fort Collins"
 slug: "about"
-status: built-local
+status: published
 priority: P2
 parent:
 source_urls:
@@ -15,7 +15,8 @@ partners:
   - Division of IT
 last_reviewed:
 local_post_id: 283
-production_post_id:
+production_post_id: 864
+production_modified: "2026-11-08 12:27:57"
 ---
 
 # About AI @ CSU Fort Collins
