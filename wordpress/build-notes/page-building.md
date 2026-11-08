@@ -18,6 +18,8 @@ Lessons from building the Resources pages on Local with the EMCP tools, verified
 - `build-page` takes no parent or slug. After building, call `update-post` with `slug` and `parent`.
 - `build-page` rejects a missing `title`, and widgets need `widget_type`.
 - New widgets added later with `add-free-widget` regenerate CSS correctly. If a page looks stale, reload with a changed query string.
+- `build-page` leaves the outer container's `flex_align_items` at Elementor's default (center), so headings and text shrink and center. After building, call `update-container` on the outer container with `flex_align_items: stretch` and `flex_justify_content: flex-start`. The heading `align` setting alone does not fix it.
+- The CSU theme sets `--flex-direction: column` on `.footer .e-con-inner`, so a boxed container in a Theme Builder footer cannot be a row. Use `content_width: full` containers in footer templates.
 - `reorder-elements` takes `container_id` and `element_ids`.
 - `menu-write` operations: `add-item`, `delete-item`, `reorder-items`. A menu write can fail once with `ECONNRESET`. Check the menu with `get-menu` before retrying, because it may have saved.
 - Protected meta (for example `_wc_*`) cannot be written through `update-post`.

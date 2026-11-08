@@ -1,7 +1,7 @@
 ---
 title: "About AI @ CSU Fort Collins"
 slug: "about"
-status: drafting
+status: built-local
 priority: P2
 parent:
 source_urls:
@@ -14,7 +14,7 @@ owner:
 partners:
   - Division of IT
 last_reviewed:
-local_post_id:
+local_post_id: 283
 production_post_id:
 ---
 
@@ -36,3 +36,7 @@ Explain the Fort Collins vision for AI, who coordinates the work, and how the ca
 
 - Obtain approved vision language and leadership sign-off.
 - Confirm the current team name, membership, and public contact information.
+
+## Local stub
+
+A stub is published on Local (post 283) with a single card linking to How We Use AI on This Site. Replace it with the full page when the vision language is approved.

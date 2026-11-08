@@ -1,0 +1,187 @@
+{
+  "version": "0.4",
+  "title": "AI @ CSU Footer",
+  "type": "footer",
+  "content": [
+    {
+      "id": "6512bd4",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "padding": {
+          "unit": "px",
+          "top": "8",
+          "right": "32",
+          "bottom": "24",
+          "left": "32",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "d3d9446",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+            "editor": "<p>All content on this site is reviewed by CSU staff.<br><a href=\"/about/ai-use-on-this-site/\">How we use AI on this site</a></p>"
+          },
+          "elements": []
+        }
+      ],
+      "isInner": false
+    },
+    {
+      "id": "c81e728",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "row",
+        "flex_wrap": "wrap",
+        "flex_gap": {
+          "unit": "px",
+          "size": 24,
+          "column": "24",
+          "row": "24",
+          "isLinked": true
+        },
+        "padding": {
+          "unit": "px",
+          "top": "32",
+          "right": "32",
+          "bottom": "16",
+          "left": "32",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "e4da3b7",
+          "elType": "container",
+          "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "width": {
+              "unit": "%",
+              "size": 30
+            },
+            "width_mobile": {
+              "unit": "%",
+              "size": 100
+            }
+          },
+          "elements": [
+            {
+              "id": "eccbc87",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Colleges:",
+                "header_size": "h3"
+              },
+              "elements": []
+            },
+            {
+              "id": "a87ff67",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<ul><li><a href=\"https://agsci.colostate.edu/\">Agricultural Sciences</a></li><li><a href=\"https://biz.colostate.edu/\">Business</a></li><li><a href=\"https://www.engr.colostate.edu/\">Walter Scott, Jr. College of Engineering</a></li><li><a href=\"https://www.chhs.colostate.edu/\">Health and Human Sciences</a></li><li><a href=\"https://www.libarts.colostate.edu/\">Liberal Arts</a></li><li><a href=\"https://warnercnr.colostate.edu/\">Warner College of Natural Resources</a></li><li><a href=\"https://www.natsci.colostate.edu/\">Natural Sciences</a></li><li><a href=\"https://vetmedbiosci.colostate.edu/\">Veterinary Medicine and Biomedical Sciences</a></li></ul>"
+              },
+              "elements": []
+            }
+          ],
+          "isInner": true
+        },
+        {
+          "id": "c9f0f89",
+          "elType": "container",
+          "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "width": {
+              "unit": "%",
+              "size": 30
+            },
+            "width_mobile": {
+              "unit": "%",
+              "size": 100
+            }
+          },
+          "elements": [
+            {
+              "id": "1679091",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Schools &amp; Programs:",
+                "header_size": "h3"
+              },
+              "elements": []
+            },
+            {
+              "id": "8f14e45",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<ul><li><a href=\"https://graduateschool.colostate.edu/\">Graduate School</a></li><li><a href=\"https://international.colostate.edu/\">International Programs</a></li><li><a href=\"https://www.online.colostate.edu/\">Online Degrees and Courses</a></li><li><a href=\"https://www.research.colostate.edu/smse/\">School of Materials Science and Engineering</a></li><li><a href=\"https://smtd.colostate.edu/\">School of Music, Theatre and Dance</a></li><li><a href=\"https://www.engr.colostate.edu/bce/\">School of Biomedical and Chemical Engineering</a></li><li><a href=\"https://www.chhs.colostate.edu/soe/\">School of Education</a></li><li><a href=\"https://sustainability.colostate.edu/\">School of Global Environmental Sustainability</a></li><li><a href=\"https://www.chhs.colostate.edu/ssw/\">School of Social Work</a></li><li><a href=\"https://publichealth.colostate.edu/\">School of Public Health</a></li></ul>"
+              },
+              "elements": []
+            }
+          ],
+          "isInner": true
+        },
+        {
+          "id": "45c48cc",
+          "elType": "container",
+          "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "width": {
+              "unit": "%",
+              "size": 28
+            },
+            "width_mobile": {
+              "unit": "%",
+              "size": 100
+            }
+          },
+          "elements": [
+            {
+              "id": "c4ca423",
+              "elType": "widget",
+              "widgetType": "image",
+              "settings": {
+                "image": {
+                  "url": "https://static.colostate.edu/site-templates/csu-theme/assets/img/support-csu-nb.svg?v1",
+                  "id": "",
+                  "alt": "Support CSU"
+                },
+                "image_size": "full",
+                "link_to": "custom",
+                "link": {
+                  "url": "https://giving.colostate.edu/",
+                  "is_external": "",
+                  "nofollow": ""
+                },
+                "_element_custom_width": {
+                  "unit": "px",
+                  "size": 220
+                },
+                "width": {
+                  "unit": "px",
+                  "size": 220
+                },
+                "_element_width": "initial"
+              },
+              "elements": []
+            }
+          ],
+          "isInner": true
+        }
+      ],
+      "isInner": false
+    }
+  ],
+  "page_settings": []
+}

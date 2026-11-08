@@ -1,2 +1,141 @@
 # Shared terms and approved definitions for planned content.
-terms: []
+# Definitions are plain-language rewrites. Sources: CSU System "Understanding AI" page
+# (https://ai.csusystem.edu/resources/understanding-ai/) and the Provost's AI working group
+# terminology (CSU Fort Collins). Group: key-terms | capabilities | delivery | csu-context.
+# csu_note is Fort Collins specific context and may be empty.
+terms:
+  # Key terms
+  - term: Algorithm
+    group: key-terms
+    definition: A defined set of step-by-step instructions a computer follows to complete a task or solve a problem.
+    source: both
+  - term: Bias
+    group: key-terms
+    definition: A systematic pattern in AI output that is inaccurate or unfair. It can come from gaps or imbalances in the training data, from how the system was built and tested, or from how it is used.
+    source: both
+  - term: Foundation model
+    group: key-terms
+    definition: A general-purpose AI model trained on broad data and adaptable to many tasks. Tools such as ChatGPT and Claude are built on foundation models.
+    source: both
+  - term: Hallucination
+    group: key-terms
+    definition: False, made-up, or unsupported output that an AI system presents with confidence as true. Always check facts, quotes, and citations.
+    source: both
+  - term: Inference
+    group: key-terms
+    definition: How a trained model produces a prediction or response from new input. It generates an answer from learned patterns instead of looking up a stored one.
+    source: both
+  - term: Large language model (LLM)
+    group: key-terms
+    definition: An AI model trained on very large amounts of text and other data so it can process and generate natural language.
+    aliases: [LLM, LLMs]
+    source: both
+  - term: Natural language processing (NLP)
+    group: key-terms
+    definition: Methods that let computers interpret, analyze, and generate human language instead of relying on fixed, pre-defined terms.
+    aliases: [NLP]
+    source: both
+  - term: Prompt
+    group: key-terms
+    definition: The instruction, question, or other input you give an AI system to get a response.
+    source: both
+  - term: Prompt engineering
+    group: key-terms
+    definition: Writing and refining prompts to get more useful, consistent, or testable results.
+    source: system
+  - term: Retrieval-augmented generation (RAG)
+    group: key-terms
+    definition: A technique where the system first pulls information from selected sources and gives it to a generative model before it answers. It can make answers more relevant but does not guarantee they are accurate.
+    aliases: [RAG]
+    source: system
+  - term: Training
+    group: key-terms
+    definition: The process of adjusting a model with data so it learns patterns and produces useful output.
+    source: both
+  - term: Training data
+    group: key-terms
+    definition: The material used to build or refine a model. Its quality, coverage, permissions, and biases shape what the resulting system can do.
+    source: system
+
+  # Common AI capabilities
+  - term: Agent
+    group: capabilities
+    definition: An AI system that uses a model, instructions, and sometimes outside tools to complete a specific task, such as a customer service chatbot or audio captioning.
+    link: /tools/agents/
+    source: both
+  - term: Agentic AI
+    group: capabilities
+    definition: AI that plans and carries out a series of steps toward a goal with limited supervision, such as booking workflows or account reconciliation. More autonomy calls for tighter permissions, monitoring, and human review.
+    source: both
+  - term: Generative AI
+    group: capabilities
+    definition: AI that creates new text, images, audio, video, or code from natural language instructions. ChatGPT, Claude, Gemini, and Copilot are examples. Good for drafting and summarizing, and it can produce inaccurate or biased content.
+    source: both
+  - term: Machine learning (ML)
+    group: capabilities
+    definition: AI that learns patterns from data to predict, match, recommend, or correct. Spell check and adaptive learning platforms are examples. Results depend on the quality and coverage of the data.
+    aliases: [ML]
+    source: both
+
+  # How AI is delivered
+  - term: API access
+    group: delivery
+    definition: A programmatic connection to an AI model through a defined interface, often used to build the model into another tool, such as a custom chatbot. Security, retention, and cost depend on the agreement and setup.
+    aliases: [API]
+    source: both
+  - term: Browser extension or plugin
+    group: delivery
+    definition: An AI feature added to a web browser or another application. It may read page content or what you type, so review its permissions before installing.
+    source: both
+  - term: Cloud-hosted service
+    group: delivery
+    definition: An AI tool you reach through a vendor's website or app, where your input is processed on the vendor's servers. Data handling depends on your account, the contract, and your settings, not on the product name.
+    source: both
+  - term: Embedded AI
+    group: delivery
+    definition: AI built into an application you use for something else, such as search, recommendations, writing help, or image editing. It still needs data and accessibility review, including in workplace software.
+    source: both
+  - term: Enterprise or licensed instance
+    group: delivery
+    definition: Institution-provided access to an AI tool under negotiated contract terms, managed settings, and institutional login. The protections are stronger, but they do not automatically cover every feature, data type, or use.
+    csu_note: chat.colostate.edu and the institutional Copilot license are examples.
+    source: both
+  - term: Knowledge discovery tool
+    group: delivery
+    definition: An AI-powered search tool that finds, organizes, or summarizes information across sources. Check the underlying sources and verify citations and claims.
+    source: both
+  - term: Local model
+    group: delivery
+    definition: An AI model that runs on your own device or an institution-managed server instead of in the cloud. It gives more control, but that alone does not make it secure, accurate, accessible, or compliant.
+    aliases: [Local LLM]
+    source: both
+  - term: Sandbox
+    group: delivery
+    definition: A contained space for testing AI where access to other systems and data is limited. It lowers exposure but is not risk-free. Confirm what information you may use and whether anything leaves the environment.
+    source: both
+
+  # CSU context
+  - term: Data classification
+    group: csu-context
+    definition: The CSU System scheme that sorts information by sensitivity into Public, Internal, Confidential, and Restricted. It helps decide which tools and uses can handle a given kind of information.
+    source: system
+  - term: Enterprise data agreement
+    group: csu-context
+    definition: A contract that defines how a vendor may store, process, keep, share, or use university information. It may cover only a specific product, account, feature, or use.
+    source: system
+  - term: FERPA
+    group: csu-context
+    definition: The Family Educational Rights and Privacy Act, a federal law that protects student education records. It governs whether and how student information can be used with AI tools.
+    source: system
+  - term: Human oversight
+    group: csu-context
+    definition: A person stays responsible for reviewing AI-assisted work and is accountable for decisions, especially those that affect other people.
+    source: system
+  - term: Responsible AI
+    group: csu-context
+    definition: Use of AI that is accountable, transparent, private by design, fair, appropriate, and reviewed over time.
+    source: system
+  - term: Tenant
+    group: csu-context
+    definition: An organization's managed, logically separated environment within a cloud service. The protections available depend on the agreement, configuration, identity controls, and how it is used.
+    source: system
