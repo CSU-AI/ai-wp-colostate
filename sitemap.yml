@@ -44,6 +44,15 @@ pages:
           - path: /about/governance/ai-philosophy/
             file: content/planned/about/governance/ai-philosophy.md
             priority: P2
+          - path: /about/governance/presidential-ai-strategy-task-force/
+            file: content/planned/about/governance/presidential-ai-strategy-task-force.md
+            priority: P2
+          - path: /about/governance/provosts-ai-working-group/
+            file: content/planned/about/governance/provosts-ai-working-group.md
+            priority: P2
+          - path: /about/governance/previous-groups/
+            file: content/planned/about/governance/previous-groups.md
+            priority: P2
       - path: /about/ai-use-on-this-site/
         file: content/planned/about/ai-use-on-this-site.md
         priority: P2

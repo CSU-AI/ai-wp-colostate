@@ -55,10 +55,9 @@ Button: [AI Governance Guidelines (CSU System)](https://datagov.csusystem.edu/ai
 ## Child pages
 
 - `/about/governance/ai-philosophy/`: planned file `governance/ai-philosophy.md`.
-- `/about/governance/presidential-ai-strategy-task-force/`, `/about/governance/provosts-ai-working-group/`, and `/about/governance/previous-groups/` are built on Local (posts 312, 314, 316) but have no planned Markdown files or sitemap entries yet.
+- `/about/governance/presidential-ai-strategy-task-force/`, `/about/governance/provosts-ai-working-group/`, and `/about/governance/previous-groups/`: planned files in `governance/`.
 
 ## Editorial decisions needed
 
 - Confirm the current governance bodies and their authority.
-- Add planned files and sitemap entries for the three group pages, or confirm they are out of scope.
 - The Presidential Task Force line says it sets CSU's institutional AI philosophy, while the Provost group authored the draft philosophy. Confirm how the two relate before this page is released.

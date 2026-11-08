@@ -59,6 +59,15 @@ Pattern used on the FAQ, Glossary, Mental Health, hub and index pages (November 
 - Keep heading order: H1, H2 sections, H3 items. Do not jump from H1 to H3.
 - Rebuilding a page: `import-template` the new container tree, then `remove-element` the old top-level container. Imported element ids are regenerated, so look them up with `find-element` or `get-page-structure` before updating.
 
+### Rosters and long lists (governance pages, November 2026)
+
+- Tint panel: put `_css_classes: csu-panel` on a text-editor widget with `_background_color: #F1F0DC`, 24px 28px padding and an 8px radius. Page `custom_css` (`.csu-panel ul, .csu-panel ol { margin: 0; }`) removes the list margin so columns line up. Repeat the CSS on each page that uses panels. It is page settings, so on production apply it with `update-page-settings`.
+- Columns: the text-editor widget has native `text_columns` (3 desktop, 2 tablet, 1 mobile for long rosters) and `column_gap`. Use it only on single plain lists. Mixed bold labels and lists split badly across columns.
+- Group grids (subgroups, member groups): flex row wrap, 31.5% (three across) or 48.5% (two across) children, 3px Gold top border, H3 or H4 at 22px green. No card chrome.
+- Theme H3 is very large. Set `typography_font_size` 22 to 24px and `title_color` green on H3s inside grids and panels.
+- Jump links: a row of small Buttons linking to `#id`, with `_element_id` set on each H2.
+- Build order for new blocks in an existing page: `import-template` appends at the top level, so `move-element` it into the outer container (`position` -1 or an index).
+
 ## Brand colors
 
 Source: https://brand.colostate.edu/color/ (Find Your Energy palette). Older secondary and tertiary palettes are retired. Only that color page of the brand site reflects the current brand.
