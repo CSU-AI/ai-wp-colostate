@@ -16,7 +16,7 @@ last_reviewed:
 local_post_id: 122
 production_post_id: 833
 production_parent: 829
-production_modified: 2026-11-03 14:47:19
+production_modified: 2026-11-08 14:33:10
 ---
 
 AI @ CSU / Colorado State University
