@@ -121,14 +121,14 @@ Card grid: flex row, wrap, stretch alignment, 20px gap. Three across at 31.5% wi
 
 ## Elevation & Depth
 
-Flat by default. No shadows. Hierarchy comes from borders (1px green outline, 6px green top edge on cards, 10px green left edge on callouts), white against tint surfaces, and type weight.
+Flat by default. No shadows. Hierarchy comes from borders (1px green outline, 6px green top edge on cards, uniform 2px green border on callouts), white against tint surfaces, and type weight.
 
 ### Named Rules
 **The Flat-By-Default Rule.** Surfaces carry no shadow. Do not add elevation to mark importance; use the callout tint and edge instead.
 
 ## Shapes
 
-Gently rounded rectangles (8px) for cards and callouts. Icons sit in perfect circles. Rules are straight and structural: top and left edges in solid brand green. No pills, blobs, or decorative geometry.
+Gently rounded rectangles (8px) for cards and callouts. Icons sit in perfect circles. Rules are straight and structural: a solid brand-green top edge on cards. No pills, blobs, or decorative geometry.
 
 ## Components
 
@@ -144,8 +144,14 @@ Gently rounded rectangles (8px) for cards and callouts. Icons sit in perfect cir
 
 ### Callout
 - **Use:** crisis notices, key warnings, high-priority guidance.
-- **Style:** Gold Tint (#F1F0DC) fill, 2px green border with a 10px left edge, 8px radius, 28px padding (18px mobile), 14px gap.
+- **Style:** Gold Tint (#F1F0DC) fill, uniform 2px green border (no thicker side edge), 8px radius, 28px padding (18px mobile), 14px gap.
 - **Contents:** green H2, dark paragraph, then buttons.
+
+### Section Band
+- Full-width container, Gold Tint (#F1F0DC), 8px radius, 28px padding (18px mobile), 16px gap. Alternates with plain white sections to give long pages rhythm. Header row: icon badge plus green H2, 14px gap.
+
+### Accordion
+- Native Elementor Accordion, H3 titles in green 20px/600, white title and content backgrounds, 1px green border, title padding 18px 20px, plus/minus icons in green. FAQ schema on. First item opens by default.
 
 ### Icon Badge
 - Font Awesome through Elementor's icon widget (inline SVG), stacked circle, Gold (#C8C372) fill, Green (#1E4D2B) glyph, 30px, 0.6em padding, left-aligned.

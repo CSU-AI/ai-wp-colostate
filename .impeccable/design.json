@@ -120,9 +120,9 @@
       "name": "Callout",
       "kind": "custom",
       "refersTo": "callout",
-      "description": "Gold-tint callout with a thick green left edge.",
+      "description": "Gold-tint callout with a uniform green border.",
       "html": "<div class=\"ds-callout\"><h2>Need Help Now?</h2><p>Contact campus support for urgent concerns.</p></div>",
-      "css": ".ds-callout{background:#F1F0DC;border:2px solid #1E4D2B;border-left-width:10px;border-radius:8px;padding:28px;font-family:Poppins,sans-serif;color:#3A3A3A;max-width:420px}.ds-callout h2{color:#1E4D2B;margin:0 0 14px;font-size:22px}.ds-callout p{margin:0}"
+      "css": ".ds-callout{background:#F1F0DC;border:2px solid #1E4D2B;border-radius:8px;padding:28px;font-family:Poppins,sans-serif;color:#3A3A3A;max-width:420px}.ds-callout h2{color:#1E4D2B;margin:0 0 14px;font-size:22px}.ds-callout p{margin:0}"
     },
     {
       "name": "Icon Badge",

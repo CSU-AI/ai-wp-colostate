@@ -112,7 +112,7 @@ Yes. We welcome stories and projects about AI at CSU or in higher education from
 
 ## Build notes
 
-- Template `faq`. Page-scoped CSS only if needed. Accordion widget per section, or H3 plus paragraph (decide on review).
+- Template `faq`. Page-scoped CSS only if needed. Built with one Accordion widget per section (decided November 2026), jump links, and section bands. See `wordpress/build-notes/page-building.md`.
 - Use real lists. One H1. Add anchor IDs to each question.
 - Local links need the `multisite.local/ai/` prefix when built.
 
