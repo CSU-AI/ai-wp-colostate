@@ -16,7 +16,7 @@ partners:
 last_reviewed:
 local_post_id: 283
 production_post_id: 864
-production_modified: "2026-11-08 13:34:34"
+production_modified: "2026-11-08 13:57:04"
 ---
 
 # About AI @ CSU Fort Collins

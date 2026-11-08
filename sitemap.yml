@@ -41,6 +41,9 @@ pages:
         file: content/planned/about/governance.md
         priority: P2
         children:
+          - path: /about/governance/ai-philosophy/
+            file: content/planned/about/governance/ai-philosophy.md
+            priority: P2
           - path: /about/governance/presidential-ai-strategy-task-force/
             file: content/planned/about/governance/presidential-ai-strategy-task-force.md
             priority: P2
