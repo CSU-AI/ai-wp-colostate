@@ -16,7 +16,8 @@ This repository is the working source for the complete rebuild of `ai.colostate.
 
 - The full process is in `wordpress/build-notes/production-workflow.md`.
 - All MCP calls target the Local by Flywheel site (`emcp-multisite-local-ai`) unless the user explicitly states otherwise.
-- Create new pages as local Elementor drafts.
+- Read `wordpress/build-notes/page-building.md` before building or pushing a page. It covers theme quirks, card and callout recipes, icons, brand colors and the new-page checklist.
+- Local pages may be published directly, since David is the only viewer of Local. Production pages stay drafts until a section release.
 - Do not replace, publish, delete, or change the configured homepage without explicit approval.
 - Never point a write-enabled MCP connection at production without explicit instruction in that session. The production connection is `emcp-ai-colostate-edu`; it is read-only unless the user enables writes for that session. The user turns the server on when needed, and it authenticates with OAuth through `/mcp` in an interactive session.
 - Production pages are created as drafts. Publishing happens in section releases, one top-level sitemap section at a time, with explicit approval.
