@@ -40,6 +40,9 @@ pages:
       - path: /about/governance/
         file: content/planned/about/governance.md
         priority: P2
+      - path: /about/ai-use-on-this-site/
+        file: content/planned/about/ai-use-on-this-site.md
+        priority: P2
   - path: /tools/
     file: content/planned/tools/index.md
     priority: P0
