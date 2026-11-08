@@ -11,11 +11,15 @@ template: faq
 owner:
 partners: []
 last_reviewed:
-local_post_id:
+local_post_id: 235
 production_post_id:
 ---
 
 # AI at CSU FAQ
+
+## Local stub
+
+A short placeholder page is published on Local (post 235). Replace it when the content is written.
 
 ## Purpose
 

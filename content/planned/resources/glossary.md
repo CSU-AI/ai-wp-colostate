@@ -11,11 +11,15 @@ owner:
 partners:
   - CSU Libraries
 last_reviewed:
-local_post_id:
+local_post_id: 233
 production_post_id:
 ---
 
 # AI Glossary
+
+## Local stub
+
+A short placeholder page is published on Local (post 233). Replace it when the content is written.
 
 ## Purpose
 

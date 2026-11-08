@@ -12,7 +12,7 @@ owner:
 partners:
   - CSU Libraries
 last_reviewed:
-local_post_id:
+local_post_id: 153
 production_post_id:
 ---
 
@@ -29,33 +29,17 @@ Collect curated guides and reference material that do not belong in tools, teach
 - Links to FAQ, glossary, and contact
 - Filters only if the collection becomes large enough to justify them
 
-## AI at CSU Colleges and Schools
+## Page layout
 
-Visit the units below to learn how AI is being used in each college, school, and program.
+Three-column card grid (two on tablet, one on mobile). Each card has a Font Awesome icon in a gold circle, an H3, one sentence and a button.
 
-### Colleges
+| Icon | Heading | Text | Link |
+|---|---|---|---|
+| shield-alt | Using AI Responsibly | What to watch for when AI touches sensitive areas, and how to use it well. | /resources/responsible-use/ |
+| book | AI Glossary | Plain-language definitions of common AI terms, with CSU context. | /resources/glossary/ |
+| question-circle | AI at CSU FAQ | Answers to common questions about AI at CSU Fort Collins. | /resources/faq/ |
 
-- [Agricultural Sciences](https://agsci.colostate.edu/)
-- [Business](https://biz.colostate.edu/)
-- [Walter Scott, Jr. College of Engineering](https://www.engr.colostate.edu/)
-- [Health and Human Sciences](https://www.chhs.colostate.edu/)
-- [Liberal Arts](https://www.libarts.colostate.edu/)
-- [Warner College of Natural Resources](https://warnercnr.colostate.edu/)
-- [Natural Sciences](https://www.natsci.colostate.edu/)
-- [Veterinary Medicine and Biomedical Sciences](https://vetmedbiosci.colostate.edu/)
-
-### Schools and Programs
-
-- [Graduate School](https://graduateschool.colostate.edu/)
-- [International Programs](https://international.colostate.edu/)
-- [Online Degrees and Courses](https://www.online.colostate.edu/)
-- [School of Materials Science and Engineering](https://www.research.colostate.edu/smse/)
-- [School of Music, Theatre and Dance](https://smtd.colostate.edu/)
-- [School of Biomedical and Chemical Engineering](https://www.engr.colostate.edu/bce/)
-- [School of Education](https://www.chhs.colostate.edu/soe/)
-- [School of Global Environmental Sustainability](https://sustainability.colostate.edu/)
-- [School of Social Work](https://www.chhs.colostate.edu/ssw/)
-- [School of Public Health](https://publichealth.colostate.edu/)
+The college and school link list was removed on 2026-11-08. Do not link to generic college or division pages unless they have AI resources of their own.
 
 ## Editorial decisions needed
 

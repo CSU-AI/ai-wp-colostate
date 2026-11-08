@@ -146,6 +146,23 @@ pages:
       - path: /resources/faq/
         file: content/planned/resources/faq.md
         priority: P2
+      - path: /resources/responsible-use/
+        file: content/planned/resources/responsible-use/index.md
+        priority: P1
+        children:
+          - path: /resources/responsible-use/mental-health/
+            file: content/planned/resources/responsible-use/mental-health.md
+            priority: P1
+          # Hub card hidden until this page ships; restore steps in responsible-use/index.md
+          - path: /resources/responsible-use/health-information/
+            file: content/planned/resources/responsible-use/health-information.md
+            priority: P2
+          - path: /resources/responsible-use/environmental-impact/
+            file: content/planned/resources/responsible-use/environmental-impact.md
+            priority: P2
+          - path: /resources/responsible-use/ethics/
+            file: content/planned/resources/responsible-use/ethics.md
+            priority: P2
       - path: /resources/glossary/
         file: content/planned/resources/glossary.md
         priority: P3
