@@ -36,7 +36,7 @@ Help visitors find an approved tool, understand safe use, and reach role-specifi
 
 ## Build status
 
-**Not live.** The home page redesign exists only as a concept page on Local (`/home-concept/`, post 390). It is not on production, and the configured front page (Local post 4) is unchanged. Nothing here is transferred or scheduled for a release.
+**Not live.** The home page redesign is a concept: on Local (`/home-concept/`, post 390) and as an unpublished **draft** on production (post 937, "Home (Redesign Draft)", pushed 2026-11-09). The configured front page is unchanged on both, and nothing is scheduled for a release. The production draft needs plugin 0.4.0 before it renders; see `wordpress/home-concept/README.md`.
 
 Concept contents so far:
 

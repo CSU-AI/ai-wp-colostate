@@ -1,6 +1,8 @@
-# Home page concept (not live)
+# Home page concept (draft on production, not published)
 
-**Status: not live.** This is the redesigned AI @ CSU home page, built on Local only (post 390, `/home-concept/`). It is not on production. The configured front page is unchanged, and the home page swap is its own release (see `wordpress/build-notes/production-workflow.md`).
+**Status: draft on production, not live.** The redesigned AI @ CSU home page was pushed to production as an unpublished **draft** on 2026-11-09: post **937**, "Home (Redesign Draft)" (`https://ai.colostate.edu/?page_id=937`, visible only to logged-in editors). It is also on Local (post 390, `/home-concept/`). The configured front page (production post 6) is unchanged, and the home page swap is its own release (see `wordpress/build-notes/production-workflow.md`).
+
+**The draft will not render correctly yet:** production runs plugin `aicsu-tool-chooser` 0.3.1. The page's hero needs 0.4.0 (`[aicsu_home_hero]`, `[aicsu_quick_match]`), so until a super admin uploads and activates it, the hero shows as plain shortcode text.
 
 This folder exists so the page is not lost when only the Local database holds it.
 
@@ -23,15 +25,24 @@ This folder exists so the page is not lost when only the Local database holds it
 
 The CSU-GPT hero button link (`primary_url`) is the tool's own URL, also in the tree. The Responsible AI links to outside sources came from the shared mockup and need a link check.
 
-## Before pushing
+## Still to do on the production draft
+
+1. Release plugin 0.4.0 (zip, upload as super admin, activate on the ai subsite only), then preview the draft under the real theme.
+2. Hide the theme title banner for post 937 in wp-admin (the MCP cannot write `_wc_post_layout_head`; set Page Layout > head to "Hide the header").
+3. Link-check the Responsible AI sources and confirm the whiteboard link works for NetID users.
+4. Publish only in the home page release.
+
+Done on production, 2026-11-09: the draft page (post 937, with its page CSS rewritten for that post ID) and the tool order below (applied to all 16 published tools with `update-post`; this changes the live tool chooser order immediately).
+
+## Reference: how the push was done
 
 1. Production must run plugin `aicsu-tool-chooser` 0.4.0 or later. The page uses `[aicsu_home_hero]` and `[aicsu_quick_match]`. Release it per the workflow (zip, upload as super admin, activate on the ai subsite only). Without it the shortcodes print as plain text.
 2. Production MCP: enable writes for the session, authenticate through `/mcp` in an interactive session, run `detect-elementor-version`. Production is a draft push only.
-3. Create the page as a **draft**. Keep the front page unchanged. Apply `home-concept.page-settings.json` with `update-page-settings`.
+3. Create the page as a **draft** (`create-page` with the tree). Keep the front page unchanged. Apply `home-concept.page-settings.json` with `update-page-settings`, replacing `page-id-390` in the CSS with the new post ID.
 4. The hero container needs CSS classes `wc-container-wide wc-container-gap-none`; the Responsible AI container needs `wc-container-wide aicsu-rai` (already set in the tree).
 5. Apply the tool order below, then check the Quick Match list on the draft.
 
-## Tool directory order (apply on production)
+## Tool directory order (applied on production 2026-11-09)
 
 CSU-GPT is second; the tools below it shift down by one. Set each tool's Order (`menu_order`).
 
