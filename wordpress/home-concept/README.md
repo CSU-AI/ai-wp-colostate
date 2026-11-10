@@ -4,7 +4,7 @@
 
 Production page CSS is in `home-concept.page-settings.json`. `{{POST_ID}}` is the production post ID. Scope the margin rule by `.elementor-<post id>`, not by `body.page-id-<id>`: the theme drops the page-id body class on the front page, which first left a 64px gap under the hero.
 
-Section still to build: the approved tools cards, the latest article and workshop, and the footer links.
+Scope: the home page is the hero with Quick Match plus the Responsible AI section. Approved tools cards, a latest article and workshop block, and extra footer links are not planned.
 
 This folder exists so the page is not lost when only the Local database holds it.
 
