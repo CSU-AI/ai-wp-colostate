@@ -5,7 +5,7 @@
   "local_post_id": 42,
   "production_post_id": 785,
   "wordpress_status": "publish",
-  "menu_order": 3,
+  "menu_order": 4,
   "status": "approved",
   "approved_for_sensitive": true,
   "data_level_ceiling": "level-3-confidential",

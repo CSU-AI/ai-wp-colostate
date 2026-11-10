@@ -5,7 +5,7 @@
   "local_post_id": 43,
   "production_post_id": 784,
   "wordpress_status": "draft",
-  "menu_order": 4,
+  "menu_order": 5,
   "status": "pilot",
   "approved_for_sensitive": false,
   "data_level_ceiling": "level-2-internal",
