@@ -1,5 +1,5 @@
 const assert = require('node:assert/strict');
-const { matches, dataAllowed, score } = require('./chooser.js');
+const { matches, dataAllowed, score, focusSlug } = require('./chooser.js');
 const tool = { name:'Example Assistant', summary:'Draft and analyze', names:{aicsu_task:'Writing'}, approved:true, terms:{aicsu_task:['writing','analysis'],aicsu_data:['level-1-public','level-2-internal','level-3-confidential'],aicsu_role:['staff']} };
 assert(matches(tool, {}, 'example'));
 assert(matches(tool, {aicsu_task:['images','writing']}, ''));
@@ -11,4 +11,6 @@ assert(!matches({...tool,approved:false}, {aicsu_data:['level-1-public','level-3
 assert(!dataAllowed({...tool,approved:true,terms:{}}, {aicsu_data:['level-3-confidential']}));
 assert(matches({...tool,approved:false,terms:{aicsu_data:['level-1-public','level-2-internal']}}, {aicsu_data:['level-1-public','level-2-internal']}, ''));
 assert.equal(score(tool, {aicsu_task:['writing','analysis'],aicsu_role:['staff']}),3);
+assert.equal(focusSlug([{ slug: 'copilot' }], 'copilot'), 'copilot');
+assert.equal(focusSlug([{ slug: 'copilot' }], 'nope'), '');
 console.log('PASS: search, group matching, highest data level, sensitive-data checks, match scoring');

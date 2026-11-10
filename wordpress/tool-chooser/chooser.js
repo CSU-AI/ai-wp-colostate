@@ -14,7 +14,9 @@
   function score(tool, groups) {
     return Object.entries(groups).reduce((n, [tax, values]) => n + values.filter(value => (tool.terms[tax] || []).includes(value)).length, 0);
   }
-  if (typeof module !== 'undefined' && module.exports) { module.exports = { matches, dataAllowed, score }; return; }
+  // ?item=<slug> shows one tool. An unknown slug is ignored so a stale link still shows the full list.
+  function focusSlug(tools, slug) { return tools.some(tool => tool.slug === slug) ? slug : ''; }
+  if (typeof module !== 'undefined' && module.exports) { module.exports = { matches, dataAllowed, score, focusSlug }; return; }
   function init(root) {
     if (root.dataset.ready) return;
     root.dataset.ready = 'true';
@@ -28,6 +30,8 @@
     const dialog = root.querySelector('dialog');
     const make = (tag, text) => { const node = document.createElement(tag); node.textContent = text; return node; };
     root.querySelectorAll('.ac-interactive').forEach(node => { node.hidden = false; });
+    let focus = focusSlug(tools, (new URLSearchParams(window.location.search).get('item') || '').trim());
+    const notice = root.querySelector('.ac-focus');
     if (window.matchMedia('(max-width: 767px)').matches) root.querySelector('.ac-filters').open = false;
     function groups() {
       const result = {};
@@ -36,7 +40,7 @@
     }
     function refresh() {
       const chosen = groups();
-      const visible = tools.filter(tool => matches(tool, chosen, search.value));
+      const visible = tools.filter(tool => focus ? tool.slug === focus : matches(tool, chosen, search.value));
       if (sort.value === 'az' || sort.value === 'za') visible.sort((a, b) => a.name.localeCompare(b.name) * (sort.value === 'za' ? -1 : 1));
       if (sort.value === 'match') visible.sort((a, b) => score(b, chosen) - score(a, chosen) || a.name.localeCompare(b.name));
       cards.forEach(card => { card.hidden = true; card.querySelector('.ac-match').hidden = true; });
@@ -49,10 +53,13 @@
       });
       root.querySelector('.ac-count').textContent = `${visible.length} of ${tools.length} tools`;
       root.querySelector('.ac-empty').hidden = visible.length > 0;
-      const hasSensitive = (chosen.aicsu_data || []).some(value => levels.indexOf(value) >= 2);
+      root.querySelector('.ac-filters').hidden = !!focus;
+      root.querySelector('.ac-toolbar').hidden = !!focus;
+      notice.hidden = !focus;
+      const hasSensitive = !focus && (chosen.aicsu_data || []).some(value => levels.indexOf(value) >= 2);
       root.querySelector('.ac-sensitive').hidden = !hasSensitive;
       const excluded = root.querySelector('.ac-excluded');
-      const withheld = tools.filter(tool => !dataAllowed(tool, chosen));
+      const withheld = focus ? [] : tools.filter(tool => !dataAllowed(tool, chosen));
       excluded.hidden = !withheld.length;
       excluded.querySelector('ul').replaceChildren(...withheld.map(tool => make('li', tool.name)));
     }
@@ -76,6 +83,14 @@
     root.querySelector('.ac-clear').addEventListener('click', () => {
       selected.clear(); updateSelection();
       root.querySelector('.ac-card:not([hidden]) .ac-compare')?.focus();
+    });
+    notice.querySelector('button').addEventListener('click', () => {
+      focus = '';
+      const url = new URL(window.location.href);
+      url.searchParams.delete('item');
+      window.history.replaceState(null, '', url);
+      refresh();
+      search.focus();
     });
     function reset() { search.value = ''; sort.value = 'recommended'; }
     form.addEventListener('reset', () => { reset(); setTimeout(refresh, 0); });
@@ -103,6 +118,12 @@
     });
     root.querySelector('.ac-close').addEventListener('click', () => dialog.close());
     dialog.addEventListener('close', () => root.querySelector('.ac-open').focus());
+    // Prefilter links (used by Quick Match): ?role=staff&data=level-2-internal&task=...&comfort=... (slugs, comma separated).
+    const incoming = new URLSearchParams(window.location.search);
+    Object.entries({ role: 'aicsu_role', data: 'aicsu_data', task: 'aicsu_task', comfort: 'aicsu_complexity' }).forEach(([param, name]) => {
+      const wanted = (incoming.get(param) || '').split(',').map(value => value.trim().toLowerCase()).filter(Boolean);
+      if (wanted.length) form.querySelectorAll(`input[name="${name}"]`).forEach(box => { box.checked = wanted.includes(box.value); });
+    });
     refresh(); updateSelection();
   }
   const start = () => document.querySelectorAll('.aicsu-chooser:not(.aicsu-agents)').forEach(init);

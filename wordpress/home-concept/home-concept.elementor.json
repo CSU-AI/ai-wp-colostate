@@ -1,0 +1,737 @@
+[
+    {
+        "id": "0ef430f",
+        "elType": "container",
+        "isInner": false,
+        "settings": {
+            "container_type": "flex",
+            "content_width": "full",
+            "css_classes": "wc-container-wide wc-container-gap-none",
+            "flex_direction": "column",
+            "flex_align_items": "stretch",
+            "flex_justify_content": "flex-start",
+            "padding": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "0",
+                "left": "0",
+                "isLinked": true
+            }
+        },
+        "elements": [
+            {
+                "id": "70796cd",
+                "elType": "widget",
+                "widgetType": "shortcode",
+                "settings": {
+                    "shortcode": "[aicsu_home_hero lede=\"CSU-GPT and Microsoft Copilot Chat are free with your NetID and approved for confidential data. Tell us who you are and what data you handle, and we will point you to a tool.\" primary_label=\"Open CSU-GPT\" primary_url=\"https://chat.csusystem.edu/chat/onechat\" secondary_label=\"Compare all tools\" secondary_url=\"{{CHOOSER_URL}}\" chooser_url=\"{{CHOOSER_URL}}\" next_faculty=\"Teaching and Learning with AI|{{TEACHING_URL}}\" next_staff=\"AI Training and Literacy|{{TRAINING_URL}}\" next_researcher=\"AI Research Resources|{{RESEARCH_URL}}\" next_student=\"Using AI Responsibly|{{RESPONSIBLE_USE_URL}}\"]"
+                },
+                "elements": []
+            }
+        ]
+    },
+    {
+        "id": "02445be",
+        "elType": "container",
+        "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "flex_align_items": "stretch",
+            "flex_justify_content": "flex-start",
+            "css_classes": "wc-container-wide aicsu-rai",
+            "padding": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "0",
+                "left": "0",
+                "isLinked": false
+            },
+            "background_background": "classic",
+            "background_color": "#E3CDB1",
+            "container_type": "flex"
+        },
+        "elements": [
+            {
+                "id": "7fd90c0",
+                "elType": "container",
+                "settings": {
+                    "content_width": "boxed",
+                    "boxed_width": {
+                        "unit": "px",
+                        "size": 1200
+                    },
+                    "flex_direction": "column",
+                    "flex_align_items": "stretch",
+                    "flex_justify_content": "flex-start",
+                    "gap": {
+                        "unit": "px",
+                        "size": 28
+                    },
+                    "padding": {
+                        "unit": "px",
+                        "top": "72",
+                        "right": "24",
+                        "bottom": "72",
+                        "left": "24",
+                        "isLinked": false
+                    },
+                    "padding_mobile": {
+                        "unit": "px",
+                        "top": "40",
+                        "right": "16",
+                        "bottom": "40",
+                        "left": "16",
+                        "isLinked": false
+                    },
+                    "container_type": "flex"
+                },
+                "elements": [
+                    {
+                        "id": "80b4ebf",
+                        "elType": "widget",
+                        "settings": {
+                            "header_size": "h2",
+                            "title": "Responsible <span class=\"aicsu-rai-hl\">AI</span>",
+                            "title_color": "#1E4D2B",
+                            "align": "left",
+                            "_css_classes": "aicsu-rai-h2"
+                        },
+                        "elements": [],
+                        "widgetType": "heading"
+                    },
+                    {
+                        "id": "75759ab",
+                        "elType": "widget",
+                        "settings": {
+                            "editor": "<p>Institutions and individuals are still defining what responsible AI use means. The CSU System has <a href=\"https://ai.csusystem.edu/guidelines/ai-principles/\">seven principles for AI use</a>. These questions help you apply them to your own work.</p>",
+                            "_css_classes": "aicsu-rai-intro"
+                        },
+                        "elements": [],
+                        "widgetType": "text-editor"
+                    },
+                    {
+                        "id": "03d14c5",
+                        "elType": "container",
+                        "settings": {
+                            "content_width": "full",
+                            "flex_direction": "row",
+                            "flex_wrap": "wrap",
+                            "flex_align_items": "stretch",
+                            "flex_justify_content": "flex-start",
+                            "gap": {
+                                "unit": "px",
+                                "size": 20
+                            },
+                            "padding": {
+                                "unit": "px",
+                                "top": "12",
+                                "right": "0",
+                                "bottom": "0",
+                                "left": "0",
+                                "isLinked": false
+                            },
+                            "container_type": "flex"
+                        },
+                        "elements": [
+                            {
+                                "id": "1fbf44c",
+                                "elType": "container",
+                                "settings": {
+                                    "content_width": "full",
+                                    "flex_direction": "column",
+                                    "flex_align_items": "stretch",
+                                    "flex_justify_content": "flex-start",
+                                    "gap": {
+                                        "unit": "px",
+                                        "size": 16
+                                    },
+                                    "padding": {
+                                        "unit": "px",
+                                        "top": "32",
+                                        "right": "32",
+                                        "bottom": "24",
+                                        "left": "32",
+                                        "isLinked": false
+                                    },
+                                    "padding_mobile": {
+                                        "unit": "px",
+                                        "top": "24",
+                                        "right": "20",
+                                        "bottom": "16",
+                                        "left": "20",
+                                        "isLinked": false
+                                    },
+                                    "width": {
+                                        "unit": "%",
+                                        "size": 48.5
+                                    },
+                                    "width_tablet": {
+                                        "unit": "%",
+                                        "size": 48.5
+                                    },
+                                    "width_mobile": {
+                                        "unit": "%",
+                                        "size": 100
+                                    },
+                                    "background_background": "classic",
+                                    "background_color": "#FFFFFF",
+                                    "css_classes": "aicsu-card",
+                                    "container_type": "flex"
+                                },
+                                "elements": [
+                                    {
+                                        "id": "510bc20",
+                                        "elType": "widget",
+                                        "settings": {
+                                            "editor": "<p>Data and Privacy</p>",
+                                            "_css_classes": "aicsu-card-topic"
+                                        },
+                                        "elements": [],
+                                        "widgetType": "text-editor"
+                                    },
+                                    {
+                                        "id": "ccd6ad2",
+                                        "elType": "widget",
+                                        "settings": {
+                                            "header_size": "h3",
+                                            "title": "What are you asking AI to do, and what information or data are you providing? Do you know what privacy and data protections are in place?",
+                                            "title_color": "#1E4D2B",
+                                            "align": "left",
+                                            "_css_classes": "aicsu-card-q"
+                                        },
+                                        "elements": [],
+                                        "widgetType": "heading"
+                                    },
+                                    {
+                                        "id": "fcb6775",
+                                        "elType": "widget",
+                                        "settings": {
+                                            "editor": "<ul><li><a href=\"https://ai.csusystem.edu/data-governance/\">AI and data use</a><span class=\"src\">CSU System</span></li><li><a href=\"{{CHOOSER_URL}}\">Choosing the right AI tool</a><span class=\"src\">CSU AI</span></li></ul>",
+                                            "_css_classes": "aicsu-card-links"
+                                        },
+                                        "elements": [],
+                                        "widgetType": "text-editor"
+                                    }
+                                ],
+                                "isInner": false
+                            },
+                            {
+                                "id": "402293a",
+                                "elType": "container",
+                                "settings": {
+                                    "content_width": "full",
+                                    "flex_direction": "column",
+                                    "flex_align_items": "stretch",
+                                    "flex_justify_content": "flex-start",
+                                    "gap": {
+                                        "unit": "px",
+                                        "size": 16
+                                    },
+                                    "padding": {
+                                        "unit": "px",
+                                        "top": "32",
+                                        "right": "32",
+                                        "bottom": "24",
+                                        "left": "32",
+                                        "isLinked": false
+                                    },
+                                    "padding_mobile": {
+                                        "unit": "px",
+                                        "top": "24",
+                                        "right": "20",
+                                        "bottom": "16",
+                                        "left": "20",
+                                        "isLinked": false
+                                    },
+                                    "width": {
+                                        "unit": "%",
+                                        "size": 48.5
+                                    },
+                                    "width_tablet": {
+                                        "unit": "%",
+                                        "size": 48.5
+                                    },
+                                    "width_mobile": {
+                                        "unit": "%",
+                                        "size": 100
+                                    },
+                                    "background_background": "classic",
+                                    "background_color": "#FFFFFF",
+                                    "css_classes": "aicsu-card",
+                                    "container_type": "flex"
+                                },
+                                "elements": [
+                                    {
+                                        "id": "7612aac",
+                                        "elType": "widget",
+                                        "settings": {
+                                            "editor": "<p>Oversight</p>",
+                                            "_css_classes": "aicsu-card-topic"
+                                        },
+                                        "elements": [],
+                                        "widgetType": "text-editor"
+                                    },
+                                    {
+                                        "id": "712004f",
+                                        "elType": "widget",
+                                        "settings": {
+                                            "header_size": "h3",
+                                            "title": "Are you reviewing the outputs and ensuring consequential decisions have humans involved?",
+                                            "title_color": "#1E4D2B",
+                                            "align": "left",
+                                            "_css_classes": "aicsu-card-q"
+                                        },
+                                        "elements": [],
+                                        "widgetType": "heading"
+                                    },
+                                    {
+                                        "id": "f528821",
+                                        "elType": "widget",
+                                        "settings": {
+                                            "editor": "<ul><li><a href=\"https://www.queensu.ca/connected-minds/human-in-the-loop\">Human-in-the-Loop Is Not a Technical Detail. It’s an Ethical Position</a><span class=\"src\">E. Johannessen, Connected Minds, Queen’s University</span></li><li><a href=\"http://coag.gov/ai/\">Colorado Law</a><span class=\"src\">coag.gov/ai</span></li></ul>",
+                                            "_css_classes": "aicsu-card-links"
+                                        },
+                                        "elements": [],
+                                        "widgetType": "text-editor"
+                                    }
+                                ],
+                                "isInner": false
+                            },
+                            {
+                                "id": "f40eb52",
+                                "elType": "container",
+                                "settings": {
+                                    "content_width": "full",
+                                    "flex_direction": "column",
+                                    "flex_align_items": "stretch",
+                                    "flex_justify_content": "flex-start",
+                                    "gap": {
+                                        "unit": "px",
+                                        "size": 16
+                                    },
+                                    "padding": {
+                                        "unit": "px",
+                                        "top": "32",
+                                        "right": "32",
+                                        "bottom": "24",
+                                        "left": "32",
+                                        "isLinked": false
+                                    },
+                                    "padding_mobile": {
+                                        "unit": "px",
+                                        "top": "24",
+                                        "right": "20",
+                                        "bottom": "16",
+                                        "left": "20",
+                                        "isLinked": false
+                                    },
+                                    "width": {
+                                        "unit": "%",
+                                        "size": 48.5
+                                    },
+                                    "width_tablet": {
+                                        "unit": "%",
+                                        "size": 48.5
+                                    },
+                                    "width_mobile": {
+                                        "unit": "%",
+                                        "size": 100
+                                    },
+                                    "background_background": "classic",
+                                    "background_color": "#FFFFFF",
+                                    "css_classes": "aicsu-card",
+                                    "container_type": "flex"
+                                },
+                                "elements": [
+                                    {
+                                        "id": "b08e3d3",
+                                        "elType": "widget",
+                                        "settings": {
+                                            "editor": "<p>Transparency</p>",
+                                            "_css_classes": "aicsu-card-topic"
+                                        },
+                                        "elements": [],
+                                        "widgetType": "text-editor"
+                                    },
+                                    {
+                                        "id": "d94c27b",
+                                        "elType": "widget",
+                                        "settings": {
+                                            "header_size": "h3",
+                                            "title": "Are you letting others know when you’ve used AI?",
+                                            "title_color": "#1E4D2B",
+                                            "align": "left",
+                                            "_css_classes": "aicsu-card-q"
+                                        },
+                                        "elements": [],
+                                        "widgetType": "heading"
+                                    },
+                                    {
+                                        "id": "8887f6d",
+                                        "elType": "widget",
+                                        "settings": {
+                                            "editor": "<ul><li><a href=\"https://libguides.colostate.edu/c.php?g=1351658&#038;p=9976117\">Citing AI</a><span class=\"src\">CSU Libraries</span></li><li><a href=\"https://aidframework.org/\">AI Disclosure Statement Tool</a><span class=\"src\">K. Weaver, University of Waterloo</span></li></ul>",
+                                            "_css_classes": "aicsu-card-links"
+                                        },
+                                        "elements": [],
+                                        "widgetType": "text-editor"
+                                    }
+                                ],
+                                "isInner": false
+                            },
+                            {
+                                "id": "bfebc7a",
+                                "elType": "container",
+                                "settings": {
+                                    "content_width": "full",
+                                    "flex_direction": "column",
+                                    "flex_align_items": "stretch",
+                                    "flex_justify_content": "flex-start",
+                                    "gap": {
+                                        "unit": "px",
+                                        "size": 16
+                                    },
+                                    "padding": {
+                                        "unit": "px",
+                                        "top": "32",
+                                        "right": "32",
+                                        "bottom": "24",
+                                        "left": "32",
+                                        "isLinked": false
+                                    },
+                                    "padding_mobile": {
+                                        "unit": "px",
+                                        "top": "24",
+                                        "right": "20",
+                                        "bottom": "16",
+                                        "left": "20",
+                                        "isLinked": false
+                                    },
+                                    "width": {
+                                        "unit": "%",
+                                        "size": 48.5
+                                    },
+                                    "width_tablet": {
+                                        "unit": "%",
+                                        "size": 48.5
+                                    },
+                                    "width_mobile": {
+                                        "unit": "%",
+                                        "size": 100
+                                    },
+                                    "background_background": "classic",
+                                    "background_color": "#FFFFFF",
+                                    "css_classes": "aicsu-card",
+                                    "container_type": "flex"
+                                },
+                                "elements": [
+                                    {
+                                        "id": "c98875c",
+                                        "elType": "widget",
+                                        "settings": {
+                                            "editor": "<p>Learning</p>",
+                                            "_css_classes": "aicsu-card-topic"
+                                        },
+                                        "elements": [],
+                                        "widgetType": "text-editor"
+                                    },
+                                    {
+                                        "id": "bd7ac45",
+                                        "elType": "widget",
+                                        "settings": {
+                                            "header_size": "h3",
+                                            "title": "Are you iterating with the AI to refine your thinking, or offloading the task? If offloading, is it routine work, or work where the struggle is how you learn?",
+                                            "title_color": "#1E4D2B",
+                                            "align": "left",
+                                            "_css_classes": "aicsu-card-q"
+                                        },
+                                        "elements": [],
+                                        "widgetType": "heading"
+                                    },
+                                    {
+                                        "id": "a55fc54",
+                                        "elType": "widget",
+                                        "settings": {
+                                            "editor": "<ul><li><a href=\"https://www.weforum.org/stories/artificial-intelligence/ai-cognitive-offloading-thinking-worth-effort\">AI makes thinking optional. Which thinking is still worth your effort?</a><span class=\"src\">World Economic Forum</span></li><li><a href=\"https://www.anthropic.com/research/how-ai-is-transforming-work-at-anthropic\">Anthropic study of their own engineers and Claude Code usage</a><span class=\"src\">Anthropic</span></li></ul>",
+                                            "_css_classes": "aicsu-card-links"
+                                        },
+                                        "elements": [],
+                                        "widgetType": "text-editor"
+                                    }
+                                ],
+                                "isInner": false
+                            },
+                            {
+                                "id": "e85d237",
+                                "elType": "container",
+                                "settings": {
+                                    "content_width": "full",
+                                    "flex_direction": "column",
+                                    "flex_align_items": "stretch",
+                                    "flex_justify_content": "flex-start",
+                                    "gap": {
+                                        "unit": "px",
+                                        "size": 16
+                                    },
+                                    "padding": {
+                                        "unit": "px",
+                                        "top": "32",
+                                        "right": "32",
+                                        "bottom": "24",
+                                        "left": "32",
+                                        "isLinked": false
+                                    },
+                                    "padding_mobile": {
+                                        "unit": "px",
+                                        "top": "24",
+                                        "right": "20",
+                                        "bottom": "16",
+                                        "left": "20",
+                                        "isLinked": false
+                                    },
+                                    "width": {
+                                        "unit": "%",
+                                        "size": 48.5
+                                    },
+                                    "width_tablet": {
+                                        "unit": "%",
+                                        "size": 48.5
+                                    },
+                                    "width_mobile": {
+                                        "unit": "%",
+                                        "size": 100
+                                    },
+                                    "background_background": "classic",
+                                    "background_color": "#FFFFFF",
+                                    "css_classes": "aicsu-card",
+                                    "container_type": "flex"
+                                },
+                                "elements": [
+                                    {
+                                        "id": "56c9b65",
+                                        "elType": "widget",
+                                        "settings": {
+                                            "editor": "<p>Wellbeing</p>",
+                                            "_css_classes": "aicsu-card-topic"
+                                        },
+                                        "elements": [],
+                                        "widgetType": "text-editor"
+                                    },
+                                    {
+                                        "id": "9d2df6f",
+                                        "elType": "widget",
+                                        "settings": {
+                                            "header_size": "h3",
+                                            "title": "Are you turning to AI for guidance on personal, health, or spiritual matters, or for company?",
+                                            "title_color": "#1E4D2B",
+                                            "align": "left",
+                                            "_css_classes": "aicsu-card-q"
+                                        },
+                                        "elements": [],
+                                        "widgetType": "heading"
+                                    },
+                                    {
+                                        "id": "1648484",
+                                        "elType": "widget",
+                                        "settings": {
+                                            "editor": "<ul><li><a href=\"{{MENTAL_HEALTH_URL}}\">Using AI for mental health support</a><span class=\"src\">CSU AI</span></li><li><a href=\"https://health.colostate.edu/\">CSU Health Network</a></li></ul>",
+                                            "_css_classes": "aicsu-card-links"
+                                        },
+                                        "elements": [],
+                                        "widgetType": "text-editor"
+                                    }
+                                ],
+                                "isInner": false
+                            },
+                            {
+                                "id": "3cb44d4",
+                                "elType": "container",
+                                "settings": {
+                                    "content_width": "full",
+                                    "flex_direction": "column",
+                                    "flex_align_items": "stretch",
+                                    "flex_justify_content": "flex-start",
+                                    "gap": {
+                                        "unit": "px",
+                                        "size": 16
+                                    },
+                                    "padding": {
+                                        "unit": "px",
+                                        "top": "32",
+                                        "right": "32",
+                                        "bottom": "24",
+                                        "left": "32",
+                                        "isLinked": false
+                                    },
+                                    "padding_mobile": {
+                                        "unit": "px",
+                                        "top": "24",
+                                        "right": "20",
+                                        "bottom": "16",
+                                        "left": "20",
+                                        "isLinked": false
+                                    },
+                                    "width": {
+                                        "unit": "%",
+                                        "size": 48.5
+                                    },
+                                    "width_tablet": {
+                                        "unit": "%",
+                                        "size": 48.5
+                                    },
+                                    "width_mobile": {
+                                        "unit": "%",
+                                        "size": 100
+                                    },
+                                    "background_background": "classic",
+                                    "background_color": "#FFFFFF",
+                                    "css_classes": "aicsu-card",
+                                    "container_type": "flex"
+                                },
+                                "elements": [
+                                    {
+                                        "id": "7d3c381",
+                                        "elType": "widget",
+                                        "settings": {
+                                            "editor": "<p>Balance</p>",
+                                            "_css_classes": "aicsu-card-topic"
+                                        },
+                                        "elements": [],
+                                        "widgetType": "text-editor"
+                                    },
+                                    {
+                                        "id": "ace6365",
+                                        "elType": "widget",
+                                        "settings": {
+                                            "header_size": "h3",
+                                            "title": "How does your AI use balance with other issues that are important to you?",
+                                            "title_color": "#1E4D2B",
+                                            "align": "left",
+                                            "_css_classes": "aicsu-card-q"
+                                        },
+                                        "elements": [],
+                                        "widgetType": "heading"
+                                    },
+                                    {
+                                        "id": "47c65b9",
+                                        "elType": "widget",
+                                        "settings": {
+                                            "editor": "<p>Coming soon</p>",
+                                            "_css_classes": "aicsu-card-soon"
+                                        },
+                                        "elements": [],
+                                        "widgetType": "text-editor"
+                                    }
+                                ],
+                                "isInner": false
+                            },
+                            {
+                                "id": "0301104",
+                                "elType": "container",
+                                "settings": {
+                                    "css_classes": "aicsu-card aicsu-card-wide",
+                                    "content_width": "full",
+                                    "flex_direction": "column",
+                                    "flex_align_items": "stretch",
+                                    "flex_justify_content": "flex-start",
+                                    "gap": {
+                                        "unit": "px",
+                                        "size": 16
+                                    },
+                                    "padding": {
+                                        "unit": "px",
+                                        "top": "32",
+                                        "right": "32",
+                                        "bottom": "24",
+                                        "left": "32",
+                                        "isLinked": false
+                                    },
+                                    "padding_mobile": {
+                                        "unit": "px",
+                                        "top": "24",
+                                        "right": "20",
+                                        "bottom": "16",
+                                        "left": "20",
+                                        "isLinked": false
+                                    },
+                                    "width": {
+                                        "unit": "%",
+                                        "size": 100
+                                    },
+                                    "width_tablet": {
+                                        "unit": "%",
+                                        "size": 100
+                                    },
+                                    "width_mobile": {
+                                        "unit": "%",
+                                        "size": 100
+                                    },
+                                    "background_background": "classic",
+                                    "background_color": "#FFFFFF",
+                                    "container_type": "flex"
+                                },
+                                "elements": [
+                                    {
+                                        "id": "c55de30",
+                                        "elType": "widget",
+                                        "settings": {
+                                            "editor": "<p>Your Voice</p>",
+                                            "_css_classes": "aicsu-card-topic"
+                                        },
+                                        "elements": [],
+                                        "widgetType": "text-editor"
+                                    },
+                                    {
+                                        "id": "32c7b07",
+                                        "elType": "widget",
+                                        "settings": {
+                                            "header_size": "h3",
+                                            "title": "What does responsible AI mean to you?",
+                                            "title_color": "#1E4D2B",
+                                            "align": "left",
+                                            "_css_classes": "aicsu-card-q"
+                                        },
+                                        "elements": [],
+                                        "widgetType": "heading"
+                                    },
+                                    {
+                                        "id": "74a8bde",
+                                        "elType": "widget",
+                                        "settings": {
+                                            "editor": "<p>Add your thoughts to a shared whiteboard. A CSU NetID is required to sign in, and your response is anonymous to viewers.</p>"
+                                        },
+                                        "elements": [],
+                                        "widgetType": "text-editor"
+                                    },
+                                    {
+                                        "id": "7669f51",
+                                        "elType": "widget",
+                                        "settings": {
+                                            "text": "Add Your Thoughts",
+                                            "link": {
+                                                "url": "{{WHITEBOARD_URL}}",
+                                                "is_external": "",
+                                                "nofollow": "",
+                                                "custom_attributes": ""
+                                            },
+                                            "size": "md",
+                                            "align": "left"
+                                        },
+                                        "elements": [],
+                                        "widgetType": "button"
+                                    }
+                                ],
+                                "isInner": false
+                            }
+                        ],
+                        "isInner": false
+                    }
+                ],
+                "isInner": false
+            }
+        ],
+        "isInner": false
+    }
+]
