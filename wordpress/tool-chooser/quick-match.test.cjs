@@ -1,0 +1,14 @@
+const assert = require('node:assert/strict');
+const { eligible, LEVELS } = require('./quick-match.js');
+const tool = { approved: true, terms: { aicsu_role: ['faculty', 'staff'], aicsu_data: ['level-1-public', 'level-2-internal', 'level-3-confidential'] } };
+assert(eligible(tool, 'faculty', 'level-1-public'));
+assert(eligible(tool, 'staff', 'level-3-confidential'));
+assert(!eligible(tool, 'student', 'level-1-public'), 'role must match');
+assert(!eligible({ ...tool, terms: { ...tool.terms, aicsu_data: ['level-1-public'] } }, 'faculty', 'level-2-internal'), 'tool must be tagged for the chosen level');
+assert(!eligible({ ...tool, approved: false }, 'faculty', 'level-3-confidential'), 'Level 3 needs sensitive-data approval');
+assert(eligible({ ...tool, approved: false }, 'faculty', 'level-2-internal'), 'Levels 1 and 2 do not');
+assert(!eligible(tool, 'faculty', 'level-4-restricted'), 'Level 4 never matches');
+assert(!eligible({ ...tool, terms: { aicsu_role: ['faculty', 'staff'], aicsu_data: ['level-4-restricted'] } }, 'faculty', 'level-4-restricted'), 'even a tool wrongly tagged Level 4');
+assert(!eligible({ approved: true }, 'faculty', 'level-1-public'), 'missing terms are safe');
+assert.equal(LEVELS.length, 3, 'only Levels 1 to 3 are offered');
+console.log('PASS: quick match eligibility');

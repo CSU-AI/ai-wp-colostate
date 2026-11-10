@@ -1,12 +1,15 @@
 <?php
 /**
  * Plugin Name: AI @ CSU Tool Chooser
- * Description: ACF-backed tool chooser and agent directory for Elementor Shortcode widgets: [aicsu_tool_chooser] and [aicsu_agent_directory].
- * Version: 0.3.1
+ * Description: ACF-backed tool chooser and agent directory for Elementor Shortcode widgets: [aicsu_tool_chooser] and [aicsu_agent_directory], and the home page [aicsu_quick_match] filter and [aicsu_home_hero].
+ * Version: 0.4.0
  */
 defined('ABSPATH') || exit;
 
+require_once __DIR__ . '/tool-records.php';
 require_once __DIR__ . '/agent-directory.php';
+require_once __DIR__ . '/quick-match.php';
+require_once __DIR__ . '/home-hero.php';
 
 // Tool and agent post types, taxonomies, and fields ship as ACF Local JSON. Regenerate with export-acf-json.php.
 add_filter('acf/settings/load_json', function ($paths) {
@@ -22,48 +25,9 @@ add_shortcode('aicsu_tool_chooser', function () {
     if (!post_type_exists('aicsu_tool') || !function_exists('get_field')) {
         return '<p>The tool directory is unavailable. Please check the ACF configuration.</p>';
     }
-    $groups = [
-        'aicsu_role' => 'Who Are You?',
-        'aicsu_data' => 'What Data Is Involved?',
-        'aicsu_task' => 'What Do You Want to Do?',
-        'aicsu_complexity' => 'Technical Comfort',
-    ];
-    $posts = get_posts([
-        'post_type' => 'aicsu_tool',
-        'post_status' => ['publish'],
-        // ponytail: a small directory is rendered once; add pagination for hundreds of tools.
-        'posts_per_page' => -1,
-        'orderby' => ['menu_order' => 'ASC', 'title' => 'ASC'],
-        'suppress_filters' => false,
-    ]);
-    $levels = ['level-1-public', 'level-2-internal', 'level-3-confidential', 'level-4-restricted'];
-    $statuses = ['coming_soon' => 'Coming soon', 'pilot' => 'CSU evaluation pilot', 'public_only' => 'Public information only', 'unsupported' => 'Not reviewed or supported by CSU', 'informational' => 'Not provided by CSU'];
-    $records = [];
-    foreach ($posts as $post) {
-        $terms = [];
-        $names = [];
-        foreach ($groups as $taxonomy => $label) {
-            $items = get_the_terms($post, $taxonomy);
-            $items = is_array($items) ? $items : [];
-            if ($taxonomy === 'aicsu_data') $items = array_values(array_filter($items, fn($item) => in_array($item->slug, $levels, true)));
-            $terms[$taxonomy] = wp_list_pluck($items, 'slug');
-            $names[$taxonomy] = implode(', ', wp_list_pluck($items, 'name'));
-        }
-        $demo = (bool) get_post_meta($post->ID, 'aicsu_demo', true);
-        $status = (string) get_field('status', $post->ID);
-        $ceiling = max([0, ...array_map(fn($slug) => array_search($slug, $levels, true), $terms['aicsu_data'])]) + 1;
-        $status_label = $status === 'approved' ? "Approved for CSU use • up to Level {$ceiling}" : ($statuses[$status] ?? 'Approval not reviewed');
-        $records[] = [
-            'id' => $post->ID, 'name' => get_the_title($post),
-            'summary' => wp_strip_all_tags($post->post_excerpt),
-            'cost' => (string) get_field('cost', $post->ID),
-            'status' => ($demo ? 'Example: ' : '') . $status_label,
-            'approved' => $status === 'approved' && (bool) get_field('approved_for_sensitive', $post->ID),
-            'terms' => $terms, 'names' => $names,
-            'url' => esc_url_raw((string) get_field('tool_url', $post->ID), ['https', 'http']),
-            'highlights' => get_field('highlights', $post->ID) ?: [], 'demo' => $demo,
-        ];
-    }
+    $groups = aicsu_tool_groups();
+    $levels = aicsu_tool_levels();
+    $records = aicsu_tool_records();
     $base = plugin_dir_url(__FILE__);
     wp_enqueue_script('aicsu-chooser', $base . 'chooser.js', [], (string) filemtime(__DIR__ . '/chooser.js'), true);
     $uid = wp_unique_id('aicsu-chooser-');
@@ -104,18 +68,7 @@ add_shortcode('aicsu_tool_chooser', function () {
                 <p class="ac-sensitive" hidden>Level 3 and 4 results require matching tool approval.</p>
                 <div class="ac-grid">
                 <?php foreach ($records as $record) : ?>
-                    <article class="ac-card" data-id="<?php echo (int) $record['id']; ?>">
-                        <p class="ac-eyebrow"><?php echo $record['demo'] ? 'Sample Tool' : 'AI Tool'; ?><span class="ac-match" hidden>Best Match</span></p>
-                        <h3><?php echo esc_html($record['name']); ?></h3>
-                        <p class="ac-badge"><?php echo esc_html($record['status']); ?></p>
-                        <p class="ac-summary"><?php echo esc_html($record['summary']); ?></p>
-                        <p class="ac-cost"><?php echo esc_html($record['cost'] ?: 'Cost not provided'); ?></p>
-                        <?php if ($record['highlights']) : ?><ul class="ac-tags"><?php foreach ($record['highlights'] as $highlight) : ?><li><?php echo esc_html($highlight['label'] ?? ''); ?></li><?php endforeach; ?></ul><?php endif; ?>
-                        <div class="ac-card-actions">
-                            <?php if ($record['url']) : ?><a href="<?php echo esc_url($record['url']); ?>">Visit <?php echo esc_html($record['name']); ?></a><?php endif; ?>
-                            <button type="button" class="ac-compare ac-interactive ac-secondary" aria-pressed="false" aria-label="<?php echo esc_attr('Compare ' . $record['name']); ?>" hidden>Compare</button>
-                        </div>
-                    </article>
+                    <?php aicsu_render_tool_card($record); ?>
                 <?php endforeach; ?>
                 </div>
                 <div class="ac-empty" <?php echo $records ? 'hidden' : ''; ?>><h3>No Matching Tools</h3><p>Try removing a filter or changing your search.</p><button type="button" class="ac-reset ac-interactive" hidden>Reset Search and Filters</button></div>

@@ -103,6 +103,12 @@
     });
     root.querySelector('.ac-close').addEventListener('click', () => dialog.close());
     dialog.addEventListener('close', () => root.querySelector('.ac-open').focus());
+    // Prefilter links (used by Quick Match): ?role=staff&data=level-2-internal&task=...&comfort=... (slugs, comma separated).
+    const incoming = new URLSearchParams(window.location.search);
+    Object.entries({ role: 'aicsu_role', data: 'aicsu_data', task: 'aicsu_task', comfort: 'aicsu_complexity' }).forEach(([param, name]) => {
+      const wanted = (incoming.get(param) || '').split(',').map(value => value.trim().toLowerCase()).filter(Boolean);
+      if (wanted.length) form.querySelectorAll(`input[name="${name}"]`).forEach(box => { box.checked = wanted.includes(box.value); });
+    });
     refresh(); updateSelection();
   }
   const start = () => document.querySelectorAll('.aicsu-chooser:not(.aicsu-agents)').forEach(init);
