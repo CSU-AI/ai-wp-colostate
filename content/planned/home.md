@@ -36,9 +36,9 @@ Help visitors find an approved tool, understand safe use, and reach role-specifi
 
 ## Build status
 
-**Not live.** The home page redesign is a concept: on Local (`/home-concept/`, post 390) and as an unpublished **draft** on production (post 937, "Home (Redesign Draft)", pushed 2026-11-09). The configured front page is unchanged on both, and nothing is scheduled for a release. The production draft needs plugin 0.4.0 before it renders; see `wordpress/home-concept/README.md`.
+**Live.** The redesigned home page is published as the front page on production (post 937, published by David on 2026-11-09). Local has the build at `/home-concept/` (post 390). Details and the page CSS are in `wordpress/home-concept/README.md`.
 
-Concept contents so far:
+Contents so far:
 
 - Hero with the Quick Match filter (`[aicsu_home_hero]` and `[aicsu_quick_match]`, plugin 0.4.0). Level 4 data is deliberately not offered, because no tool is approved for it.
 - Responsible AI section: seven reflection prompts as cards on brand Tan, built from native Elementor widgets.

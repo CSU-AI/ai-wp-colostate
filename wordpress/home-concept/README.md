@@ -1,8 +1,10 @@
-# Home page concept (draft on production, not published)
+# Home page concept (live as the front page)
 
-**Status: draft on production, not live.** The redesigned AI @ CSU home page was pushed to production as an unpublished **draft** on 2026-11-09: post **937**, "Home (Redesign Draft)" (`https://ai.colostate.edu/?page_id=937`, visible only to logged-in editors). It is also on Local (post 390, `/home-concept/`). The configured front page (production post 6) is unchanged, and the home page swap is its own release (see `wordpress/build-notes/production-workflow.md`).
+**Status: live.** David published the redesigned AI @ CSU home page and made it the front page on production (post **937**, retitled "Home") on 2026-11-09, after plugin 0.4.0 was installed and the draft was checked. It was built on Local first (post 390, `/home-concept/`).
 
-**The draft will not render correctly yet:** production runs plugin `aicsu-tool-chooser` 0.3.1. The page's hero needs 0.4.0 (`[aicsu_home_hero]`, `[aicsu_quick_match]`), so until a super admin uploads and activates it, the hero shows as plain shortcode text.
+Production page CSS is in `home-concept.page-settings.json`. `{{POST_ID}}` is the production post ID. Scope the margin rule by `.elementor-<post id>`, not by `body.page-id-<id>`: the theme drops the page-id body class on the front page, which first left a 64px gap under the hero.
+
+Section still to build: the approved tools cards, the latest article and workshop, and the footer links.
 
 This folder exists so the page is not lost when only the Local database holds it.
 
@@ -25,7 +27,7 @@ This folder exists so the page is not lost when only the Local database holds it
 
 The CSU-GPT hero button link (`primary_url`) is the tool's own URL, also in the tree. The Responsible AI links to outside sources came from the shared mockup and need a link check.
 
-## Still to do on the production draft
+## Done and still to do
 
 1. Release plugin 0.4.0 (zip, upload as super admin, activate on the ai subsite only), then preview the draft under the real theme.
 2. Hide the theme title banner for post 937 in wp-admin (the MCP cannot write `_wc_post_layout_head`; set Page Layout > head to "Hide the header").
