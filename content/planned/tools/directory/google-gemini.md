@@ -12,8 +12,8 @@
   "cost": "Free",
   "tool_url": "https://gemini.google.com/",
   "highlights": [
-    "Use your rams.colostate.edu account",
-    "Approved for Levels 1 and 2 with that account",
+    "Level 2 data needs a rams.colostate.edu account",
+    "The account is free and optional; request it at mail.rams.colostate.edu",
     "Personal Google accounts: public data only"
   ],
   "taxonomies": {
@@ -44,9 +44,10 @@
   ],
   "demo": false,
   "sources": [
-    "https://edu.google.com/our-values/privacy-security/frequently-asked-questions/"
+    "https://edu.google.com/our-values/privacy-security/frequently-asked-questions/",
+    "https://mail.rams.colostate.edu/"
   ]
 }
 ---
 
-Google Gemini helps with writing, research, images, and everyday questions. CSU students, faculty, and staff can use it with a rams.colostate.edu Google Workspace for Education account for Level 1 public and Level 2 internal data. Sign in with that account before entering CSU information. A personal Google account does not have the same CSU-approved access; use it only with Level 1 public information. Do not enter Level 3 confidential or Level 4 restricted data.
+Google Gemini helps with writing, research, images, and everyday questions. To use Level 2 internal data, first get a rams.colostate.edu Google account, then sign in with that account before entering CSU information. The account is optional and free; request one at https://mail.rams.colostate.edu/. A personal Google account does not have the same CSU-approved access; use it only with Level 1 public information. Do not enter Level 3 confidential or Level 4 restricted data.

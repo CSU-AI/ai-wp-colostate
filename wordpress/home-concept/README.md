@@ -17,7 +17,7 @@ This folder exists so the page is not lost when only the Local database holds it
 
 | Token | Local value | Production target |
 |---|---|---|
-| `{{CHOOSER_URL}}` | `/ai-tool-chooser-poc/` | The Help Me Choose page (sitemap `/tools/help-me-choose/`, production post 796) |
+| `{{CHOOSER_URL}}` | `/tools/help-me-choose/` (Local post 52, under a placeholder `/tools/` parent) | The Help Me Choose page (sitemap `/tools/help-me-choose/`, production post 796) |
 | `{{TEACHING_URL}}` | `/teaching/` | `/teaching/` |
 | `{{TRAINING_URL}}` | `/training/` | `/training/` |
 | `{{RESEARCH_URL}}` | `/research/` | `/research/` |
