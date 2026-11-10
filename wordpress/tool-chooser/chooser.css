@@ -58,3 +58,6 @@
 .ac-dialog caption { text-align:left; padding:12px 0; }
 @media (max-width:1024px) { .ac-layout { grid-template-columns:230px minmax(0,1fr); gap:20px; } .ac-grid { grid-template-columns:1fr; } }
 @media (max-width:767px) { .ac-layout { grid-template-columns:1fr; } .ac-toolbar { flex-direction:column; align-items:stretch; gap:12px; } .ac-card { padding:20px; } .ac-results-heading { flex-wrap:wrap; gap:0; } .ac-tray { flex-direction:column; align-items:stretch; padding:12px; gap:10px; } .ac-tray>div { flex-wrap:wrap; } .ac-tray button { flex:1; } .ac-dialog { padding:16px; } }
+
+.ac-focus { display:flex; flex-wrap:wrap; gap:12px; align-items:center; margin:0 0 20px; padding:12px 16px; background:#f5f5f2; border:1px solid #c8c8c8; border-radius:4px; }
+.ac-focus span { font-weight:700; }

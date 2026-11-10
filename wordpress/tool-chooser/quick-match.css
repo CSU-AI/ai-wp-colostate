@@ -27,6 +27,8 @@
 .aicsu-quickmatch .qm-list { margin:0; padding:0; list-style:none; }
 .aicsu-quickmatch .qm-list li { display:flex; flex-wrap:wrap; justify-content:space-between; gap:4px 16px; padding:14px 0; border-bottom:1px solid #ddd; }
 .aicsu-quickmatch .qm-tool { flex:1 1 40%; font-size:19px; font-weight:700; color:var(--qm-green); }
+.aicsu-quickmatch .qm-tool a { color:var(--qm-green); text-decoration:underline; text-underline-offset:3px; }
+.aicsu-quickmatch .qm-tool a:hover { color:var(--qm-red); }
 .aicsu-quickmatch .qm-cost { flex:0 1 52%; font-size:16px; color:#4b4b4b; text-align:right; }
 .aicsu-quickmatch .qm-empty { margin:0; font-size:17px; }
 .aicsu-quickmatch .qm-next { margin:16px 0 0; font-size:17px; }

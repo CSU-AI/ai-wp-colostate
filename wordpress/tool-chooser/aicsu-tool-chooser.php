@@ -66,6 +66,7 @@ add_shortcode('aicsu_tool_chooser', function () {
                 <p class="ac-interactive ac-hint" hidden>Select up to three tools to compare side by side.</p>
                 <p class="ac-hint">Tool approval does not grant access to CSU data. For Level 3, follow applicable data-steward and access requirements.</p>
                 <p class="ac-sensitive" hidden>Level 3 and 4 results require matching tool approval.</p>
+                <p class="ac-focus" hidden><span>Showing one tool.</span> <button type="button" class="ac-show-all ac-secondary">Show all tools</button></p>
                 <div class="ac-grid">
                 <?php foreach ($records as $record) : ?>
                     <?php aicsu_render_tool_card($record); ?>

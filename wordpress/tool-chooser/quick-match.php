@@ -12,6 +12,7 @@
  *   heading, intro, note   panel text
  *   limit         tools listed before "See all" (default 4)
  *   next_faculty, next_staff, next_researcher, next_student   "Link text|URL" shown as the role's next step
+ * Each listed tool links to the chooser showing just that tool (?item=<slug>), carrying the answers so Show all tools restores the filtered list.
  * Answers are read from and written to ?role=<slug>&data=<level slug>, so a result can be shared.
  */
 defined('ABSPATH') || exit;
@@ -98,7 +99,7 @@ function aicsu_quick_match_render($atts) {
             <p class="qm-status" role="status" aria-live="polite"></p>
             <ul class="qm-list">
             <?php foreach ($records as $record) : ?>
-                <li data-id="<?php echo (int) $record['id']; ?>"><span class="qm-tool"><?php echo esc_html($record['name']); ?></span><span class="qm-cost"><?php echo esc_html($record['cost'] ?: 'Cost not provided'); ?></span></li>
+                <li data-id="<?php echo (int) $record['id']; ?>"><span class="qm-tool"><?php if ($chooser) : ?><a class="qm-tool-link" href="<?php echo esc_url(add_query_arg('item', $record['slug'], $chooser)); ?>"><?php echo esc_html($record['name']); ?></a><?php else : echo esc_html($record['name']); endif; ?></span><span class="qm-cost"><?php echo esc_html($record['cost'] ?: 'Cost not provided'); ?></span></li>
             <?php endforeach; ?>
             </ul>
             <p class="qm-empty" hidden>No approved tool fits that role and data level. Try a lower data level, or ask for help choosing.</p>

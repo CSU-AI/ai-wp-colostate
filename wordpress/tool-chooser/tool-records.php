@@ -48,7 +48,7 @@ function aicsu_tool_records(): array {
         $ceiling = max([0, ...array_map(fn($slug) => array_search($slug, $levels, true), $terms['aicsu_data'])]) + 1;
         $status_label = $status === 'approved' ? "Approved for CSU use • up to Level {$ceiling}" : ($statuses[$status] ?? 'Approval not reviewed');
         $records[] = [
-            'id' => $post->ID, 'name' => get_the_title($post),
+            'id' => $post->ID, 'slug' => $post->post_name, 'name' => get_the_title($post),
             'summary' => wp_strip_all_tags($post->post_excerpt),
             'cost' => (string) get_field('cost', $post->ID),
             'status' => ($demo ? 'Example: ' : '') . $status_label,

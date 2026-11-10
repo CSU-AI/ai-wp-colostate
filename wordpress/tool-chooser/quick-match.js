@@ -26,6 +26,7 @@
     const empty = root.querySelector('.qm-empty');
     const nextStep = root.querySelector('.qm-next');
     const seeAll = root.querySelector('.qm-see-all');
+    const toolLinks = Array.from(root.querySelectorAll('.qm-tool-link'));
     form.hidden = false;
 
     const value = name => form.querySelector(`input[name="${name}"]:checked`)?.value || '';
@@ -57,6 +58,13 @@
         seeAll.hidden = !ready || !fit.length;
         seeAll.textContent = fit.length > limit ? `See all ${fit.length} matching tools` : `Compare ${fit.length === 1 ? 'this tool' : 'these tools'} in the chooser`;
       }
+      // Each tool opens the chooser on that tool, carrying the answers so "Show all tools" returns to the same filtered list.
+      toolLinks.forEach(link => {
+        const url = new URL(link.href, window.location.href);
+        if (role) url.searchParams.set('role', role); else url.searchParams.delete('role');
+        if (data) url.searchParams.set('data', data); else url.searchParams.delete('data');
+        link.href = url.toString();
+      });
       if (updateUrl) {
         const params = new URLSearchParams(window.location.search);
         [['role', role], ['data', data]].forEach(([key, v]) => { if (v) params.set(key, v); else params.delete(key); });
