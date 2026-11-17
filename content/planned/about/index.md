@@ -16,7 +16,7 @@ partners:
 last_reviewed:
 local_post_id: 283
 production_post_id: 864
-production_modified: "2026-11-08 13:57:04"
+production_modified: "2026-11-16 19:06:04"
 ---
 
 # About AI @ CSU Fort Collins
@@ -37,6 +37,10 @@ Explain the Fort Collins vision for AI, who coordinates the work, and how the ca
 
 - Obtain approved vision language and leadership sign-off.
 - Confirm the current team name, membership, and public contact information.
+
+## Cards (2026-11-16)
+
+Three cards on Local (post 283) and production (post 864): AI Governance (See Governance), AI Groups (See the Groups, links to /about/groups/), and How We Use AI on This Site. Menu item AI Groups added under About on both sites.
 
 ## Local stub
 

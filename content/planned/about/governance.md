@@ -1,7 +1,7 @@
 ---
 title: "AI Governance at CSU Fort Collins"
 slug: "governance"
-status: built-local
+status: published
 priority: P2
 parent: /about/
 source_urls:
@@ -18,7 +18,7 @@ partners:
 last_reviewed:
 local_post_id: 310
 production_post_id: 887
-production_modified: "2026-11-08 13:54:57"
+production_modified: 2026-11-16 19:05:27
 ---
 
 # AI Governance at CSU Fort Collins
@@ -29,22 +29,11 @@ Describe campus decision-making and initiatives while directing visitors to CSU 
 
 ## Page copy
 
-Synced from the Local build (post 310) on 2026-11-08.
+Synced from production (post 887) on 2026-11-10, then groups moved to [AI Groups](/about/groups/). Applied to Local (post 310) and production (post 887) on 2026-11-16.
 
-CSU Fort Collins has been organizing around AI since 2024. These groups set direction, coordinate campus work, and develop guidance. For system-level requirements, see the CSU System guidelines below.
+CSU Fort Collins has been organizing around AI since 2024. The committees, working groups, and communities of practice that set direction and develop guidance are listed on the [AI Groups](/about/groups/) page. For system-level requirements, see the CSU System guidelines below.
 
-### Current Groups
-
-- [Presidential AI Strategy Task Force](/about/governance/presidential-ai-strategy-task-force/): sets CSU's institutional AI philosophy, coordination, and governance model. Phase 1 runs October 2026 to January 2027.
-- [Provost's Artificial Intelligence Working Group](/about/governance/provosts-ai-working-group/): guides how AI is integrated into teaching, learning, advising, and academic operations. Charged in Fall 2026.
-
-### AI Philosophy Draft
-
-The Provost AI Working Group has drafted a campus-wide AI philosophy and wants your feedback. The statement is a draft and has not been adopted. Read [AI Philosophy (Draft for Feedback)](/about/governance/ai-philosophy/) and share your comments.
-
-### Previous Groups
-
-Two earlier groups completed their work. [Previous AI Groups](/about/governance/previous-groups/) covers the Enterprise AI Design Team (through December 2025) and the AI Joint Task Force (September to December 2024).
+The AI Philosophy Draft section (heading and paragraph linking to `/about/governance/ai-philosophy/`) was removed from view at David's request. On production it is hidden with the Elementor hide-on-all-devices settings, and Local matches. The elements remain in the page.
 
 ### CSU System AI Governance Guidelines (callout)
 
@@ -54,8 +43,8 @@ Button: [AI Governance Guidelines (CSU System)](https://datagov.csusystem.edu/ai
 
 ## Child pages
 
-- `/about/governance/ai-philosophy/`: planned file `governance/ai-philosophy.md`.
-- `/about/governance/presidential-ai-strategy-task-force/`, `/about/governance/provosts-ai-working-group/`, and `/about/governance/previous-groups/`: planned files in `governance/`.
+- Group pages still live at `/about/governance/...` and are linked from `/about/groups/`. Decide whether to move them under `/about/groups/`.
+- `/about/governance/ai-philosophy/`: hidden from this page; page itself is unchanged.
 
 ## Editorial decisions needed
 
