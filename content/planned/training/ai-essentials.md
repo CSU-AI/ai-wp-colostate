@@ -15,7 +15,7 @@ last_reviewed:
 local_post_id: 120
 production_post_id: 831
 production_parent: 829
-production_modified: 2026-11-08 14:32:32
+production_modified: 2026-11-16 18:53:20
 ---
 
 AI @ CSU / Division of IT
@@ -34,7 +34,8 @@ Written for faculty and staff. Students are welcome to watch. Recordings open in
 4. From Prompt to Reviewed Output
 5. CSU-GPT Deep Dive
 6. Microsoft and Copilot
-7. AI Across the CSU System: Panel
+7. Microsoft-Led Training: Copilot Premium
+8. AI Across the CSU System: Panel
 
 Already using AI? Skip to the video that matches your tool. Each recording stands on its own.
 
@@ -79,6 +80,12 @@ Learn how CSU-GPT uses tokens and context, and explore file and knowledge-source
 Explore Microsoft 365 and Microsoft Copilot, including Copilot Chat, meeting recaps, prompting tools, Microsoft 365 workflows, data protection, storage, and licensing considerations.
 
 [Button: Watch Microsoft and Copilot recording](https://colostate.sharepoint.com/:v:/s/DoIT-_AI-Strategy/IQBSfwFEAxYUQbY2Fc0O-7RjARt-yUIXj8jvMEJr7T9yWEs?e=8OK84E)
+
+### Microsoft-Led Training: Copilot Premium
+
+Recording of a Microsoft-guided session for CSU System employees, held November 12. Whether you already have a Copilot Premium license or want to learn what it does before requesting one, this session gives a practical introduction to using Copilot Premium in Microsoft 365. It includes real-world examples, guided activities, and questions about features, use cases, and licensing.
+
+[Button: Watch Copilot Premium recording](https://colostate.sharepoint.com/:v:/s/DoIT-_AI-Strategy/IQAkQAYJhqvsTKdJCvP1JBGgAScJEZebURD5HqZX8D7P3rk?e=e01Rik)
 
 ### AI Across the CSU System: Panel
 
