@@ -29,7 +29,7 @@ Help visitors find an approved tool, understand safe use, and reach role-specifi
 
 ## Editorial decisions needed
 
-- None open. CSU-GPT is the primary hero action, and the page has no workshop or news block.
+- None open. CSU-GPT is the primary hero action. The page has no workshop block.
 
 ## Build status
 
@@ -40,4 +40,6 @@ Contents so far:
 - Hero with the Quick Match filter (`[aicsu_home_hero]` and `[aicsu_quick_match]`, plugin 0.4.0). Level 4 data is deliberately not offered, because no tool is approved for it.
 - Responsible AI section: seven reflection prompts as cards on brand Tan, built from native Elementor widgets.
 
-Not planned: approved tools cards, a latest article and workshop block, and extra footer links. The Balance card in the Responsible AI section stays as "Coming soon" without a link.
+- News section (live on production and Local, 2026-11-16): three link cards at the bottom, RAMintel signup first, then the nebulaONE newsletter signup, then SOURCE articles tagged artificial intelligence. Tree is `wordpress/home-concept/news-section.elementor.json`.
+
+Not planned: approved tools cards, a workshop block, and extra footer links. The Balance card in the Responsible AI section stays as "Coming soon" without a link.
