@@ -1,7 +1,7 @@
 ---
 title: "AI Governance at CSU Fort Collins"
 slug: "governance"
-status: built-local
+status: published
 priority: P2
 parent: /about/
 source_urls:
@@ -18,7 +18,7 @@ partners:
 last_reviewed:
 local_post_id: 310
 production_post_id: 887
-production_modified: "2026-11-08 13:54:57"
+production_modified: 2026-11-16 19:05:27
 ---
 
 # AI Governance at CSU Fort Collins
@@ -29,7 +29,7 @@ Describe campus decision-making and initiatives while directing visitors to CSU 
 
 ## Page copy
 
-Synced from production (post 887) on 2026-11-10, then groups moved to [AI Groups](/about/groups/) on Local (post 310).
+Synced from production (post 887) on 2026-11-10, then groups moved to [AI Groups](/about/groups/). Applied to Local (post 310) and production (post 887) on 2026-11-16.
 
 CSU Fort Collins has been organizing around AI since 2024. The committees, working groups, and communities of practice that set direction and develop guidance are listed on the [AI Groups](/about/groups/) page. For system-level requirements, see the CSU System guidelines below.
 

@@ -1,7 +1,7 @@
 ---
 title: "AI Groups"
 slug: "groups"
-status: ready-production
+status: published
 priority: P2
 parent: /about/
 source_urls:
@@ -16,7 +16,7 @@ last_reviewed:
 local_post_id: 396
 production_post_id: 974
 production_parent: 864
-production_modified: 2026-11-16 19:03:34
+production_modified: 2026-11-16 19:03:56
 ---
 
 # AI Groups
