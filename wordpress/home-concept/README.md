@@ -4,7 +4,9 @@
 
 Production page CSS is in `home-concept.page-settings.json`. `{{POST_ID}}` is the production post ID. Scope the margin rule by `.elementor-<post id>`, not by `body.page-id-<id>`: the theme drops the page-id body class on the front page, which first left a 64px gap under the hero.
 
-Scope: the home page is the hero with Quick Match plus the Responsible AI section. Approved tools cards, a latest article and workshop block, and extra footer links are not planned.
+Scope: the home page is the hero with Quick Match, the Responsible AI section, and a News section. Approved tools cards, a workshop block, and extra footer links are not planned.
+
+**News section (live on production post 937 since 2026-11-16; built on Local post 390).** `news-section.elementor.json` holds the tree: three cards (RAMintel signup, nebulaONE newsletter signup, SOURCE articles tagged artificial intelligence), no tokens to resolve. Its CSS is the `.aicsu-news` block at the end of `home-concept.page-settings.json`, which also extends the margin reset. Pushed with `import-template` (appends at the end), then the page settings with the production post ID.
 
 This folder exists so the page is not lost when only the Local database holds it.
 
